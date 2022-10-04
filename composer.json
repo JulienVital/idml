@@ -1,0 +1,24 @@
+{
+    "name": "jvital/idml",
+    "description": "library manage Idml",
+    "type": "library",
+    "require": {
+        "jms/serializer": "^3.18",
+        "symfony/dom-crawler": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jvital\\Idml\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "julien",
+            "email": "contact@julien-vital.dev"
+        }
+    ]
+}
