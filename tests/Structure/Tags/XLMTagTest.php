@@ -8,10 +8,7 @@ use Symfony\Component\DomCrawler\Crawler;
 class XLMTagTest extends TestCase
 {
 
-  public function testLaunch(){
 
-    $this->assertTrue(true);
-  }
 
   public function testValidXml()
   {
