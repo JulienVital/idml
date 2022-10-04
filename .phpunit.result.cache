@@ -1,1 +1,0 @@
-{"version":1,"defects":{"XLMTagTest::testTextFrame":5,"XLMTagTest::testValidXml":4,"XLMTagTest::testDeserialize":5,"Warning":6},"times":{"XLMTagTest::testTextFrame":0.017,"XLMTagTest::testValidXml":0.016,"XLMTagTest::testDeserialize":0.003,"Warning":0.003,"XLMTagTest::testLaunch":0.003}}
