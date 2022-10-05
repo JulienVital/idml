@@ -7,13 +7,13 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /** 
  * @XmlRoot("XMLTag") 
 */
-class XMLTag {
+class XmlTag {
 
 /**
  * @XmlAttribute
  * @SerializedName("Self")
  */
-private string $self;
+private string $id;
 
 /**
  * @XmlAttribute
@@ -37,8 +37,16 @@ public function setName(string $name): self
 {
   $name = str_replace(' ', '_', $name);
   $this->name = $name;
-  $this->self = "XMLTag/$name";
+  $this->id = "XMLTag/$name";
 
   return $this;
   }
+
+/**
+ * Get the value of id
+ */
+public function getId(): string
+{
+return $this->id;
+}
 }
