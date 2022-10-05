@@ -1,7 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\Structure\Tags\XMLTag;
+use Jvital\Idml\XML\Tags\XMLTag;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -23,8 +23,8 @@ class XLMTagTest extends TestCase
     ->filterXpath('//XMLTag')
     ->extract(['Self', 'Name']);
 
-    $this->assertEquals("XMLTag/name of Xml Tag", $attributes[0][0], 'selfTag Error serialization');
-    $this->assertEquals("name of Xml Tag", $attributes[0][1], 'NameTag of XMLTag Error serialization');
+    $this->assertEquals("XMLTag/name_of_Xml_Tag", $attributes[0][0], 'selfTag Error serialization');
+    $this->assertEquals("name_of_Xml_Tag", $attributes[0][1], 'NameTag of XMLTag Error serialization');
 
   }
 
@@ -37,7 +37,7 @@ class XLMTagTest extends TestCase
 
     $XMLTagDeserialized = $serializer->deserialize($XMLTagSerialized, XMLTag::class, 'xml');
 
-    $this->assertEquals("name of Xml Tag", $XMLTagDeserialized->getName(), 'NameTag of XMLTag Error Deserialization');
+    $this->assertEquals("name_of_Xml_Tag", $XMLTagDeserialized->getName(), 'NameTag of XMLTag Error Deserialization');
 
   }
 }
