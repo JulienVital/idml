@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParagraphStyleRange>
+  <CharacterStyleRange>
+    <XMLElement Self="selfId" XMLContent="uf1">
+      <XMLElement Self="childfId" XMLContent="uf12"/>
+    </XMLElement>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
