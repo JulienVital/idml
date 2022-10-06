@@ -92,7 +92,7 @@ class XmlElementTest extends TestCase
     // Parse 
     $crawler = new Crawler($xmleEementRootSerialized);
     $attributes = $crawler
-    ->filterXpath('//XmlElement')
+    ->filterXpath('//XMLElement')
     ->first()
     ->extract(['Self', 'MarkupTag', 'XMLContent'])[0];
 
