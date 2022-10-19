@@ -19,7 +19,12 @@ class CharacterStyleRange
     private XmlElement $xmlElement;
 
 
-
+    /**
+     * @SkipWhenEmpty
+     * @var string
+     * @SerializedName("Content")
+     */
+    private string $content;
     /**
      * Get the value of xmlElement
      */
@@ -34,6 +39,24 @@ class CharacterStyleRange
     public function setXmlElement(XmlElement $xmlElement): self
     {
         $this->xmlElement = $xmlElement;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of content
+     */
+    public function getContent(): string
+    {
+        return $this->content;
+    }
+
+    /**
+     * Set the value of content
+     */
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
 
         return $this;
     }

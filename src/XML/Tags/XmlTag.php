@@ -8,7 +8,11 @@ use JMS\Serializer\Annotation\XmlAttribute;
  * @XmlRoot("XMLTag") 
 */
 class XmlTag {
-
+  
+  public function __construct($name= ''){
+    $name = $name ==='' ? uniqid(): $name;
+    $this->setName($name);
+  }
 /**
  * @XmlAttribute
  * @SerializedName("Self")

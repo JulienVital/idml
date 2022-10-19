@@ -16,9 +16,9 @@ class XmlElementTest extends TestCase
 
     $xmlTag = new XmlTag();
     $xmlTag->setName('xml tag name from XmlTag');
-    $xmleEement1->setXmlTag($xmlTag);
+    $xmleEement1->setMarkupTag($xmlTag);
 
-    $this->assertEquals($xmleEement1->getXmlTag(), 'XMLTag/xml_tag_name_from_XmlTag');
+    $this->assertEquals($xmleEement1->getMarkupTag(), 'XMLTag/xml_tag_name_from_XmlTag');
 
   }
 
@@ -76,11 +76,11 @@ class XmlElementTest extends TestCase
 
     $xmleEementRoot
       ->setId('selfId')
-      ->setXmlTag($xmlTag)
+      ->setMarkupTag($xmlTag)
       ->setXmlContent('testXmlContent');
 
     $xmleEementChild = new XmlElement();
-    $xmleEementChild ->setXmlTag($xmlTagChild)
+    $xmleEementChild ->setMarkupTag($xmlTagChild)
     ->setXmlContent('childContent')
     ->setId('childId');
 
@@ -117,11 +117,11 @@ class XmlElementTest extends TestCase
 
     $xmleEementRoot
       ->setId('selfId')
-      ->setXmlTag($xmlTag)
+      ->setMarkupTag($xmlTag)
       ->setXmlContent('testXmlContent');
 
     $xmleEementChild = new XmlElement();
-    $xmleEementChild ->setXmlTag($xmlTagChild)
+    $xmleEementChild ->setMarkupTag($xmlTagChild)
     ->setXmlContent('childContent')
     ->setId('childId');
 
@@ -134,12 +134,38 @@ class XmlElementTest extends TestCase
     $xmleEementRootDeserialized = $serializer->deserialize($xmleEementRootSerialized, XmlElement::class, 'xml');
 
     $this->assertEquals($xmleEementRootDeserialized->getId(),'selfId');
-    $this->assertEquals($xmleEementRootDeserialized->getxmlTag(),'XMLTag/Root_Tag_Name');
+    $this->assertEquals($xmleEementRootDeserialized->getMarkupTag(),'XMLTag/Root_Tag_Name');
     $this->assertEquals($xmleEementRootDeserialized->getXmlContent(),'testXmlContent');
 
     $this->assertEquals($xmleEementRootDeserialized->getChildren()[0]->getId(),'childId');
-    $this->assertEquals($xmleEementRootDeserialized->getChildren()[0]->getxmlTag(),'XMLTag/Child_name');
+    $this->assertEquals($xmleEementRootDeserialized->getChildren()[0]->getMarkupTag(),'XMLTag/Child_name');
     $this->assertEquals($xmleEementRootDeserialized->getChildren()[0]->getXmlContent(),'childContent');
+
+  }
+
+  public function testExpect(){
+
+    $xmlElementExpect = file_get_contents(__DIR__.'/XMLelementExpect.xml');
+    $serializer = SerializerBuilder::create()->build();
+
+    /** @var XmlElement */
+    $XmlElement = $serializer->deserialize($xmlElementExpect, XmlElement::class, 'xml');
+    $XmlElementSerialized = $serializer->serialize($XmlElement, 'xml');
+    
+    $this->assertEquals($XmlElementSerialized,$xmlElementExpect);
+
+    $this->assertEquals($XmlElement->getMarkupTag(),'XMLTag/Root');
+    $this->assertEquals($XmlElement->getId(),'ci2');
+
+    $firstChild = $XmlElement->getChildren()[0];
+    $this->assertEquals($firstChild->getId(),'ci2396');
+    $this->assertEquals($firstChild->getXmlContent(),'uf1');
+    $this->assertEquals($firstChild->getMarkupTag(),'XMLTag/tag_1_1');
+
+    $secondChild = $XmlElement->getChildren()[1];
+    $this->assertEquals($secondChild->getId(),'ci2397');
+    $this->assertEquals($secondChild->getXmlContent(),'u10b');
+    $this->assertEquals($secondChild->getMarkupTag(),'XMLTag/tag_1_2');
 
   }
 }
