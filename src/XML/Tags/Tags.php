@@ -33,7 +33,7 @@ class Tags {
   /**
    * Get the value of XMLTags
    */
-  public function getXMLTags(): array
+  public function getMarkupTags(): array
   {
     return $this->XMLTags;
   }
@@ -42,7 +42,7 @@ class Tags {
    * @var XmlTag[]
    * Set the value of XMLTags
    */
-  public function setXMLTags(array $XMLTags): self
+  public function setMarkupTags(array $XMLTags): self
   {
     if (is_array($XMLTags)){
       $this->XMLTags = array_merge($XMLTags, $this->XMLTags);

@@ -41,4 +41,5 @@ class CharacterStyleRangeTest extends TestCase
 
   }
 
+
 }

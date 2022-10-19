@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLElement Self="ci2" MarkupTag="XMLTag/Root">
+  <XMLElement Self="ci2396" MarkupTag="XMLTag/tag_1_1" XMLContent="uf1"/>
+  <XMLElement Self="ci2397" MarkupTag="XMLTag/tag_1_2" XMLContent="u10b"/>
+</XMLElement>

@@ -7,11 +7,21 @@
   colors="true"
   convertErrorsToExceptions="true"
   convertNoticesToExceptions="true"
-  convertWarningsToExceptions="true">
+  convertWarningsToExceptions="true"
+  printerClass="Sempro\PHPUnitPrettyPrinter\PrettyPrinterForPhpUnit9">
   <testsuites>
     <testsuite name="IdmlTests">
       <directory>./tests</directory>
     </testsuite>
   </testsuites>
+ <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+        <report>
+            <!-- <text outputFile="php://stdout" showUncoveredFiles="true"/> -->
+            <html outputDirectory="build/coverage"/>
+        </report>
+     </coverage>
   <logging/>
 </phpunit>

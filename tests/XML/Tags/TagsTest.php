@@ -18,8 +18,12 @@ class TagsTest extends TestCase
   $xmlTag2 = new XmlTag();
   $xmlTag2->setName('name of Xml Tag2');
   $tags = new Tags();
-  $tags->setXMLTags([$xmlTag, $xmlTag2]);
-  
+  $tags->setMarkupTags([$xmlTag, $xmlTag2]);
+    
+  $xmlTag3 = new XmlTag();
+  $xmlTag3->setName('name of Xml Tag3');
+  $tags->addXMLTags($xmlTag3);
+
   $serializer = SerializerBuilder::create()->build();
   $tagsSerialized = $serializer->serialize($tags, 'xml');
   $crawler = new Crawler($tagsSerialized);
@@ -29,6 +33,7 @@ class TagsTest extends TestCase
 
   $this->assertEquals("XMLTag", $childrenTypeNode[0]);
   $this->assertEquals("XMLTag", $childrenTypeNode[1]);
+  $this->assertEquals("XMLTag", $childrenTypeNode[2]);
 
   }
 
@@ -41,16 +46,16 @@ class TagsTest extends TestCase
     $xmlTag2 = new XmlTag();
     $xmlTag2->setName('name of Xml Tag2');
     $tags = new Tags();
-    $tags->setXMLTags([$xmlTag, $xmlTag2]);
+    $tags->setMarkupTags([$xmlTag, $xmlTag2]);
     
     $serializer = SerializerBuilder::create()->build();
     $tagsSerialized = $serializer->serialize($tags, 'xml');
   
     $tagsDeserialized = $serializer->deserialize($tagsSerialized, Tags::class, 'xml');
 
-    $this->assertTrue(is_array($tagsDeserialized->getXMLTags()));
-    $this->assertEquals($tagsDeserialized->getXMLTags()[0]->getName(),'name_of_Xml_Tag' );
-    $this->assertEquals($tagsDeserialized->getXMLTags()[1]->getName(),'name_of_Xml_Tag2' );
+    $this->assertTrue(is_array($tagsDeserialized->getMarkupTags()));
+    $this->assertEquals($tagsDeserialized->getMarkupTags()[0]->getName(),'name_of_Xml_Tag' );
+    $this->assertEquals($tagsDeserialized->getMarkupTags()[1]->getName(),'name_of_Xml_Tag2' );
 
   }
 

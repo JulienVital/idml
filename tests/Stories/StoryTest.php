@@ -28,7 +28,7 @@ class StoryTest extends TestCase
 
     $crawler = new Crawler($storySerialized);
     $storyElement = $crawler
-    ->filterXpath('//XmlStory');
+    ->filterXpath('//Story');
     
     $attributesStory = $storyElement->extract(['Self']);
     $this->assertEquals($attributesStory[0],'pageID' );

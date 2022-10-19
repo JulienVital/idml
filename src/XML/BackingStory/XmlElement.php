@@ -17,16 +17,16 @@ class XmlElement
 {
     /**
      * @XmlAttribute
-     * @SerializedName("MarkupTag")
-     */
-    private string $xmlTag;
-
-    
-    /**
-     * @XmlAttribute
      * @SerializedName("Self")
      */
     private string $id;
+    /**
+     * @XmlAttribute
+     * @SerializedName("MarkupTag")
+     */
+    private string $markupTag;
+
+    
     /**
      * @XmlAttribute
      * @SerializedName("XMLContent")
@@ -41,25 +41,14 @@ class XmlElement
     */
     private array $children;
 
-    /**
-    * @SkipWhenEmpty
-    * @var ParagraphStyleRange
-    */
-    private ParagraphStyleRange $paragraphStyleRange;
-
-    public function getXmlTag(): string
+    public function getMarkupTag(): string
     {
-        return $this->xmlTag;
+        return $this->markupTag;
     }
 
-    public function setXmlTag(string|XmlTag $xmlTag): self
+    public function setMarkupTag(XmlTag $xmlTag): self
     {
-        if ($xmlTag instanceof XmlTag){
-            $this->xmlTag = $xmlTag->getId();
-            return $this;
-        }
-        $this->xmlTag = $xmlTag;
-
+        $this->markupTag = $xmlTag->getId();
         return $this;
     }
 
@@ -102,24 +91,6 @@ class XmlElement
     public function addChild(XmlElement $children): self
     {
         $this->children[] = $children;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of paragraphStyleRange
-     */
-    public function getParagraphStyleRange(): ParagraphStyleRange
-    {
-        return $this->paragraphStyleRange;
-    }
-
-    /**
-     * Set the value of paragraphStyleRange
-     */
-    public function setParagraphStyleRange(ParagraphStyleRange $paragraphStyleRange): self
-    {
-        $this->paragraphStyleRange = $paragraphStyleRange;
 
         return $this;
     }
