@@ -1,13 +1,4 @@
 <?php
-
-use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\Stories\CharacterStyleRange;
-use Jvital\Idml\Stories\ParagraphStyleRange;
-use Jvital\Idml\Stories\Story;
-use Jvital\Idml\XML\BackingStory\XmlStory;
-use PHPUnit\Framework\TestCase;
-use Symfony\Component\DomCrawler\Crawler;
-
 class StoryTest extends TestCase
 {
 
@@ -28,7 +19,7 @@ class StoryTest extends TestCase
 
     $crawler = new Crawler($storySerialized);
     $storyElement = $crawler
-    ->filterXpath('//Story');
+    ->filterXpath('//XmlStory');
     
     $attributesStory = $storyElement->extract(['Self']);
     $this->assertEquals($attributesStory[0],'pageID' );
