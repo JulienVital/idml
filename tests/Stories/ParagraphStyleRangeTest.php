@@ -42,8 +42,6 @@ class ParagraphStyleRangeTest extends TestCase
     $this->assertEquals($attributes[0],'selfId' );
     $this->assertEquals($attributes[1],'uf1' );
 
-    file_put_contents('test22.xml',$paragraphStyleRangeSerialized );
-
   }
 
 }
