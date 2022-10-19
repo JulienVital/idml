@@ -6,11 +6,10 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
- * @XmlRoot("XmlStory") 
+ * @XmlRoot("Story") 
 */
 class Story
 {
-
 
     /**
      * @XmlAttribute
