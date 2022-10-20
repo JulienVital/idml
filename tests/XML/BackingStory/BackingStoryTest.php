@@ -63,5 +63,16 @@ class BackingStoryTest extends TestCase
     $this->assertEquals($backingStoryDeserialized->getXmlStory(), $story);
   }
 
+  public function testExpect(){
+
+    $xmlExpect = file_get_contents(__DIR__.'/BackingStoryExpect.xml');
+    $serializer = SerializerBuilder::create()->build();
+
+    /** @var XmlElement */
+    $xmlDeSerialized = $serializer->deserialize($xmlExpect, BackingStory::class, 'xml');
+    $XmlSerialized = $serializer->serialize($xmlDeSerialized, 'xml');
+    
+    $this->assertEquals($XmlSerialized,$xmlExpect);
+  }
 
 }
