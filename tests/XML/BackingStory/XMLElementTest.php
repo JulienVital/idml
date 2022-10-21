@@ -143,7 +143,7 @@ class XmlElementTest extends TestCase
 
   }
 
-  public function testDeserialize(){
+  public function testDeserializeExpectz(){
 
     $xmlElementExpect = file_get_contents(__DIR__.'/XMLelementExpect.xml');
     $serializer = SerializerBuilder::create()->build();
