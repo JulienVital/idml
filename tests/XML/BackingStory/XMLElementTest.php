@@ -143,13 +143,14 @@ class XmlElementTest extends TestCase
 
   }
 
-  public function testExpectDeserialize(){
+  public function testDeserialize(){
 
     $xmlElementExpect = file_get_contents(__DIR__.'/XMLelementExpect.xml');
     $serializer = SerializerBuilder::create()->build();
 
     /** @var XmlElement */
     $XmlElement = $serializer->deserialize($xmlElementExpect, XmlElement::class, 'xml');
+    
     $XmlElementSerialized = $serializer->serialize($XmlElement, 'xml');
     
     $this->assertEquals($XmlElementSerialized,$xmlElementExpect);
@@ -166,6 +167,7 @@ class XmlElementTest extends TestCase
     $this->assertEquals($secondChild->getId(),'ci2397');
     $this->assertEquals($secondChild->getXmlContent(),'u10b');
     $this->assertEquals($secondChild->getMarkupTag(),'XMLTag/tag_1_2');
-
+    $attributes=$XmlElement->getXmlAttribute();
+    $this->assertEquals($secondChild->getXmlAttribute()[0]->getId(),'di2i3i1cXMLAttributenhref');
   }
 }

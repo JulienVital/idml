@@ -2,7 +2,7 @@
 namespace Jvital\Idml\XML;
 
 use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\XmlAttribute as XmlAttributeJms;
+use JMS\Serializer\Annotation\XmlAttribute as JmsXmlAttribute;
 use JMS\Serializer\Annotation\XmlRoot;
 
 /** 
@@ -11,19 +11,19 @@ use JMS\Serializer\Annotation\XmlRoot;
 class XmlAttribute
 {
     /**
-     * @XmlAttributeJms
+     * @JmsXmlAttribute
      * @SerializedName("Self")
      */
     private string $id;
     
     /**
-     * @XmlAttributeJms
+     * @JmsXmlAttribute
      * @SerializedName("Name")
      */
     private string $name;
     
     /**
-     * @XmlAttributeJms
+     * @JmsXmlAttribute
      * @SerializedName("Value")
      */
     private string $value;

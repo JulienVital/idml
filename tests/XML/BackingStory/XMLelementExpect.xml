@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <XMLElement Self="ci2" MarkupTag="XMLTag/Root">
   <XMLElement Self="ci2396" MarkupTag="XMLTag/tag_1_1" XMLContent="uf1"/>
-  <XMLElement Self="ci2397" MarkupTag="XMLTag/tag_1_2" XMLContent="u10b"/>
+  <XMLElement Self="ci2397" MarkupTag="XMLTag/tag_1_2" XMLContent="u10b">
+    <XMLElement Self="di2i3i1c" MarkupTag="XMLTag/product_249822_image_2" XMLContent="u220"/>
+    <XMLAttribute Self="di2i3i1cXMLAttributenhref" Name="href" Value="file:///C:/Users/userName/Desktop/picture.jpg"/>
+  </XMLElement>
 </XMLElement>
