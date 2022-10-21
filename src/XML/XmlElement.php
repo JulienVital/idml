@@ -5,10 +5,11 @@ use Jvital\Idml\XML\XmlTag;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
-use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlAttribute as JMSXmlAttribute;;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
 use Jvital\Idml\Stories\ParagraphStyleRange;
+use Jvital\Idml\XML\XmlAttribute;
 
 /** 
  * @XmlRoot("XMLElement") 
@@ -16,19 +17,19 @@ use Jvital\Idml\Stories\ParagraphStyleRange;
 class XmlElement
 {
     /**
-     * @XmlAttribute
+     * @JMSXmlAttribute
      * @SerializedName("Self")
      */
     private string $id;
     /**
-     * @XmlAttribute
+     * @JMSXmlAttribute
      * @SerializedName("MarkupTag")
      */
     private string $markupTag;
 
     
     /**
-     * @XmlAttribute
+     * @JMSXmlAttribute
      * @SerializedName("XMLContent")
      */
     private string $xmlContent;
@@ -40,6 +41,14 @@ class XmlElement
     * @XmlList(inline = true, entry = "XMLElement")
     */
     private array $children;
+
+    /**
+    * @var XmlAttribute[]
+    *
+    * @Type("array<Jvital\Idml\XML\XmlAttribute>")
+    * @XmlList(inline = true, entry = "XMLAttribute")
+    */
+    private $xmlAttribute = [];
 
     public function getMarkupTag(): string
     {
@@ -91,6 +100,28 @@ class XmlElement
     public function addChild(XmlElement $children): self
     {
         $this->children[] = $children;
+
+        return $this;
+    }
+
+    
+
+
+    public function getXmlAttribute(): array
+    {
+        return $this->xmlAttribute;
+    }
+
+    public function setXmlAttribute(array $xmlAttribute): self
+    {
+        $this->xmlAttribute = $xmlAttribute;
+
+        return $this;
+    }
+
+    public function addXmlAttribute(XmlAttribute $xmlAttribute): self
+    {
+        $this->xmlAttribute[] = $xmlAttribute;
 
         return $this;
     }
