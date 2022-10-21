@@ -1,7 +1,7 @@
 <?php
-namespace Jvital\Idml\XML\BackingStory;
+namespace Jvital\Idml\XML;
 
-use Jvital\Idml\XML\Tags\XmlTag;
+use Jvital\Idml\XML\XmlTag;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -36,7 +36,7 @@ class XmlElement
     /**
     * @var XmlElement[]
     *
-    * @Type("array<Jvital\Idml\XML\BackingStory\XmlElement>")
+    * @Type("array<Jvital\Idml\XML\XmlElement>")
     * @XmlList(inline = true, entry = "XMLElement")
     */
     private array $children;

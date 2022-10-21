@@ -1,5 +1,5 @@
 <?php
-namespace Jvital\Idml\XML\BackingStory;
+namespace Jvital\Idml\XML;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute as XmlAttributeJms;

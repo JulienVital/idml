@@ -1,5 +1,5 @@
 <?php
-namespace Jvital\Idml\XML\BackingStory;
+namespace Jvital\Idml\XML;
 
 use JMS\Serializer\Annotation\XmlRoot;
 use Jvital\Idml\Stories\Story;

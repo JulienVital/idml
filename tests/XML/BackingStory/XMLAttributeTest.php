@@ -1,8 +1,8 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\XML\BackingStory\XmlAttribute;
-use Jvital\Idml\XML\Tags\XmlTag as XmlTag;
+use Jvital\Idml\XML\XmlAttribute;
+use Jvital\Idml\XML\XmlTag as XmlTag;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 

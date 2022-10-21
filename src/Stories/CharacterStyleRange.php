@@ -2,7 +2,7 @@
 namespace Jvital\Idml\Stories;
 
 use JMS\Serializer\Annotation\XmlRoot;
-use Jvital\Idml\XML\BackingStory\XmlElement;
+use Jvital\Idml\XML\XmlElement;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\SerializedName;
 

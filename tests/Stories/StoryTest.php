@@ -4,7 +4,7 @@ use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Stories\CharacterStyleRange;
 use Jvital\Idml\Stories\ParagraphStyleRange;
 use Jvital\Idml\Stories\Story;
-use Jvital\Idml\XML\BackingStory\XmlStory;
+use Jvital\Idml\XML\XmlStory;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
