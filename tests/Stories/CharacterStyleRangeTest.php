@@ -2,7 +2,7 @@
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Stories\CharacterStyleRange;
-use Jvital\Idml\XML\BackingStory\XmlElement;
+use Jvital\Idml\XML\XmlElement;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
