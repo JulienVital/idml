@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idPkg:Story xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="17.0">
+  <Story Self="u1a3" AppliedTOCStyle="n" UserText="true" IsEndnoteStory="false" TrackChanges="false" StoryTitle="$ID/" AppliedNamedGrid="n">
+  	<XMLElement Self="di2i3i12" MarkupTag="XMLTag/product_249822_block_16" XMLContent="u1a3">
+  		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/block-index">
+  			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+  				<Content>3</Content>
+  			</CharacterStyleRange>
+  		</ParagraphStyleRange>
+  	</XMLElement>
+  </Story>
+</idPkg:Story>
