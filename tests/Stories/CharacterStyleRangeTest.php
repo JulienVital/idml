@@ -2,14 +2,33 @@
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Stories\CharacterStyleRange;
-use Jvital\Idml\XML\XmlElement;
+use Jvital\Idml\XML\BackingStory\XmlElement;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
 class CharacterStyleRangeTest extends TestCase
 {
 
+  public function testGetterAndSetter(){
+    
+    // Create Object
+    $characterStyleRange = new CharacterStyleRange();
 
+    $xmlElement = new XmlElement();
+    $xmlElementchild = new XmlElement();
+    $xmlElement
+      ->setId('selfId1')
+      ->setXmlContent('uf1')
+      ->addChild($xmlElementchild);
+    $xmlElementchild
+      ->setId('childfId')
+      ->setXmlContent('uf12');
+    $characterStyleRange->setXmlElement($xmlElement);
+    $characterStyleRange->setContent("testSetterContent");
+
+    $this->assertEquals($characterStyleRange->getXmlElement(),$xmlElement );
+    $this->assertEquals($characterStyleRange->getContent(),"testSetterContent" );
+  }
 
   public function testSerialize(){
     
@@ -41,5 +60,24 @@ class CharacterStyleRangeTest extends TestCase
 
   }
 
+  public function testDeSerializeAndSerializeIsSame(){
+    $xmlExpect = <<<EOT
+    <?xml version="1.0" encoding="UTF-8"?>
+    <CharacterStyleRange>
+      <Content>3</Content>
+    </CharacterStyleRange>
+
+    EOT;
+
+    $serializer = SerializerBuilder::create()->build();
+
+    /** @var XmlElement */
+    $xmlDeSerialized = $serializer->deserialize($xmlExpect, CharacterStyleRange::class, 'xml');
+    $XmlSerialized = $serializer->serialize($xmlDeSerialized, 'xml');
+    
+    $this->assertEquals($XmlSerialized,$xmlExpect);
+
+
+  }
 
 }

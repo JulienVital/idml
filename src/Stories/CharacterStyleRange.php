@@ -2,9 +2,10 @@
 namespace Jvital\Idml\Stories;
 
 use JMS\Serializer\Annotation\XmlRoot;
-use Jvital\Idml\XML\XmlElement;
+use Jvital\Idml\XML\BackingStory\XmlElement;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\XmlElement as XmlElementJMS;
 
 /** 
  * @XmlRoot("CharacterStyleRange") 
@@ -23,6 +24,7 @@ class CharacterStyleRange
      * @SkipWhenEmpty
      * @var string
      * @SerializedName("Content")
+     * @XmlElementJMS(cdata=false)
      */
     private string $content;
     /**

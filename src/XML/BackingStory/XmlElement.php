@@ -1,7 +1,7 @@
 <?php
-namespace Jvital\Idml\XML;
+namespace Jvital\Idml\XML\BackingStory;
 
-use Jvital\Idml\XML\XmlTag;
+use Jvital\Idml\XML\Tags\XmlTag;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -9,7 +9,7 @@ use JMS\Serializer\Annotation\XmlAttribute as JMSXmlAttribute;;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
 use Jvital\Idml\Stories\ParagraphStyleRange;
-use Jvital\Idml\XML\XmlAttribute;
+use Jvital\Idml\XML\BackingStory\XmlAttribute;
 
 /** 
  * @XmlRoot("XMLElement") 
@@ -37,7 +37,7 @@ class XmlElement
     /**
     * @var XmlElement[]
     *
-    * @Type("array<Jvital\Idml\XML\XmlElement>")
+    * @Type("array<Jvital\Idml\XML\BackingStory\XmlElement>")
     * @XmlList(inline = true, entry = "XMLElement")
     */
     private array $children;
@@ -45,7 +45,7 @@ class XmlElement
     /**
     * @var XmlAttribute[]
     *
-    * @Type("array<Jvital\Idml\XML\XmlAttribute>")
+    * @Type("array<Jvital\Idml\XML\BackingStory\XmlAttribute>")
     * @XmlList(inline = true, entry = "XMLAttribute")
     */
     private $xmlAttribute = [];

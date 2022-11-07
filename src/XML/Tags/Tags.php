@@ -1,12 +1,12 @@
 <?php
-namespace Jvital\Idml\XML;
+namespace Jvital\Idml\XML\Tags;
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\XmlNamespace;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\Type;
-use Jvital\Idml\XML\XmlTag;
+use Jvital\Idml\XML\Tags\XmlTag;
 
 /** 
  * @XmlRoot("idPkg:Tags") 
@@ -23,7 +23,7 @@ class Tags {
   /**
   * @var XmlTag[]
   *
-  * @Type("array<Jvital\Idml\XML\XMLTag>")
+  * @Type("array<Jvital\Idml\XML\Tags\XmlTag>")
   * @XmlList(inline = true, entry = "XMLTag")
   */
   public $XMLTags = [];

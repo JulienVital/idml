@@ -3,10 +3,9 @@
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Stories\CharacterStyleRange;
 use Jvital\Idml\Stories\ParagraphStyleRange;
-use Jvital\Idml\XML\BackingStory;
-use Jvital\Idml\XML\XmlElement;
-use Jvital\Idml\XML\XmlStory;
-use Jvital\Idml\XML\XmlTag;
+use Jvital\Idml\XML\BackingStory\BackingStory;
+use Jvital\Idml\XML\BackingStory\XmlElement;
+use Jvital\Idml\XML\BackingStory\XmlStory;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -65,7 +64,7 @@ class BackingStoryTest extends TestCase
 
   public function testExpect(){
 
-    $xmlExpect = file_get_contents(__DIR__.'/BackingStoryExpect.xml');
+    $xmlExpect = file_get_contents(__DIR__.'/expects/BackingStoryExpect.xml');
     $serializer = SerializerBuilder::create()->build();
 
     /** @var XmlElement */

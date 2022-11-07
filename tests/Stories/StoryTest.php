@@ -4,7 +4,6 @@ use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Stories\CharacterStyleRange;
 use Jvital\Idml\Stories\ParagraphStyleRange;
 use Jvital\Idml\Stories\Story;
-use Jvital\Idml\XML\XmlStory;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -37,14 +36,14 @@ class StoryTest extends TestCase
 
   }
 
-  public function testXmlStory(){
+  public function testStory(){
     
     // Create Object
     $characterStyleRange = new CharacterStyleRange();
     $paragraphStyleRange = new ParagraphStyleRange();
     $paragraphStyleRange->setCharacterStyleRange($characterStyleRange);
 
-    $story = new XmlStory();
+    $story = new Story();
     $story
       ->setId('pageID')
       ->setParagraphStyleRange($paragraphStyleRange);
@@ -55,7 +54,7 @@ class StoryTest extends TestCase
     $crawler = new Crawler($storySerialized);
     $storyElement = $crawler->first();
     
-    $this->assertEquals($storyElement->nodeName(),'XmlStory' );
+    $this->assertEquals($storyElement->nodeName(),'Story' );
 
   }
 

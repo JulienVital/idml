@@ -1,5 +1,5 @@
 <?php
-namespace Jvital\Idml\XML;
+namespace Jvital\Idml\XML\Tags;
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;

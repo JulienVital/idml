@@ -1,8 +1,8 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\XML\XmlElement;
-use Jvital\Idml\XML\XmlTag as XmlTag;
+use Jvital\Idml\XML\BackingStory\XmlElement;
+use Jvital\Idml\XML\Tags\XmlTag;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -143,9 +143,9 @@ class XmlElementTest extends TestCase
 
   }
 
-  public function testDeserializeExpectz(){
+  public function testDeserializeExpect(){
 
-    $xmlElementExpect = file_get_contents(__DIR__.'/XMLelementExpect.xml');
+    $xmlElementExpect = file_get_contents(__DIR__.'/expects/XMLelementExpect.xml');
     $serializer = SerializerBuilder::create()->build();
 
     /** @var XmlElement */
