@@ -3,7 +3,7 @@
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Stories\CharacterStyleRange;
 use Jvital\Idml\Stories\ParagraphStyleRange;
-use Jvital\Idml\XML\XmlElement;
+use Jvital\Idml\XML\BackingStory\XmlElement;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -43,5 +43,27 @@ class ParagraphStyleRangeTest extends TestCase
     $this->assertEquals($attributes[1],'uf1' );
 
   }
+
+  
+  public function testDeSerializeAndSerializeIsSame(){
+    $xmlExpect = $this->paragraphExpect;
+
+    $serializer = SerializerBuilder::create()->build();
+
+    /** @var XmlElement */
+    $xmlDeSerialized = $serializer->deserialize($xmlExpect, ParagraphStyleRange::class, 'xml');
+    $XmlSerialized = $serializer->serialize($xmlDeSerialized, 'xml');
+    
+    $this->assertEquals($XmlSerialized,$xmlExpect);
+
+  }
+  private $paragraphExpect ='<?xml version="1.0" encoding="UTF-8"?>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/block-index">
+  <CharacterStyleRange>
+    <Content>3</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+';
+
 
 }

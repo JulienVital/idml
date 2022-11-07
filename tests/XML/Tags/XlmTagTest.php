@@ -1,7 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\XML\XmlTag;
+use Jvital\Idml\XML\BackingStory\BackingStoryXmlTag;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -13,7 +13,7 @@ class XLMTagTest extends TestCase
   public function testValidXml()
   {
 
-    $xmlTag = new XmlTag();
+    $xmlTag = new BackingStoryXmlTag();
     $xmlTag->setName('name of Xml Tag');
     $serializer = SerializerBuilder::create()->build();
     $XMLTagSerialized = $serializer->serialize($xmlTag, 'xml');
@@ -30,12 +30,12 @@ class XLMTagTest extends TestCase
 
   public function testDeserialize(){
 
-    $xmlTag = new XmlTag();
+    $xmlTag = new BackingStoryXmlTag();
     $xmlTag->setName('name of Xml Tag');
     $serializer = SerializerBuilder::create()->build();
     $XMLTagSerialized = $serializer->serialize($xmlTag, 'xml');
 
-    $XMLTagDeserialized = $serializer->deserialize($XMLTagSerialized, XmlTag::class, 'xml');
+    $XMLTagDeserialized = $serializer->deserialize($XMLTagSerialized, BackingStoryXmlTag::class, 'xml');
 
     $this->assertEquals("name_of_Xml_Tag", $XMLTagDeserialized->getName(), 'NameTag of XMLTag Error Deserialization');
 

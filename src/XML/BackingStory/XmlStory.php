@@ -1,5 +1,5 @@
 <?php
-namespace Jvital\Idml\XML;
+namespace Jvital\Idml\XML\BackingStory;
 
 use JMS\Serializer\Annotation\XmlRoot;
 use Jvital\Idml\Stories\ParagraphStyleRange;

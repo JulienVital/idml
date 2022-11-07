@@ -1,10 +1,8 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\XML\XmlAttribute;
-use Jvital\Idml\XML\XmlTag as XmlTag;
+use Jvital\Idml\XML\BackingStory\XmlAttribute;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\DomCrawler\Crawler;
 
 class XMLAttributeTest extends TestCase
 {
@@ -20,7 +18,7 @@ class XMLAttributeTest extends TestCase
 
   public function testDeserializeXmlAttribute()
   {
-    $xmlAttributeExpect = file_get_contents(__DIR__.'/XMLAttributeExpect.xml');
+    $xmlAttributeExpect = file_get_contents(__DIR__.'/expects/XMLAttributeExpect.xml');
     $serializer = SerializerBuilder::create()->build();
     
     
