@@ -1,7 +1,7 @@
 <?php
 namespace Jvital\Idml\XML\BackingStory;
 
-use Jvital\Idml\XML\BackingStory\BackingStoryXmlTag;
+use Jvital\Idml\XML\Tags\XmlTag;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -55,7 +55,7 @@ class XmlElement
         return $this->markupTag;
     }
 
-    public function setMarkupTag(BackingStoryXmlTag $xmlTag): self
+    public function setMarkupTag(XmlTag $xmlTag): self
     {
         $this->markupTag = $xmlTag->getId();
         return $this;

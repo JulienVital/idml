@@ -2,7 +2,7 @@
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\XML\BackingStory\XmlElement;
-use Jvital\Idml\XML\BackingStory\BackingStoryXmlTag;
+use Jvital\Idml\XML\Tags\XmlTag;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -14,7 +14,7 @@ class XmlElementTest extends TestCase
 
     $xmleEement1 = new XmlElement();
 
-    $xmlTag = new BackingStoryXmlTag();
+    $xmlTag = new XmlTag();
     $xmlTag->setName('xml tag name from XmlTag');
     $xmleEement1->setMarkupTag($xmlTag);
 
@@ -67,9 +67,9 @@ class XmlElementTest extends TestCase
   public function testSerialize(){
     
     // Create Object
-    $xmlTag = new BackingStoryXmlTag();
+    $xmlTag = new XmlTag();
     $xmlTag->setName('Root Tag Name');
-    $xmlTagChild = new BackingStoryXmlTag();
+    $xmlTagChild = new XmlTag();
     $xmlTagChild->setName('Child name');
 
     $xmleEementRoot = new XmlElement();
@@ -108,9 +108,9 @@ class XmlElementTest extends TestCase
 
       
     // Create Object
-    $xmlTag = new BackingStoryXmlTag();
+    $xmlTag = new XmlTag();
     $xmlTag->setName('Root Tag Name');
-    $xmlTagChild = new BackingStoryXmlTag();
+    $xmlTagChild = new XmlTag();
     $xmlTagChild->setName('Child name');
 
     $xmleEementRoot = new XmlElement();

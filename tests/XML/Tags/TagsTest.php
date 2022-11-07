@@ -2,7 +2,7 @@
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\XML\Tags\Tags;
-use Jvital\Idml\XML\BackingStory\BackingStoryXmlTag;
+use Jvital\Idml\XML\Tags\XmlTag;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -12,15 +12,15 @@ class TagsTest extends TestCase
   public function testValidXml()
   {
 
-  $xmlTag = new BackingStoryXmlTag();
+  $xmlTag = new XmlTag();
   $xmlTag->setName('name of Xml Tag');
   
-  $xmlTag2 = new BackingStoryXmlTag();
+  $xmlTag2 = new XmlTag();
   $xmlTag2->setName('name of Xml Tag2');
   $tags = new Tags();
   $tags->setMarkupTags([$xmlTag, $xmlTag2]);
     
-  $xmlTag3 = new BackingStoryXmlTag();
+  $xmlTag3 = new XmlTag();
   $xmlTag3->setName('name of Xml Tag3');
   $tags->addXMLTags($xmlTag3);
 
@@ -40,10 +40,10 @@ class TagsTest extends TestCase
   public function testDeserializeTagsXml()
   {
 
-    $xmlTag = new BackingStoryXmlTag();
+    $xmlTag = new XmlTag();
     $xmlTag->setName('name of Xml Tag');
     
-    $xmlTag2 = new BackingStoryXmlTag();
+    $xmlTag2 = new XmlTag();
     $xmlTag2->setName('name of Xml Tag2');
     $tags = new Tags();
     $tags->setMarkupTags([$xmlTag, $xmlTag2]);

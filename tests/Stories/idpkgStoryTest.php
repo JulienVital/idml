@@ -4,11 +4,14 @@ use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Stories\IdpkgStory;
 use PHPUnit\Framework\TestCase;
 
+use function PHPUnit\Framework\assertTrue;
+
 class idpkgStoryTest extends TestCase
 {
 
   public function testSerializeDeserialize(){
 
+    $this->assertTrue(true);
     // $xmlExpect = file_get_contents(__DIR__.'/IdpkgstoryExpect.xml');
     // $serializer = SerializerBuilder::create()->build();
 

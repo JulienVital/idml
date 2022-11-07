@@ -6,7 +6,7 @@ use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\Type;
-use Jvital\Idml\XML\BackingStory\BackingStoryXmlTag;
+use Jvital\Idml\XML\Tags\XmlTag;
 
 /** 
  * @XmlRoot("idPkg:Tags") 
@@ -21,9 +21,9 @@ class Tags {
   private string $DOMVersion = "17.0";
 
   /**
-  * @var BackingStoryXmlTag[]
+  * @var XmlTag[]
   *
-  * @Type("array<Jvital\Idml\XML\BackingStory\BackingStoryXmlTag>")
+  * @Type("array<Jvital\Idml\XML\Tags\XmlTag>")
   * @XmlList(inline = true, entry = "XMLTag")
   */
   public $XMLTags = [];
@@ -39,7 +39,7 @@ class Tags {
   }
 
   /**
-   * @var BackingStoryXmlTag[]
+   * @var XmlTag[]
    * Set the value of XMLTags
    */
   public function setMarkupTags(array $XMLTags): self
@@ -53,7 +53,7 @@ class Tags {
   /**
    * add a XMLTag
    */
-  public function addXMLTags(BackingStoryXmlTag $XMLTags): self
+  public function addXMLTags(XmlTag $XMLTags): self
   {
     $this->XMLTags[] = $XMLTags;
     return $this;

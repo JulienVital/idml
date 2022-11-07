@@ -1,5 +1,5 @@
 <?php
-namespace Jvital\Idml\XML\BackingStory;
+namespace Jvital\Idml\XML\Tags;
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /** 
  * @XmlRoot("XMLTag") 
 */
-class BackingStoryXmlTag {
+class XmlTag {
   
   public function __construct($name= ''){
     $name = $name ==='' ? uniqid(): $name;
