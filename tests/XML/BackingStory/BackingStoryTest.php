@@ -67,11 +67,25 @@ class BackingStoryTest extends TestCase
     $xmlExpect = file_get_contents(__DIR__.'/expects/BackingStoryExpect.xml');
     $serializer = SerializerBuilder::create()->build();
 
-    /** @var XmlElement */
+    /** @var BackingStory */
     $xmlDeSerialized = $serializer->deserialize($xmlExpect, BackingStory::class, 'xml');
     $XmlSerialized = $serializer->serialize($xmlDeSerialized, 'xml');
     
     $this->assertEquals($XmlSerialized,$xmlExpect);
   }
 
+  public function testGetterFromDeserialize(){
+
+    $xmlExpect = file_get_contents(__DIR__.'/expects/BackingStoryExpect.xml');
+    $serializer = SerializerBuilder::create()->build();
+
+    /** @var BackingStory */
+    $xmlDeSerialized = $serializer->deserialize($xmlExpect, BackingStory::class, 'xml');
+    
+    $paragraphStyle = $xmlDeSerialized->getXmlStory()->getParagraphStyleRange()->getAppliedParagraphStyle();
+    $this->assertEquals($paragraphStyle ,'ParagraphStyle/$ID/NormalParagraphStyle');
+
+    $storyId = $xmlDeSerialized->getXmlStory()->getId();
+    $this->assertEquals($storyId ,'ub0');
+  }
 }

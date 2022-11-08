@@ -2,6 +2,7 @@
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Stories\CharacterStyleRange;
+use Jvital\Idml\Stories\IdpkgStory;
 use Jvital\Idml\Stories\ParagraphStyleRange;
 use Jvital\Idml\Stories\Story;
 use PHPUnit\Framework\TestCase;
@@ -58,4 +59,16 @@ class StoryTest extends TestCase
 
   }
 
+  public function testStoryDeserialize(){
+    
+    $xmlExpect = file_get_contents(__DIR__.'/expects/IdpkgstoryExpect.xml');
+    $serializer = SerializerBuilder::create()->build();
+
+    /** @var IdpkgStory */
+    $xmlDeSerialized = $serializer->deserialize($xmlExpect, IdpkgStory::class, 'xml');
+    $XmlSerialized = $serializer->serialize($xmlDeSerialized, 'xml');
+    
+    $this->assertEquals($xmlExpect,$XmlSerialized);
+
+  }
 }

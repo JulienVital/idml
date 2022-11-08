@@ -50,6 +50,11 @@ class XmlElement
     */
     private $xmlAttribute = [];
 
+    /**
+     * @SerializedName("ParagraphStyleRange")
+     */
+    private ParagraphStyleRange $paragraphStyleRange;
+
     public function getMarkupTag(): string
     {
         return $this->markupTag;

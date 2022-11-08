@@ -1,6 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
+use Jvital\Idml\XML\BackingStory\XmlAttribute;
 use Jvital\Idml\XML\BackingStory\XmlElement;
 use Jvital\Idml\XML\Tags\XmlTag;
 use PHPUnit\Framework\TestCase;
@@ -169,5 +170,34 @@ class XmlElementTest extends TestCase
     $this->assertEquals($secondChild->getMarkupTag(),'XMLTag/tag_1_2');
     $attributes=$XmlElement->getXmlAttribute();
     $this->assertEquals($secondChild->getXmlAttribute()[0]->getId(),'di2i3i1cXMLAttributenhref');
+  }
+
+  public function testXmlAttribute()
+  {
+
+    $xmleEement = new XmlElement();
+
+    $xmleEement->setXmlContent('testXmlContentId');
+
+    $xmlAttribute = new XmlAttribute();
+    $xmlAttribute->setId('di2i10ei119XMLAttributenhref');
+    $xmlAttribute->setName('href');
+    $xmlAttribute->setValue('file:///C:/Users/username/Desktop/picture.jpg');
+
+    $xmlAttribute2 = new XmlAttribute();
+    $xmlAttribute2->setId('di2i10ei119XMLAttributenhref2');
+    $xmlAttribute2->setName('href2');
+    $xmlAttribute2->setValue('file:///C:/Users/username/Desktop/picture2.jpg');
+    
+    $xmleEement->addXmlAttribute($xmlAttribute);
+
+    $this->assertEquals($xmleEement->getXmlAttribute(), [$xmlAttribute]);
+
+    $xmleEement->setXmlAttribute([$xmlAttribute, $xmlAttribute2]);
+
+    $this->assertEquals($xmleEement->getXmlAttribute(), [$xmlAttribute, $xmlAttribute2]);
+
+
+
   }
 }
