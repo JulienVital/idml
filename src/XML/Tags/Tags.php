@@ -1,24 +1,15 @@
 <?php
 namespace Jvital\Idml\XML\Tags;
 use JMS\Serializer\Annotation\XmlRoot;
-use JMS\Serializer\Annotation\XmlNamespace;
 use JMS\Serializer\Annotation\XmlList;
-use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\Type;
+use Jvital\Idml\Utils\IdpkgWrapper;
 use Jvital\Idml\XML\Tags\XmlTag;
 
 /** 
  * @XmlRoot("idPkg:Tags") 
- * @XmlNamespace(uri="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging", prefix="idPkg")
 */
-class Tags {
-
-  /**
-  * @XmlAttribute
-  * @SerializedName("DOMVersion")
-  */
-  private string $DOMVersion = "17.0";
+class Tags extends IdpkgWrapper {
 
   /**
   * @var XmlTag[]
