@@ -4,6 +4,7 @@ namespace Jvital\Idml\Stories;
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
+use Jvital\Idml\XML\BackingStory\XmlElement;
 
 /** 
  * @XmlRoot("Story") 
@@ -58,6 +59,11 @@ class Story
      */
     private ParagraphStyleRange $paragraphStyleRange;
 
+    /**
+     * @var XmlElement
+     * @SerializedName("XMLElement")
+     */
+    private XmlElement $xmlElement;
 
     /**
      * Get the value of paragraphStyleRange
