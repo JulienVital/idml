@@ -5,7 +5,7 @@ use Jvital\Idml\XML\Tags\XmlTag;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
-use JMS\Serializer\Annotation\XmlAttribute as JMSXmlAttribute;;
+use JMS\Serializer\Annotation\XmlAttribute as JMSXmlAttribute;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
 use Jvital\Idml\Stories\ParagraphStyleRange;
