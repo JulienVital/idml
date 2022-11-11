@@ -12,6 +12,7 @@ use Jvital\Idml\Trait\PageTransitionTypeAttribute;
 use Jvital\Idml\Trait\SelfAttribute;
 use Jvital\Idml\Trait\ShowMasterItemsAttribute;
 use Jvital\Idml\Trait\PageTransitionDurationAttribute;
+use JMS\Serializer\Annotation\SerializedName;
 
 /** 
  * @XmlRoot("Spread") 
@@ -31,4 +32,9 @@ class Spread
     function __construct($self){
         $this->self = $self;
     }
+
+    /**
+    * @SerializedName("FlattenerPreference")
+    */
+    private FlattenerPreference $flattenerPreference;
 }
