@@ -32,6 +32,5 @@ class SpreadIdpkgTest extends TestCase{
         $spreadSerialized = $this->serializer->serialize($spreadDeSerialized, 'xml');
 
         $this->assertEquals($spreadSerialized, $this->xmlExpect);
-
     }
 }
