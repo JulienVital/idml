@@ -6,5 +6,6 @@
         <RasterVectorBalance type="double">50</RasterVectorBalance>
       </Properties>
     </FlattenerPreference>
+    <Page Self="ue2"/>
   </Spread>
 </idPkg:Spread>
