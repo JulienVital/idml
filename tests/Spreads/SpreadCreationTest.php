@@ -2,6 +2,9 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
+use Jvital\Idml\Enums\PageTransitionDirectionOptions;
+use Jvital\Idml\Enums\PageTransitionDurationOptions;
+use Jvital\Idml\Enums\PageTransitionTypeOptions;
 use Jvital\Idml\Spread\Spread;
 use PHPUnit\Framework\TestCase;
 
@@ -119,5 +122,47 @@ class SpreadCreationTest extends TestCase{
         $spreadSerialized = $this->serializer->serialize($spread, 'xml');
         $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
         $this->assertEquals($spreadDeSerialized->getBindingLocation(),0);
+    }
+
+    
+    public function testPageTransitionTypeAfterSerialize(){
+        $spread = new Spread("test");
+
+        $spreadSerialized = $this->serializer->serialize($spread, 'xml');
+        $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
+        $this->assertEquals($spreadDeSerialized->getPageTransitionType(),PageTransitionTypeOptions::NONE);
+
+        $spread->setPageTransitionType(PageTransitionTypeOptions::FADE_TRANSITION);
+        $spreadSerialized = $this->serializer->serialize($spread, 'xml');
+        $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
+        $this->assertEquals($spreadDeSerialized->getPageTransitionType(),PageTransitionTypeOptions::FADE_TRANSITION);
+    }
+
+    public function testpageTransitionDirectionAfterSerialize(){
+        $spread = new Spread("test");
+
+        // with default value
+        $spreadSerialized = $this->serializer->serialize($spread, 'xml');
+        $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
+        $this->assertEquals($spreadDeSerialized->getpageTransitionDirection(),PageTransitionDirectionOptions::NOT_APPLICABLE);
+
+        $spread->setpageTransitionDirection(pageTransitionDirectionOptions::LEFT_TO_RIGHT);
+        $spreadSerialized = $this->serializer->serialize($spread, 'xml');
+        $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
+        $this->assertEquals($spreadDeSerialized->getpageTransitionDirection(),pageTransitionDirectionOptions::LEFT_TO_RIGHT);
+    }
+
+    public function testPageTransitionDurationAfterSerialize(){
+        $spread = new Spread("test");
+
+        // with default value
+        $spreadSerialized = $this->serializer->serialize($spread, 'xml');
+        $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
+        $this->assertEquals($spreadDeSerialized->getPageTransitionDuration(),PageTransitionDurationOptions::MEDIUM);
+
+        $spread->setPageTransitionDuration(PageTransitionDurationOptions::SLOW);
+        $spreadSerialized = $this->serializer->serialize($spread, 'xml');
+        $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
+        $this->assertEquals($spreadDeSerialized->getPageTransitionDuration(),PageTransitionDurationOptions::SLOW);
     }
 }

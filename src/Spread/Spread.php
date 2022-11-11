@@ -7,8 +7,11 @@ use Jvital\Idml\Trait\BindingLocationAttribute;
 use Jvital\Idml\Trait\FlattenerOverrideAttribute;
 use Jvital\Idml\Trait\ItemTransformAttribute;
 use Jvital\Idml\Trait\PageCountAttribute;
+use Jvital\Idml\Trait\PageTransitionDirectionAttribute;
+use Jvital\Idml\Trait\PageTransitionTypeAttribute;
 use Jvital\Idml\Trait\SelfAttribute;
 use Jvital\Idml\Trait\ShowMasterItemsAttribute;
+use Jvital\Idml\Trait\PageTransitionDurationAttribute;
 
 /** 
  * @XmlRoot("Spread") 
@@ -22,8 +25,9 @@ class Spread
     use ShowMasterItemsAttribute;
     use PageCountAttribute;
     use BindingLocationAttribute;
-
-    // PageTransitionType="None" PageTransitionDirection="NotApplicable" PageTransitionDuration="Medium"
+    use PageTransitionTypeAttribute;
+    use PageTransitionDirectionAttribute; 
+    use PageTransitionDurationAttribute;
     function __construct($self){
         $this->self = $self;
     }
