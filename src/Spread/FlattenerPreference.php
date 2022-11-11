@@ -12,7 +12,6 @@ class FlattenerPreference
 {
 
     use Properties;
-
     /**
      * @XmlAttribute
      * @SerializedName("LineArtAndTextResolution")

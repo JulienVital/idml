@@ -2,6 +2,8 @@
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Spread\FlattenerPreference;
+use Jvital\Idml\Spread\RasterVectorBalance;
+use Jvital\Idml\Utils\Properties;
 use PHPUnit\Framework\TestCase;
 
 class FlattenerPreferenceCreationTest extends TestCase{
@@ -68,12 +70,17 @@ class FlattenerPreferenceCreationTest extends TestCase{
 
     public function testConvertAllTextToOutlines(){
 
-        $spread = new FlattenerPreference();
-
-        $spread->setConvertAllTextToOutlines(true);
-        $spreadSerialized = $this->serializer->serialize($spread, 'xml');
+        $flattenerPreference = new FlattenerPreference();
+        $properties = new Properties();
+        $rasterVector = new RasterVectorBalance();
+        $rasterVector->setValue("500");
+        $properties->setRasterVectorBalance($rasterVector);
+        $flattenerPreference->setConvertAllTextToOutlines(true);
+        $flattenerPreference->setProperties($properties);
+        $spreadSerialized = $this->serializer->serialize($flattenerPreference, 'xml');
 
         $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, FlattenerPreference::class,'xml');
         $this->assertTrue($spreadDeSerialized-> isConvertAllTextToOutlines());
     }
+
 }
