@@ -20,7 +20,7 @@
         </include>
         <report>
             <!-- <text outputFile="php://stdout" showUncoveredFiles="true"/> -->
-            <!-- <html outputDirectory="coverage/"/> -->
+            <html outputDirectory="coverage/"/>
         </report>
      </coverage>
   <logging/>
