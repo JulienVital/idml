@@ -6,6 +6,8 @@
         <RasterVectorBalance type="double">50</RasterVectorBalance>
       </Properties>
     </FlattenerPreference>
-    <Page Self="ue2"/>
+    <Page Self="ue2" GeometricBounds="0 0 841.889763778 595.275590551" ItemTransform="1 0 0 1 0 -420.944881889">
+      <MarginPreference ColumnCount="1" ColumnGutter="12" Top="28.34645669291339" Bottom="28.34645669291339" Left="0" Right="0" ColumnDirection="Horizontal" ColumnsPositions="0 595.275590551"/>
+    </Page>
   </Spread>
 </idPkg:Spread>
