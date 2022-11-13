@@ -3,7 +3,10 @@
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Enums\ContentTypeOptions;
+use Jvital\Idml\Spread\KeyValuePair;
+use Jvital\Idml\Spread\Label;
 use Jvital\Idml\Spread\TextFrame;
+use Jvital\Idml\Utils\Properties;
 use PHPUnit\Framework\TestCase;
 
 class TextFrameCreationTest extends TestCase{
@@ -68,6 +71,27 @@ class TextFrameCreationTest extends TestCase{
         $textframeSerialized = $this->serializer->serialize($textframe, 'xml');
         $textFrameDeSerialized = $this->serializer->deSerialize($textframeSerialized, TextFrame::class,'xml');
         $this->assertEquals($textFrameDeSerialized->getAppliedObjectStyle(), $objectStyleName);
+
+    }
+
+    public function testLabel(){
+
+        $labelValue = new KeyValuePair();
+        $labelValue->setKey('testKey');
+        $labelValue->setValue('testValue');
+        $label = new Label();
+        $label->setKeyValuePair($labelValue);
+        $properties = new Properties();
+        $properties->setLabel($label);
+
+        $textframe = new TextFrame("test Texframe");
+        $textframe->setProperties($properties);
+
+        $textframeSerialized = $this->serializer->serialize($textframe, 'xml');
+        $textFrameDeSerialized = $this->serializer->deSerialize($textframeSerialized, TextFrame::class,'xml');
+        
+        $this->assertEquals($textFrameDeSerialized->getProperties()->getLabel()->getKeyValuePair()->getKey(), 'testKey');
+        $this->assertEquals($textFrameDeSerialized->getProperties()->getLabel()->getKeyValuePair()->getValue(), 'testValue');
 
     }
 }

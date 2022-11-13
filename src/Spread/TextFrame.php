@@ -8,6 +8,7 @@ use Jvital\Idml\Trait\ContentTypeAttribute;
 use Jvital\Idml\Trait\ItemTransformAttribute;
 use Jvital\Idml\Trait\LockedAttribute;
 use Jvital\Idml\Trait\ParentStoryAttribute;
+use Jvital\Idml\Trait\Properties;
 use Jvital\Idml\Trait\SelfAttribute;
 
 
@@ -22,6 +23,7 @@ class TextFrame
     use ItemTransformAttribute;
     use LockedAttribute;
     use AppliedObjectStyleAttribute;
+    use Properties;
     function __construct($self){
         $this->self = $self;
     }
