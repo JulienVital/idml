@@ -2,9 +2,9 @@
 namespace Jvital\Idml\Enums;
 
 class ContentTypeOptions {
-    const GRAPHIC_TYPE = "GRAPHIC_TYPE";
-    const TEXT_TYPE = "TEXT_TYPE";
-    const UNASSIGNED = "UNASSIGNED";
+    const GRAPHIC_TYPE = "GraphicType";
+    const TEXT_TYPE = "TextType";
+    const UNASSIGNED = "Unassigned";
 }
 
 

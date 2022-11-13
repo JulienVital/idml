@@ -14,23 +14,23 @@ trait AppliedObjectStyleAttribute {
      * @XmlAttribute
      * @SerializedName("AppliedObjectStyle")
      */
-    private string $appliedObjectStyleAttribute;
+    private string $appliedObjectStyle;
 
 
     /**
-     * Get the value of appliedObjectStyleAttribute
+     * Get the value of appliedObjectStyle
      */
-    public function getAppliedObjectStyleAttribute(): string
+    public function getAppliedObjectStyle(): string
     {
-        return $this->appliedObjectStyleAttribute;
+        return $this->appliedObjectStyle;
     }
 
     /**
-     * Set the value of appliedObjectStyleAttribute
+     * Set the value of appliedObjectStyle
      */
-    public function setAppliedObjectStyleAttribute(string $appliedObjectStyleAttribute): self
+    public function setAppliedObjectStyle(string $appliedObjectStyle): self
     {
-        $this->appliedObjectStyleAttribute = $appliedObjectStyleAttribute;
+        $this->appliedObjectStyle = $appliedObjectStyle;
 
         return $this;
     }

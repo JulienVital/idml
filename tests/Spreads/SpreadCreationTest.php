@@ -6,6 +6,7 @@ use Jvital\Idml\Enums\PageTransitionDirectionOptions;
 use Jvital\Idml\Enums\PageTransitionDurationOptions;
 use Jvital\Idml\Enums\PageTransitionTypeOptions;
 use Jvital\Idml\Spread\Spread;
+use Jvital\Idml\Spread\TextFrame;
 use PHPUnit\Framework\TestCase;
 
 class SpreadCreationTest extends TestCase{
@@ -164,5 +165,15 @@ class SpreadCreationTest extends TestCase{
         $spreadSerialized = $this->serializer->serialize($spread, 'xml');
         $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
         $this->assertEquals($spreadDeSerialized->getPageTransitionDuration(),PageTransitionDurationOptions::SLOW);
+    }
+
+    public function testTextFrame(){
+        $spread = new Spread("test");
+        $textFrame = new TextFrame('name');
+        $spread->setTextFrame($textFrame);
+
+        $spreadSerialized = $this->serializer->serialize($spread, 'xml');
+        $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
+        $this->assertEquals($spreadDeSerialized->getTextFrame(),$textFrame);
     }
 }

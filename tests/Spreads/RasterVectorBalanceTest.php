@@ -27,6 +27,7 @@ class RasterVectorBalanceTest extends TestCase{
 
         $rasterVectorBalanceDeSerialized = $this->serializer->deSerialize($rasterVectorBalanceSerialized, RasterVectorBalance::class,'xml');
         $this->assertEquals($rasterVectorBalanceDeSerialized->getType(), "double");
+        $this->assertEquals($rasterVectorBalanceDeSerialized->getValue(), "50");
     }
 
 }
