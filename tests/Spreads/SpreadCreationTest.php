@@ -6,6 +6,7 @@ use Jvital\Idml\Enums\PageTransitionDirectionOptions;
 use Jvital\Idml\Enums\PageTransitionDurationOptions;
 use Jvital\Idml\Enums\PageTransitionTypeOptions;
 use Jvital\Idml\Spread\Spread;
+use Jvital\Idml\Spread\TextFrame;
 use PHPUnit\Framework\TestCase;
 
 class SpreadCreationTest extends TestCase{
@@ -69,13 +70,13 @@ class SpreadCreationTest extends TestCase{
     }
 
     public function testGetItemTransformAfterSerialize(){
-        $itemTransform="1 0 0 1 0 0";
+        $itemTransform="1 0 0 10 0 0";
         $spread = new Spread("test");
 
         // with default value(null)
         $spreadSerialized = $this->serializer->serialize($spread, 'xml');
         $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
-        $this->assertNull($spreadDeSerialized->getItemTransform());
+        $this->assertEquals($spreadDeSerialized->getItemTransform(),"1 0 0 1 0 0" );
 
         //with string value
         $spread->setItemTransform($itemTransform);
@@ -164,5 +165,15 @@ class SpreadCreationTest extends TestCase{
         $spreadSerialized = $this->serializer->serialize($spread, 'xml');
         $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
         $this->assertEquals($spreadDeSerialized->getPageTransitionDuration(),PageTransitionDurationOptions::SLOW);
+    }
+
+    public function testTextFrame(){
+        $spread = new Spread("test");
+        $textFrame = new TextFrame('name');
+        $spread->setTextFrame($textFrame);
+
+        $spreadSerialized = $this->serializer->serialize($spread, 'xml');
+        $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
+        $this->assertEquals($spreadDeSerialized->getTextFrame(),$textFrame);
     }
 }

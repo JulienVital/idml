@@ -9,5 +9,12 @@
     <Page Self="ue2" GeometricBounds="0 0 841.889763778 595.275590551" ItemTransform="1 0 0 1 0 -420.944881889">
       <MarginPreference ColumnCount="1" ColumnGutter="12" Top="28.34645669291339" Bottom="28.34645669291339" Left="0" Right="0" ColumnDirection="Horizontal" ColumnsPositions="0 595.275590551"/>
     </Page>
+    <TextFrame Self="u5a1" ParentStory="u58f" ContentType="TextType" ItemTransform="1 0 0 1 -590.275590551 -415.94488188900004" Locked="false" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]">
+      <Properties>
+        <Label>
+          <KeyValuePair Key="Label" Value="product_249828_block_0"/>
+        </Label>
+      </Properties>
+    </TextFrame>
   </Spread>
 </idPkg:Spread>

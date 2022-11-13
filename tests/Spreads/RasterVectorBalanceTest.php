@@ -8,11 +8,6 @@ use PHPUnit\Framework\TestCase;
 class RasterVectorBalanceTest extends TestCase{
 
     /**
-     * @var string (xml)
-     */
-    protected $xmlExpect;
-
-    /**
      * @var Serializer
      */
     private $serializer;
@@ -20,7 +15,6 @@ class RasterVectorBalanceTest extends TestCase{
     public function __construct(){
         parent::__construct();
         $this->serializer = SerializerBuilder::create()->build();
-        $this->xmlExpect = file_get_contents(__DIR__.'/expects/SpreadIdpkgExpect.xml');
     }
 
     public function testrasterVectorBalance(){
@@ -33,6 +27,7 @@ class RasterVectorBalanceTest extends TestCase{
 
         $rasterVectorBalanceDeSerialized = $this->serializer->deSerialize($rasterVectorBalanceSerialized, RasterVectorBalance::class,'xml');
         $this->assertEquals($rasterVectorBalanceDeSerialized->getType(), "double");
+        $this->assertEquals($rasterVectorBalanceDeSerialized->getValue(), "50");
     }
 
 }

@@ -5,6 +5,7 @@ use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Enums\PageTransitionDirectionOptions;
 use Jvital\Idml\Enums\PageTransitionDurationOptions;
 use Jvital\Idml\Enums\PageTransitionTypeOptions;
+use Jvital\Idml\Spread\MarginPreference;
 use Jvital\Idml\Spread\Page;
 use Jvital\Idml\Spread\Spread;
 use PHPUnit\Framework\TestCase;
@@ -39,5 +40,17 @@ class PageCreationTest extends TestCase{
 
         $pageDeSerialized = $this->serializer->deSerialize($pageSerialized, Page::class,'xml');
         $this->assertEquals($pageDeSerialized->getGeometricBounds(), $geometricBound);
+    }
+
+    public function testMarginPreference(){
+
+        $page = new Page("Page Testname");
+        $marginPreference = new MarginPreference();
+        $marginPreference->setColumnGutter(8);
+        $page->setMarginPreference($marginPreference);
+
+        $pageSerialized = $this->serializer->serialize($page, 'xml');
+        $pageDeSerialized = $this->serializer->deSerialize($pageSerialized, Page::class,'xml');
+        $this->assertEquals($pageDeSerialized->getMarginPreference(), $marginPreference);
     }
 }

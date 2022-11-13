@@ -79,8 +79,10 @@ class FlattenerPreferenceCreationTest extends TestCase{
         $flattenerPreference->setProperties($properties);
         $spreadSerialized = $this->serializer->serialize($flattenerPreference, 'xml');
 
-        $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, FlattenerPreference::class,'xml');
-        $this->assertTrue($spreadDeSerialized-> isConvertAllTextToOutlines());
+        $flattenerPreference = $this->serializer->deSerialize($spreadSerialized, FlattenerPreference::class,'xml');
+        $this->assertTrue($flattenerPreference-> isConvertAllTextToOutlines());
+        $this->assertEquals($flattenerPreference->getProperties(), $properties);
+        $this->assertEquals($flattenerPreference->getProperties()->getRasterVectorBalance(), $rasterVector);
     }
 
 }

@@ -14,6 +14,7 @@ use Jvital\Idml\Trait\ShowMasterItemsAttribute;
 use Jvital\Idml\Trait\PageTransitionDurationAttribute;
 use JMS\Serializer\Annotation\SerializedName;
 use Jvital\Idml\Trait\Page;
+use Jvital\Idml\Trait\TextFrame;
 
 /** 
  * @XmlRoot("Spread") 
@@ -31,6 +32,8 @@ class Spread
     use PageTransitionDirectionAttribute; 
     use PageTransitionDurationAttribute;
     use Page;
+    use TextFrame;
+    
     function __construct($self){
         $this->self = $self;
     }
