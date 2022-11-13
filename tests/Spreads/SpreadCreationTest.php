@@ -69,13 +69,13 @@ class SpreadCreationTest extends TestCase{
     }
 
     public function testGetItemTransformAfterSerialize(){
-        $itemTransform="1 0 0 1 0 0";
+        $itemTransform="1 0 0 10 0 0";
         $spread = new Spread("test");
 
         // with default value(null)
         $spreadSerialized = $this->serializer->serialize($spread, 'xml');
         $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
-        $this->assertNull($spreadDeSerialized->getItemTransform());
+        $this->assertEquals($spreadDeSerialized->getItemTransform(),"1 0 0 1 0 0" );
 
         //with string value
         $spread->setItemTransform($itemTransform);
