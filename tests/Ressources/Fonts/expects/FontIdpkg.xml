@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idPkg:Fonts xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="17.0">
+  <FontFamily Self="di91c" Name="Impact">
+    <Font Status="Unknown" FontType="Unknown" WritingScript="0" Self="di91cFontnImpact Regular" FontFamily="Impact" Name="Impact Regular" PostScriptName="Impact"/>
+  </FontFamily>
+  <FontFamily Self="di91c" Name="Impact">
+    <Font Status="Unknown" FontType="Unknown" WritingScript="0" Self="di91cFontnImpact Regular" FontFamily="Impact" Name="Impact Regular" PostScriptName="Impact"/>
+  </FontFamily>
+</idPkg:Fonts>
