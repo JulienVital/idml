@@ -20,7 +20,7 @@ class GeometryPathType
     /**
      * @SerializedName("PathPointArray")
      */
-    private PathPointArray $PathPointArray;
+    private PathPointArray $pathPointArray;
 
     /**
      * Get the value of pathOpen
@@ -36,6 +36,24 @@ class GeometryPathType
     public function setPathOpen(bool $pathOpen): self
     {
         $this->pathOpen = $pathOpen;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of pathPointArray
+     */
+    public function getPathPointArray(): PathPointArray
+    {
+        return $this->pathPointArray;
+    }
+
+    /**
+     * Set the value of pathPointArray
+     */
+    public function setPathPointArray(PathPointArray $pathPointArray): self
+    {
+        $this->pathPointArray = $pathPointArray;
 
         return $this;
     }
