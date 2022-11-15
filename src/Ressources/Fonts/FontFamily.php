@@ -22,4 +22,22 @@ class FontFamily
      * @XmlList(inline = true, entry = "Font")
      */
     private array $font;
+
+    /**
+     * Get the value of font
+     */
+    public function getFont(): array
+    {
+        return $this->font;
+    }
+
+    /**
+     * Set the value of font
+     */
+    public function setFont(array $font): self
+    {
+        $this->font = $font;
+
+        return $this;
+    }
 }

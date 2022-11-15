@@ -18,4 +18,22 @@ class FontIdpkg extends IdpkgWrapper
      * @XmlList(inline = true, entry = "FontFamily")
      */
     private array $fontFamily;
+
+    /**
+     * Get the value of fontFamily
+     */
+    public function getFontFamily(): array
+    {
+        return $this->fontFamily;
+    }
+
+    /**
+     * Set the value of fontFamily
+     */
+    public function setFontFamily(array $fontFamily): self
+    {
+        $this->fontFamily = $fontFamily;
+
+        return $this;
+    }
 }
