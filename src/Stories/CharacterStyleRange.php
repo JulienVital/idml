@@ -5,12 +5,14 @@ use JMS\Serializer\Annotation\XmlRoot;
 use Jvital\Idml\XML\BackingStory\XmlElement;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlElement as XmlElementJMS;
+use Jvital\Idml\Trait\AppliedCharacterStyle;
 
 /** 
  * @XmlRoot("CharacterStyleRange") 
 */
 class CharacterStyleRange
 {
+    use AppliedCharacterStyle;
     /**
      * @var XmlElement
      * @SerializedName("XMLElement")
