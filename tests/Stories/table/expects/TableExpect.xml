@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Table Self="u7b0i4ad4" HeaderRowCount="0" FooterRowCount="0" TextTopInset="4" TextLeftInset="4" TextBottomInset="4" TextRightInset="4" BodyRowCount="4" ColumnCount="5" AppliedTableStyle="TableStyle/block-articles-table" TableDirection="LeftToRightDirection"/>
+<Table Self="u7b0i4ad4" HeaderRowCount="0" FooterRowCount="0" TextTopInset="4" TextLeftInset="4" TextBottomInset="4" TextRightInset="4" BodyRowCount="4" ColumnCount="5" AppliedTableStyle="TableStyle/block-articles-table" TableDirection="LeftToRightDirection">
+  <Row Self="u7b0i4ad4Column4" Name="4" TextTopInset="1.4173228346456694" TextLeftInset="1.4173228346456694" TextBottomInset="1.4173228346456694" TextRightInset="1.4173228346456694" SingleRowHeight="43.65354330708662"/>
+  <Row Self="u7b0i4ad4Column4" Name="4" TextTopInset="1.4173228346456694" TextLeftInset="1.4173228346456694" TextBottomInset="1.4173228346456694" TextRightInset="1.4173228346456694" SingleRowHeight="43.65354330708662"/>
+  <Column Self="u7b0i4ad4Column4" Name="4" TextTopInset="1.4173228346456694" TextLeftInset="1.4173228346456694" TextBottomInset="1.4173228346456694" TextRightInset="1.4173228346456694" SingleColumnWidth="43.65354330708662"/>
+  <Column Self="u7b0i4ad4Column4" Name="4" TextTopInset="1.4173228346456694" TextLeftInset="1.4173228346456694" TextBottomInset="1.4173228346456694" TextRightInset="1.4173228346456694" SingleColumnWidth="43.65354330708662"/>
+  <Cell Self="u7b0i4ad4i0" Name="0:0" RowSpan="1" ColumnSpan="1" CellType="TextTypeCell" TextTopInset="1.4173228346456694" TextLeftInset="1.4173228346456694" TextBottomInset="1.4173228346456694" TextRightInset="1.4173228346456694" AppliedCellStyle="CellStyle/article-attribute-first">
+    <XMLElement Self="di3i1ci2ai1i2" MarkupTag="XMLTag/cell" XMLContent="u7b0i4ad4i0">
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/article-attribute-first">
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+          <Content>test content</Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+    </XMLElement>
+  </Cell>
+</Table>
