@@ -80,4 +80,14 @@ class CharacterStyleRangeTest extends TestCase
 
   }
 
+
+  public function testSingleColumnWidth(){
+    $serializer = SerializerBuilder::create()->build();
+    $characterStyleRange = new CharacterStyleRange();
+    $characterStyleRange->setAppliedCharacterStyle('CharacterStyle/$ID/[No character style2]');
+    $characterStyleRangeSerialized = $serializer->serialize($characterStyleRange, 'xml');
+    $characterStyleRangeDeserialized = $serializer->deSerialize($characterStyleRangeSerialized, CharacterStyleRange::class,'xml');
+
+    $this->assertEquals($characterStyleRangeDeserialized->getAppliedCharacterStyle(), 'CharacterStyle/$ID/[No character style2]');
+  }
 }
