@@ -26,6 +26,12 @@ class Cell
     use TextTypeCellAttribute;
     use TextCellInsetAttribute;
     use AppliedCellStyleAttribute;
+    /**
+     * @var XmlElement
+     * @SerializedName("XMLElement")
+     */
+    private XmlElement $xmlElement;
+
     // /**
     //  * @XmlAttribute
     //  * @SerializedName("Self")
