@@ -3,13 +3,12 @@ namespace Jvital\Idml\Stories\Table;
 
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\XmlAttribute;
 use Jvital\Idml\Trait\AppliedCellStyleAttribute;
 use Jvital\Idml\Trait\ColumnSpanAttribute;
 use Jvital\Idml\Trait\NameAttribute;
 use Jvital\Idml\Trait\RowSpanAttribute;
 use Jvital\Idml\Trait\SelfAttribute;
-use Jvital\Idml\Trait\TextCellInsetAttribute;
+use Jvital\Idml\Trait\TextTableInsetAttribute;
 use Jvital\Idml\Trait\TextTypeCellAttribute;
 use Jvital\Idml\XML\BackingStory\XmlElement;
 
@@ -24,7 +23,7 @@ class Cell
     use RowSpanAttribute;
     use ColumnSpanAttribute;
     use TextTypeCellAttribute;
-    use TextCellInsetAttribute;
+    use TextTableInsetAttribute;
     use AppliedCellStyleAttribute;
     /**
      * @var XmlElement
@@ -32,58 +31,21 @@ class Cell
      */
     private XmlElement $xmlElement;
 
-    // /**
-    //  * @XmlAttribute
-    //  * @SerializedName("Self")
-    //  */
-    // private string $id;
+    /**
+     * Get the value of xmlElement
+     */
+    public function getXmlElement(): XmlElement
+    {
+        return $this->xmlElement;
+    }
 
-    // /**
-    //  * @XmlAttribute
-    //  * @SerializedName("AppliedTOCStyle")
-    //  */
-    // private string $appliedTOCStyle ='n';
+    /**
+     * Set the value of xmlElement
+     */
+    public function setXmlElement(XmlElement $xmlElement): self
+    {
+        $this->xmlElement = $xmlElement;
 
-    // /**
-    //  * @XmlAttribute
-    //  * @SerializedName("UserText")
-    //  */
-    // private string $userText ='true';
-
-    // /**
-    //  * @XmlAttribute
-    //  * @SerializedName("IsEndnoteStory")
-    //  */
-    // private string $isEndnoteStory ='false';
-
-    // /**
-    //  * @XmlAttribute
-    //  * @SerializedName("TrackChanges")
-    //  */
-    // private string $trackChanges ='false';
-
-    // /**
-    //  * @XmlAttribute
-    //  * @SerializedName("StoryTitle")
-    //  */
-    // private string $storyTitle = '$ID/';
-
-    // /**
-    //  * @XmlAttribute
-    //  * @SerializedName("AppliedNamedGrid")
-    //  */
-    // private string $appliedNamedGrid ='n';
-
-    // /**
-    //  * @SerializedName("ParagraphStyleRange")
-    //  */
-    // private ParagraphStyleRange $paragraphStyleRange;
-
-    // /**
-    //  * @var XmlElement
-    //  * @SerializedName("XMLElement")
-    //  */
-    // private XmlElement $xmlElement;
-
-
+        return $this;
+    }
 }

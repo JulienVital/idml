@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation\SerializedName;
  * The number of columns that the object spans.
  * default value is 1
  */
-trait TextCellInsetAttribute {
+trait TextTableInsetAttribute {
     
     /**
      * @XmlAttribute
