@@ -14,7 +14,7 @@ trait AllowPageShuffleAttribute {
      * @XmlAttribute
      * @SerializedName("AllowPageShuffle")
      */
-    private bool $AllowPageShuffle= true;
+    private bool $allowPageShuffle= true;
 
 
     /**
@@ -22,15 +22,15 @@ trait AllowPageShuffleAttribute {
      */
     public function isAllowPageShuffle(): bool
     {
-        return $this->AllowPageShuffle;
+        return $this->allowPageShuffle;
     }
 
     /**
      * Set the value of allowPageShuffle
      */
-    public function setAllowPageShuffle(bool $AllowPageShuffle): self
+    public function setAllowPageShuffle(bool $allowPageShuffle): self
     {
-        $this->AllowPageShuffle = $AllowPageShuffle;
+        $this->allowPageShuffle = $allowPageShuffle;
 
         return $this;
     }

@@ -18,6 +18,7 @@ class ParagraphStyleTest extends TestCase{
         $this->xmlExpect['ParagraphStyle1'] = file_get_contents(__DIR__.'/expects/ParagraphStyle1.xml');
         $this->xmlExpect['ParagraphStyle2'] = file_get_contents(__DIR__.'/expects/ParagraphStyle2.xml');
         $this->xmlExpect['ParagraphStyle3'] = file_get_contents(__DIR__.'/expects/ParagraphStyle3.xml');
+        $this->xmlExpect['ParagraphStyle4'] = file_get_contents(__DIR__.'/expects/ParagraphStyle4.xml');
     }
 
     public function testDeserializeSerializeIsSame(){
@@ -44,6 +45,13 @@ class ParagraphStyleTest extends TestCase{
         $this->assertEquals($paragraphStyleSerialized, $this->xmlExpect['ParagraphStyle3']);
     }
 
+    public function testDeserializeSerializeIsSame4(){
+
+        $paragraphStyleDeSerialized = $this->serializer->deSerialize($this->xmlExpect['ParagraphStyle4'], ParagraphStyle::class,'xml');
+        $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyleDeSerialized, 'xml');
+
+        $this->assertEquals($paragraphStyleSerialized, $this->xmlExpect['ParagraphStyle4']);
+    }
     public function testImported(){
         $paragraphStyle = new ParagraphStyle();
         $paragraphStyle->setImported(false);
