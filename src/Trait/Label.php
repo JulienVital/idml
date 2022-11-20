@@ -12,7 +12,7 @@ trait Label {
     /**
      * @SerializedName("Label")
      */
-    private SpreadLabel $Label;
+    private SpreadLabel $label;
 
 
     /**
@@ -20,15 +20,15 @@ trait Label {
      */
     public function getLabel(): SpreadLabel
     {
-        return $this->Label;
+        return $this->label;
     }
 
     /**
      * Set the value of Label
      */
-    public function setLabel(SpreadLabel $Label): self
+    public function setLabel(SpreadLabel $label): self
     {
-        $this->Label = $Label;
+        $this->label = $label;
 
         return $this;
     }

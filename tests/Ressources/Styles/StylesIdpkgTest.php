@@ -20,10 +20,10 @@ class StylesIdpkgTest extends TestCase{
 
     public function testDeserializeSerializeIsSame(){
 
-        $fontDeSerialized = $this->serializer->deSerialize($this->xmlExpect['StylesIdpkg'], StylesIdpkg::class,'xml');
-        $fontSerialized = $this->serializer->serialize($fontDeSerialized, 'xml');
+        $StyleDeSerialized = $this->serializer->deSerialize($this->xmlExpect['StylesIdpkg'], StylesIdpkg::class,'xml');
+        $styleSerialized = $this->serializer->serialize($StyleDeSerialized, 'xml');
 
-        $this->assertEquals($fontSerialized, $this->xmlExpect['StylesIdpkg']);
+        $this->assertEquals($styleSerialized, $this->xmlExpect['StylesIdpkg']);
     }
 
     

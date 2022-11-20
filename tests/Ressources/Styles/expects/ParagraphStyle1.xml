@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParagraphStyle Self="ParagraphStyle/Style de paragraphe 1" Name="Style de paragraphe 1" Imported="false" NextStyle="ParagraphStyle/Style de paragraphe 1">
+  <Properties>
+    <BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+  </Properties>
+</ParagraphStyle>
