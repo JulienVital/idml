@@ -3,11 +3,11 @@
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Enums\ContentTypeOptions;
+use Jvital\Idml\Properties\Properties;
 use Jvital\Idml\Spread\KeyValuePair;
 use Jvital\Idml\Spread\Label;
 use Jvital\Idml\Spread\TextFrame;
 use Jvital\Idml\Spread\TextFramePreference;
-use Jvital\Idml\Utils\Properties;
 use PHPUnit\Framework\TestCase;
 
 class TextFrameCreationTest extends TestCase{

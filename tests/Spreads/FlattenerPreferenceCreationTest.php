@@ -1,9 +1,9 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
+use Jvital\Idml\Properties\Properties;
 use Jvital\Idml\Spread\FlattenerPreference;
 use Jvital\Idml\Spread\RasterVectorBalance;
-use Jvital\Idml\Utils\Properties;
 use PHPUnit\Framework\TestCase;
 
 class FlattenerPreferenceCreationTest extends TestCase{

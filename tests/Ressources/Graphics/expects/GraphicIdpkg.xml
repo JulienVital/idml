@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <idPkg:Graphic xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="17.0">
   <Color Model="Process" Space="CMYK" ColorValue="0 0 0 100" ColorOverride="Specialblack" SwatchColorGroupReference="u12ColorGroupSwatch3" SwatchCreatorID="7937" Visible="true" ColorEditable="false" ColorRemovable="false" Self="Color/Black" Name="Black"/>
+  <Color Model="Process" Space="CMYK" ColorValue="0 0 0 100" ColorOverride="Specialblack" SwatchColorGroupReference="u12ColorGroupSwatch3" SwatchCreatorID="7937" Visible="true" ColorEditable="false" ColorRemovable="false" Self="Color/Black" Name="Black"/>
 </idPkg:Graphic>
