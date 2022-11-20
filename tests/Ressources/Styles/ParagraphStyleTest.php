@@ -17,6 +17,7 @@ class ParagraphStyleTest extends TestCase{
         $this->serializer = SerializerBuilder::create()->build();
         $this->xmlExpect['ParagraphStyle1'] = file_get_contents(__DIR__.'/expects/ParagraphStyle1.xml');
         $this->xmlExpect['ParagraphStyle2'] = file_get_contents(__DIR__.'/expects/ParagraphStyle2.xml');
+        $this->xmlExpect['ParagraphStyle3'] = file_get_contents(__DIR__.'/expects/ParagraphStyle3.xml');
     }
 
     public function testDeserializeSerializeIsSame(){
@@ -33,6 +34,14 @@ class ParagraphStyleTest extends TestCase{
         $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyleDeSerialized, 'xml');
 
         $this->assertEquals($paragraphStyleSerialized, $this->xmlExpect['ParagraphStyle2']);
+    }
+
+    public function testDeserializeSerializeIsSame3(){
+
+        $paragraphStyleDeSerialized = $this->serializer->deSerialize($this->xmlExpect['ParagraphStyle3'], ParagraphStyle::class,'xml');
+        $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyleDeSerialized, 'xml');
+
+        $this->assertEquals($paragraphStyleSerialized, $this->xmlExpect['ParagraphStyle3']);
     }
 
     public function testImported(){
