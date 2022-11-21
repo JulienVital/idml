@@ -19,6 +19,7 @@ class ParagraphStyleTest extends TestCase{
         $this->xmlExpect['ParagraphStyle2'] = file_get_contents(__DIR__.'/expects/ParagraphStyle2.xml');
         $this->xmlExpect['ParagraphStyle3'] = file_get_contents(__DIR__.'/expects/ParagraphStyle3.xml');
         $this->xmlExpect['ParagraphStyle4'] = file_get_contents(__DIR__.'/expects/ParagraphStyle4.xml');
+        $this->xmlExpect['ParagraphStyle5'] = file_get_contents(__DIR__.'/expects/ParagraphStyle5.xml');
     }
 
     public function testDeserializeSerializeIsSame(){
@@ -51,6 +52,14 @@ class ParagraphStyleTest extends TestCase{
         $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyleDeSerialized, 'xml');
 
         $this->assertEquals($paragraphStyleSerialized, $this->xmlExpect['ParagraphStyle4']);
+    }
+
+    public function testDeserializeSerializeIsSame5(){
+
+        $paragraphStyleDeSerialized = $this->serializer->deSerialize($this->xmlExpect['ParagraphStyle5'], ParagraphStyle::class,'xml');
+        $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyleDeSerialized, 'xml');
+
+        $this->assertEquals($paragraphStyleSerialized, $this->xmlExpect['ParagraphStyle5']);
     }
 
     public function testImported(){
@@ -222,5 +231,59 @@ class ParagraphStyleTest extends TestCase{
         $paragraphStyleDeSerialized = $this->serializer->deSerialize($paragraphStyleSerialized, ParagraphStyle::class,'xml');
 
         $this->assertEquals($paragraphStyleDeSerialized->getBaselineShift(), 12);
+    }
+    
+    public function testParagraphBorderOn(){
+        $paragraphStyle = new ParagraphStyle();
+        $paragraphStyle->setParagraphBorderOn(true);
+        $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyle, 'xml');
+        $paragraphStyleDeSerialized = $this->serializer->deSerialize($paragraphStyleSerialized, ParagraphStyle::class,'xml');
+
+        $this->assertEquals($paragraphStyleDeSerialized->isParagraphBorderOn(), true);
+    }
+
+    public function testParagraphBorderOnFalse(){
+        $paragraphStyle = new ParagraphStyle();
+        $paragraphStyle->setParagraphBorderOn(false);
+        $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyle, 'xml');
+        $paragraphStyleDeSerialized = $this->serializer->deSerialize($paragraphStyleSerialized, ParagraphStyle::class,'xml');
+
+        $this->assertEquals($paragraphStyleDeSerialized->isParagraphBorderOn(), false);
+    }
+
+    public function testParagraphBorderTopLineWeight(){
+        $paragraphStyle = new ParagraphStyle();
+        $paragraphStyle->setParagraphBorderTopLineWeight(12);
+        $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyle, 'xml');
+        $paragraphStyleDeSerialized = $this->serializer->deSerialize($paragraphStyleSerialized, ParagraphStyle::class,'xml');
+
+        $this->assertEquals($paragraphStyleDeSerialized->getParagraphBorderTopLineWeight(), 12);
+    }
+
+    public function testParagraphBorderBottomLineWeight(){
+        $paragraphStyle = new ParagraphStyle();
+        $paragraphStyle->setParagraphBorderBottomLineWeight(10);
+        $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyle, 'xml');
+        $paragraphStyleDeSerialized = $this->serializer->deSerialize($paragraphStyleSerialized, ParagraphStyle::class,'xml');
+
+        $this->assertEquals($paragraphStyleDeSerialized->getParagraphBorderBottomLineWeight(), 10);
+    }
+
+    public function testParagraphBorderLeftLineWeight(){
+        $paragraphStyle = new ParagraphStyle();
+        $paragraphStyle->setParagraphBorderLeftLineWeight(11);
+        $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyle, 'xml');
+        $paragraphStyleDeSerialized = $this->serializer->deSerialize($paragraphStyleSerialized, ParagraphStyle::class,'xml');
+
+        $this->assertEquals($paragraphStyleDeSerialized->getParagraphBorderLeftLineWeight(), 11);
+    }
+
+    public function testParagraphBorderRightLineWeight(){
+        $paragraphStyle = new ParagraphStyle();
+        $paragraphStyle->setParagraphBorderRightLineWeight(3);
+        $paragraphStyleSerialized = $this->serializer->serialize($paragraphStyle, 'xml');
+        $paragraphStyleDeSerialized = $this->serializer->deSerialize($paragraphStyleSerialized, ParagraphStyle::class,'xml');
+
+        $this->assertEquals($paragraphStyleDeSerialized->getParagraphBorderRightLineWeight(), 3);
     }
 }

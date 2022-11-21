@@ -5,6 +5,8 @@ use Jvital\Idml\Properties\Properties;
 use Jvital\Idml\Properties\Value\AppliedFont;
 use Jvital\Idml\Properties\Value\BasedOn;
 use Jvital\Idml\Properties\Value\Leading;
+use Jvital\Idml\Properties\Value\ParagraphBorderColor;
+use Jvital\Idml\Properties\Value\ParagraphBorderType;
 use PHPUnit\Framework\TestCase;
 
 class PropertiesTest extends TestCase{
@@ -68,5 +70,33 @@ class PropertiesTest extends TestCase{
 
         $this->assertEquals($propertyDeSerialized->getLeading()->getType(), 'unit');
         $this->assertEquals($propertyDeSerialized->getLeading()->getValue(), 25);
+    }
+
+    public function testParagraphBorderColor(){
+        $property = new Properties();
+        $paragraphBorderColorValue = new ParagraphBorderColor(); 
+        $paragraphBorderColorValue->setType('object');
+        $paragraphBorderColorValue->setValue(25);
+        $property->setParagraphBorderColor($paragraphBorderColorValue);
+
+        $propertySerialized = $this->serializer->serialize($property, 'xml');
+        $propertyDeSerialized = $this->serializer->deSerialize($propertySerialized, Properties::class,'xml');
+
+        $this->assertEquals($propertyDeSerialized->getParagraphBorderColor()->getType(), 'object');
+        $this->assertEquals($propertyDeSerialized->getParagraphBorderColor()->getValue(), 25);
+    }
+
+    public function testParagraphBorderType(){
+        $property = new Properties();
+        $paragraphBorderTypeValue = new ParagraphBorderType(); 
+        $paragraphBorderTypeValue->setType('StrokeStyle/$ID/ThickThick');
+        $paragraphBorderTypeValue->setValue(25);
+        $property->setParagraphBorderType($paragraphBorderTypeValue);
+
+        $propertySerialized = $this->serializer->serialize($property, 'xml');
+        $propertyDeSerialized = $this->serializer->deSerialize($propertySerialized, Properties::class,'xml');
+
+        $this->assertEquals($propertyDeSerialized->getParagraphBorderType()->getType(), 'StrokeStyle/$ID/ThickThick');
+        $this->assertEquals($propertyDeSerialized->getParagraphBorderType()->getValue(), 25);
     }
 }

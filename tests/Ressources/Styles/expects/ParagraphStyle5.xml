@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParagraphStyle Self="ParagraphStyle/Style de paragraphe 5" Name="Style de paragraphe 5" Imported="false" NextStyle="ParagraphStyle/Style de paragraphe 5" ParagraphBorderOn="true" ParagraphBorderTopLineWeight="2" ParagraphBorderBottomLineWeight="2" ParagraphBorderLeftLineWeight="2" ParagraphBorderRightLineWeight="2">
+  <Properties>
+    <ParagraphBorderColor type="object">Color/#e43e10</ParagraphBorderColor>
+    <ParagraphBorderType type="object">StrokeStyle/$ID/ThickThick</ParagraphBorderType>
+  </Properties>
+</ParagraphStyle>

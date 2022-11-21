@@ -12,6 +12,11 @@ use Jvital\Idml\Trait\LastLineIndentAttribute;
 use Jvital\Idml\Trait\LeftIndentAttribute;
 use Jvital\Idml\Trait\NameAttribute;
 use Jvital\Idml\Trait\NextStyleAttribute;
+use Jvital\Idml\Trait\ParagraphBorderBottomLineWeightAttribute;
+use Jvital\Idml\Trait\ParagraphBorderLeftLineWeightAttribute;
+use Jvital\Idml\Trait\ParagraphBorderOnAttribute;
+use Jvital\Idml\Trait\ParagraphBorderRightLineWeightAttribute;
+use Jvital\Idml\Trait\ParagraphBorderTopLineWeightAttribute;
 use Jvital\Idml\Trait\PointSizeAttribute;
 use Jvital\Idml\Trait\Properties;
 use Jvital\Idml\Trait\RightIndentAttribute;
@@ -50,5 +55,10 @@ class ParagraphStyle{
     use SpaceBeforeAttribute; 
     use SpaceAfterAttribute; 
     use LastLineIndentAttribute; 
-    use JustificationAttribute; 
+    use JustificationAttribute;
+    use ParagraphBorderOnAttribute;
+    use ParagraphBorderTopLineWeightAttribute;
+    use ParagraphBorderBottomLineWeightAttribute;
+    use ParagraphBorderLeftLineWeightAttribute;
+    use ParagraphBorderRightLineWeightAttribute;
 }
