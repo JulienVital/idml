@@ -61,5 +61,4 @@ class ParagraphStyle{
     use ParagraphBorderBottomLineWeightAttribute;
     use ParagraphBorderLeftLineWeightAttribute;
     use ParagraphBorderRightLineWeightAttribute;
-    
 }
