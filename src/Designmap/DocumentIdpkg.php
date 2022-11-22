@@ -35,4 +35,8 @@ class DocumentIdpkg extends IdpkgWrapper
     */
     private IdpkgStyles $styles;
 
+    /**
+    * @SerializedName("idPkg:Tags")
+    */
+    private IdpkgTags $tags;
 }

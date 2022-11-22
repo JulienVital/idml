@@ -3,4 +3,5 @@
   <idPkg:Graphic src="Resources/Graphic.xml"/>
   <idPkg:Fonts src="Resources/Fonts.xml"/>
   <idPkg:Styles src="Resources/Styles.xml"/>
+  <idPkg:Tags src="XML/Tags.xml"/>
 </Document>
