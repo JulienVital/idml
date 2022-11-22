@@ -5,7 +5,7 @@ use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\SerializedName;
 
 /**
- * This trait add a FirstLine Attribute
+ * This trait add a FirstLineIndent Attribute
  */
 trait FirstLineIndentAttribute {
     
@@ -13,22 +13,22 @@ trait FirstLineIndentAttribute {
      * @XmlAttribute
      * @SerializedName("FirstLineIndent")
      */
-    private string $firstLineIndentAttribute;
+    private string $firstLineIndent;
 
     /**
-     * Get the value of firstLineIndentAttribute
+     * Get the value of firstLineIndent
      */
-    public function getFirstLineIndentAttribute(): string
+    public function getFirstLineIndent(): string
     {
-        return $this->firstLineIndentAttribute;
+        return $this->firstLineIndent;
     }
 
     /**
      * Set the value of firstLineIndentAttribute
      */
-    public function setFirstLineIndentAttribute(string $firstLineIndentAttribute): self
+    public function setFirstLineIndent(string $firstLineIndent): self
     {
-        $this->firstLineIndentAttribute = $firstLineIndentAttribute;
+        $this->firstLineIndent = $firstLineIndent;
 
         return $this;
     }

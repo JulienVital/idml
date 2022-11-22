@@ -6,6 +6,8 @@ use Jvital\Idml\Trait\AppliedFontValue;
 use Jvital\Idml\Trait\BasedOnValue;
 use Jvital\Idml\Trait\Label;
 use Jvital\Idml\Trait\LeadingValue;
+use Jvital\Idml\Trait\ParagraphBorderColorValue;
+use Jvital\Idml\Trait\ParagraphBorderTypeValue;
 use Jvital\Idml\Trait\RasterVectorBalance;
 
 /** 
@@ -18,4 +20,6 @@ class Properties
     use BasedOnValue;
     use LeadingValue;
     use AppliedFontValue;
+    use ParagraphBorderColorValue;
+    use ParagraphBorderTypeValue;
 }
