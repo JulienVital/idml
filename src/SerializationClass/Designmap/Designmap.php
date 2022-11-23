@@ -14,7 +14,7 @@ use Jvital\Idml\SerializationClass\Utils\IdpkgWrapper;
 /** 
  * @XmlRoot("Document") 
 */
-class DocumentIdpkg extends IdpkgWrapper
+class Designmap extends IdpkgWrapper
 {
 
     use SelfAttribute;
@@ -25,12 +25,12 @@ class DocumentIdpkg extends IdpkgWrapper
     /**
     * @SerializedName("idPkg:Graphic")
     */
-    private idPkgGraphic $graphic;
+    private IdpkgGraphic $graphic;
 
     /**
     * @SerializedName("idPkg:Fonts")
     */
-    private idPkgFonts $fonts;
+    private IdpkgFonts $fonts;
 
     /**
     * @SerializedName("idPkg:Styles")
@@ -43,6 +43,11 @@ class DocumentIdpkg extends IdpkgWrapper
     private IdpkgTags $tags;
 
     /**
+    * @SerializedName("idPkg:BackingStory")
+    */
+    private IdpkgBackingStory $backingStory;
+
+    /**
     * @Type("array<Jvital\Idml\SerializationClass\Designmap\IdpkgSpread>")
     * @XmlList(inline = true, entry = "idPkg:Spread")
     */
@@ -53,4 +58,13 @@ class DocumentIdpkg extends IdpkgWrapper
     * @XmlList(inline = true, entry = "idPkg:Story")
     */
     private array $stories;
+
+    public function __construct()
+    {
+        $this->graphic = new IdpkgGraphic();
+        $this->fonts = new IdpkgFonts();
+        $this->styles = new IdpkgStyles();
+        $this->tags = new IdpkgTags();
+        $this->backingStory = new IdpkgBackingStory();
+    }
 }
