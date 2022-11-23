@@ -3,4 +3,9 @@
   <idPkg:Graphic src="Resources/Graphic.xml"/>
   <idPkg:Fonts src="Resources/Fonts.xml"/>
   <idPkg:Styles src="Resources/Styles.xml"/>
+  <idPkg:Tags src="XML/Tags.xml"/>
+  <idPkg:Spread src="Spreads/Spread_u106.xml"/>
+  <idPkg:Spread src="Spreads/Spread_u10d.xml"/>
+  <idPkg:Story src="Stories/Story_u229.xml"/>
+  <idPkg:Story src="Stories/Story_u212.xml"/>
 </Document>

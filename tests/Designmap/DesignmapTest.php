@@ -24,4 +24,14 @@ class DesignmapTest extends TestCase{
 
         $this->assertEquals($propertiesSerialized, $this->xmlExpect['deisgnmapExpect']);
     }
+
+    public function testStoryList(){
+        $designmap = new DocumentIdpkg();
+        $designmap->setStoryList("u115 u12b u141 u157 u16d u1b3 u1cd u1e4 u1fb u212 u229 u97");
+
+        $designmapSerialized = $this->serializer->serialize($designmap, 'xml');
+        $designmapDeSerialized = $this->serializer->deSerialize($designmapSerialized, DocumentIdpkg::class,'xml');
+
+        $this->assertEquals($designmapDeSerialized->getStoryList(), 'u115 u12b u141 u157 u16d u1b3 u1cd u1e4 u1fb u212 u229 u97');
+    }
 }
