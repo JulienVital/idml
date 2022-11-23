@@ -8,7 +8,7 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /** 
  * @XmlRoot("idPkgGraphic") 
 */
-class idPkgGraphic {
+class IdpkgGraphic {
     /**
     * @SerializedName("src")
     * @XmlAttribute
