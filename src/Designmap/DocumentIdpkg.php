@@ -3,6 +3,8 @@ namespace Jvital\Idml\Designmap;
 
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\XmlList;
+use JMS\Serializer\Annotation\Type;
 use Jvital\Idml\Trait\NameAttribute;
 use Jvital\Idml\Trait\SelfAttribute;
 use Jvital\Idml\Trait\StoryListAttribute;
@@ -39,4 +41,16 @@ class DocumentIdpkg extends IdpkgWrapper
     * @SerializedName("idPkg:Tags")
     */
     private IdpkgTags $tags;
+
+    /**
+    * @Type("array<Jvital\Idml\Designmap\IdpkgSpread>")
+    * @XmlList(inline = true, entry = "idPkg:Spread")
+    */
+    private array $spreads;
+
+    /**
+    * @Type("array<Jvital\Idml\Designmap\IdpkgStory>")
+    * @XmlList(inline = true, entry = "idPkg:Story")
+    */
+    private array $stories;
 }
