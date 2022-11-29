@@ -7,8 +7,8 @@ class IdmlDocument{
 
     private string $targetFolder;
 
-    public function __construct(){
-        $this->setName(uniqid());
+    public function __construct($name){
+        $this->name= $name;
     }
 
     public function generate($targetFolder){
@@ -23,16 +23,6 @@ class IdmlDocument{
     public function getName(): string
     {
         return $this->name;
-    }
-
-    /**
-     * Set the value of name
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
     }
 
     /**

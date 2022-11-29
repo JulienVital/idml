@@ -18,8 +18,7 @@ class CreateIdmlTest extends TestCase{
   }
   private function generateBaseDocument(string $nameDocument):IdmlDocument{
 
-    $idml = new IdmlDocument();
-    $idml->setName($nameDocument);
+    $idml = new IdmlDocument($nameDocument);
     $idml->generate(self::TARGET_FOLDER);
     return $idml;
   }
