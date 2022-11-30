@@ -5,15 +5,13 @@ class IdmlDocument{
     
     private string $name;
 
-    private string $targetFolder;
 
     public function __construct($name){
         $this->name= $name;
     }
 
     public function generate($targetFolder){
-        $this->targetFolder = $targetFolder;
-        $maker = new Maker($this);
+        $maker = new Maker($this, $targetFolder);
 
         $maker->exec();
     }
@@ -25,21 +23,5 @@ class IdmlDocument{
         return $this->name;
     }
 
-    /**
-     * Get the value of targetFolder
-     */
-    public function getTargetFolder(): string
-    {
-        return $this->targetFolder;
-    }
 
-    /**
-     * Set the value of targetFolder
-     */
-    public function setTargetFolder(string $targetFolder): self
-    {
-        $this->targetFolder = $targetFolder;
-
-        return $this;
-    }
 }

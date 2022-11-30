@@ -5,6 +5,8 @@ use Jvital\Idml\Builder\IdmlDocument;
 use Jvital\Idml\SerializationClass\Designmap\Designmap;
 use PHPUnit\Framework\TestCase;
 
+use function PHPUnit\Framework\fileExists;
+
 class CreateIdmlTest extends TestCase{
 
   const TARGET_FOLDER = './temp';
@@ -16,6 +18,7 @@ class CreateIdmlTest extends TestCase{
   protected function tearDown():void{
     $this->deleteRecursiveFolder(self::TARGET_FOLDER);
   }
+
   private function generateBaseDocument(string $nameDocument):IdmlDocument{
 
     $idml = new IdmlDocument($nameDocument);
@@ -30,6 +33,7 @@ class CreateIdmlTest extends TestCase{
     return rmdir($directory);
   }
 
+
   public function testCreationFolder(){
     $namefile = 'testFile';
 
@@ -38,35 +42,29 @@ class CreateIdmlTest extends TestCase{
     $this->assertTrue(is_dir("./temp/$namefile"));
   }
 
-  public function testCreationFolderRawFolder(){
+  public function testCreationFile(){
     $namefile = 'testFile';
 
     $this->generateBaseDocument($namefile);
     
-    $this->assertTrue(is_dir("./temp/$namefile/raw"));
+    $this->assertFileExists("./temp/$namefile.idml");
   }
 
-  public function testMetaInf(){
-    $namefile = 'testFile';
-
-    $this->generateBaseDocument($namefile);
-    
-    $this->assertTrue(is_dir(self::TARGET_FOLDER."/$namefile/raw/META-INF"));
-  }
 
   public function testMetaInfContainer(){
     $namefile = 'testFile';
 
     $this->generateBaseDocument($namefile);
-    
-    $this->assertTrue(file_exists(self::TARGET_FOLDER."/$namefile/raw/META-INF/container.xml"));
+    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#META-INF/container.xml");
+    $this->assertEquals($containerXml, file_get_contents('src/Builder/rawFiles/META-INF/container.xml'));
   }
 
   public function testMimetype(){
     $namefile = 'testFile';
 
     $this->generateBaseDocument($namefile);
+    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#mimetype");
+    $this->assertEquals($containerXml, file_get_contents('src/Builder/rawFiles/mimetype'));
     
-    $this->assertTrue(file_exists(self::TARGET_FOLDER."/$namefile/raw/mimetype"));
   }
 }
