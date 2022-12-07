@@ -3,6 +3,10 @@
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Builder\IdmlDocument;
 use Jvital\Idml\SerializationClass\Designmap\Designmap;
+use Jvital\Idml\SerializationClass\Designmap\IdpkgBackingStory;
+use Jvital\Idml\SerializationClass\Ressources\Fonts\FontIdpkg;
+use Jvital\Idml\SerializationClass\Ressources\Graphics\GraphicIdpkg;
+use Jvital\Idml\SerializationClass\Ressources\Styles\StylesIdpkg;
 use PHPUnit\Framework\TestCase;
 
 use function PHPUnit\Framework\fileExists;
@@ -34,14 +38,6 @@ class CreateIdmlTest extends TestCase{
   }
 
 
-  public function testCreationFolder(){
-    $namefile = 'testFile';
-
-    $this->generateBaseDocument($namefile);
-    
-    $this->assertTrue(is_dir("./temp/$namefile"));
-  }
-
   public function testCreationFile(){
     $namefile = 'testFile';
 
@@ -67,4 +63,49 @@ class CreateIdmlTest extends TestCase{
     $this->assertEquals($containerXml, file_get_contents('src/Builder/rawFiles/mimetype'));
     
   }
+
+  public function testBackingStory(){
+    $namefile = 'testFile';
+
+    $this->generateBaseDocument($namefile);
+    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#XML/BackingStory.xml");
+    $serializer = SerializerBuilder::create()->build();
+    $backingStorySerialized = $serializer->serialize(new IdpkgBackingStory(), 'xml');
+    $this->assertEquals($containerXml, $backingStorySerialized);
+    
+  }
+
+  public function testFontIdpkg(){
+    $namefile = 'testFile';
+
+    $this->generateBaseDocument($namefile);
+    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#Ressources/Fonts.xml");
+    $serializer = SerializerBuilder::create()->build();
+    $fontSerialized = $serializer->serialize(new FontIdpkg(), 'xml');
+    $this->assertEquals($containerXml, $fontSerialized);
+    
+  }
+
+  public function testgraphicIdpkg(){
+    $namefile = 'testFile';
+
+    $this->generateBaseDocument($namefile);
+    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#Ressources/Graphic.xml");
+    $serializer = SerializerBuilder::create()->build();
+    $graphicSerialized = $serializer->serialize(new GraphicIdpkg(), 'xml');
+    $this->assertEquals($containerXml, $graphicSerialized);
+    
+  }
+
+  public function teststylesIdpkg(){
+    $namefile = 'testFile';
+
+    $this->generateBaseDocument($namefile);
+    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#Ressources/Styles.xml");
+    $serializer = SerializerBuilder::create()->build();
+    $stylesSerialized = $serializer->serialize(new StylesIdpkg(), 'xml');
+    $this->assertEquals($containerXml, $stylesSerialized);
+    
+  }
+
 }
