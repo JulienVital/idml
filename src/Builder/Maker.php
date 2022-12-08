@@ -6,20 +6,13 @@ use JMS\Serializer\SerializerBuilder;
 use ZipArchive;
 
 class Maker{
-    const RAW_FOLDER = '/raw';
     
     private IdmlDocument $document;
 
     public function __construct(IdmlDocument $document, $targetFolder){
         $this->document = $document;
         $this->targetFolder = $targetFolder;
-        mkdir($this->getRootFolder(),0775, true);
     }
-
-    private function getRootFolder():string{
-        return $this->targetFolder.'/'.$this->getDocument()->getName();
-    }
-
 
     public function exec(){
         

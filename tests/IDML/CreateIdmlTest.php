@@ -13,10 +13,11 @@ use function PHPUnit\Framework\fileExists;
 
 class CreateIdmlTest extends TestCase{
 
-  const TARGET_FOLDER = './temp';
+  const TARGET_FOLDER = './temp/';
 
-  public function __construct(){
-    parent::__construct();
+  protected function setUp():void{
+    mkdir(self::TARGET_FOLDER,0775, true);
+
   }
 
   protected function tearDown():void{
