@@ -79,7 +79,7 @@ class CreateIdmlTest extends TestCase{
     $namefile = 'testFile';
 
     $this->generateBaseDocument($namefile);
-    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#Ressources/Fonts.xml");
+    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#Resources/Fonts.xml");
     $serializer = SerializerBuilder::create()->build();
     $fontSerialized = $serializer->serialize(new FontIdpkg(), 'xml');
     $this->assertEquals($containerXml, $fontSerialized);
@@ -90,7 +90,7 @@ class CreateIdmlTest extends TestCase{
     $namefile = 'testFile';
 
     $this->generateBaseDocument($namefile);
-    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#Ressources/Graphic.xml");
+    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#Resources/Graphic.xml");
     $serializer = SerializerBuilder::create()->build();
     $graphicSerialized = $serializer->serialize(new GraphicIdpkg(), 'xml');
     $this->assertEquals($containerXml, $graphicSerialized);
@@ -101,7 +101,7 @@ class CreateIdmlTest extends TestCase{
     $namefile = 'testFile';
 
     $this->generateBaseDocument($namefile);
-    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#Ressources/Styles.xml");
+    $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#Resources/Styles.xml");
     $serializer = SerializerBuilder::create()->build();
     $stylesSerialized = $serializer->serialize(new StylesIdpkg(), 'xml');
     $this->assertEquals($containerXml, $stylesSerialized);

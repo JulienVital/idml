@@ -1,6 +1,7 @@
 <?php
 namespace Jvital\Idml\Builder;
 
+use Jvital\Idml\SerializationClass\Designmap\Designmap;
 use Jvital\Idml\SerializationClass\Designmap\IdpkgBackingStory;
 use Jvital\Idml\SerializationClass\Designmap\IdpkgStyles;
 use Jvital\Idml\SerializationClass\Ressources\Fonts\FontIdpkg;
@@ -14,6 +15,7 @@ class IdmlDocument{
     private FontIdpkg $fonts;
     private GraphicIdpkg $graphic;
     private StylesIdpkg $styles;
+    private Designmap $designMap;
 
     public function __construct($name){
         $this->name= $name;
@@ -21,6 +23,7 @@ class IdmlDocument{
         $this->fonts = new FontIdpkg();
         $this->graphic = new GraphicIdpkg();
         $this->styles = new StylesIdpkg();
+        $this->designMap = new Designmap();
     }
 
     public function generate($targetFolder){
@@ -66,5 +69,13 @@ class IdmlDocument{
     public function getStyles(): StylesIdpkg
     {
         return $this->styles;
+    }
+
+    /**
+     * Get the value of designMap
+     */
+    public function getDesignMap(): Designmap
+    {
+        return $this->designMap;
     }
 }

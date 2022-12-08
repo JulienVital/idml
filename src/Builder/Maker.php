@@ -36,11 +36,13 @@ class Maker{
             $styleSerialized = $serializer->serialize($this->document->getBackingStory(), 'xml');
             $zip->addFromString("XML/BackingStory.xml", $styleSerialized);
             $styleSerialized = $serializer->serialize($this->document->getFonts(), 'xml');
-            $zip->addFromString("Ressources/Fonts.xml", $styleSerialized);
+            $zip->addFromString("Resources/Fonts.xml", $styleSerialized);
             $styleSerialized = $serializer->serialize($this->document->getGraphic(), 'xml');
-            $zip->addFromString("Ressources/Graphic.xml", $styleSerialized);
+            $zip->addFromString("Resources/Graphic.xml", $styleSerialized);
             $styleSerialized = $serializer->serialize($this->document->getStyles(), 'xml');
-            $zip->addFromString("Ressources/Styles.xml", $styleSerialized);
+            $zip->addFromString("Resources/Styles.xml", $styleSerialized);
+            $styleSerialized = $serializer->serialize($this->document->getDesignMap(), 'xml');
+            $zip->addFromString("designmap.xml", $styleSerialized);
             $zip->close();
         }
         else
