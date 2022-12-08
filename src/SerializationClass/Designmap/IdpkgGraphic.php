@@ -13,5 +13,5 @@ class IdpkgGraphic {
     * @SerializedName("src")
     * @XmlAttribute
     */
-    private string $src='Resources/Fonts.xml';
+    private string $src='Resources/Graphic.xml';
 }
