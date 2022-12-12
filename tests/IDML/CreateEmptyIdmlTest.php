@@ -2,16 +2,14 @@
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Builder\IdmlDocument;
-use Jvital\Idml\SerializationClass\Designmap\Designmap;
 use Jvital\Idml\SerializationClass\Designmap\IdpkgBackingStory;
 use Jvital\Idml\SerializationClass\Ressources\Fonts\FontIdpkg;
 use Jvital\Idml\SerializationClass\Ressources\Graphics\GraphicIdpkg;
 use Jvital\Idml\SerializationClass\Ressources\Styles\StylesIdpkg;
 use PHPUnit\Framework\TestCase;
 
-use function PHPUnit\Framework\fileExists;
 
-class CreateIdmlTest extends TestCase{
+class CreateEmptyIdmlTest extends TestCase{
 
   const TARGET_FOLDER = './temp/';
 
@@ -109,4 +107,13 @@ class CreateIdmlTest extends TestCase{
     
   }
 
+  public function testLaunchExceptionIfCantOpen(){
+    $namefile = 'testFile';
+
+    $idml = new IdmlDocument($namefile);
+
+    $this->expectExceptionMessage('Cant create ZipFile');
+    $idml->generate('/');
+    
+  }
 }

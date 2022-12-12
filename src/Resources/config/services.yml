@@ -1,5 +1,0 @@
-services:
-    serializer_listener.article:
-        class: AppBundle\Serializer\Listener\ArticleListener
-        tags:
-            - { name: jms_serializer.event_subscriber }

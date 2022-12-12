@@ -7,6 +7,7 @@ use Jvital\Idml\SerializationClass\Designmap\IdpkgStyles;
 use Jvital\Idml\SerializationClass\Ressources\Fonts\FontIdpkg;
 use Jvital\Idml\SerializationClass\Ressources\Graphics\GraphicIdpkg;
 use Jvital\Idml\SerializationClass\Ressources\Styles\StylesIdpkg;
+use Jvital\Idml\SerializationClass\XML\Tags\Tags;
 
 class IdmlDocument{
     
@@ -18,18 +19,19 @@ class IdmlDocument{
     private Designmap $designMap;
 
     public function __construct($name){
-        $this->name= $name;
+        $this->name = $name;
         $this->backingStory = new IdpkgBackingStory();
         $this->fonts = new FontIdpkg();
         $this->graphic = new GraphicIdpkg();
         $this->styles = new StylesIdpkg();
         $this->designMap = new Designmap();
+        $this->tags = new Tags();
     }
 
     public function generate($targetFolder){
         $maker = new Maker($this, $targetFolder);
 
-        $maker->exec();
+        $maker->generate();
     }
     /**
      * Get the value of name
@@ -77,5 +79,13 @@ class IdmlDocument{
     public function getDesignMap(): Designmap
     {
         return $this->designMap;
+    }
+
+    /**
+     * Get the value of designMap
+     */
+    public function getTags(): Tags
+    {
+        return $this->tags;
     }
 }
