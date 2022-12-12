@@ -2,54 +2,69 @@
 namespace Jvital\Idml\Builder;
 
 use Exception;
+use JMS\Serializer\SerializerBuilder;
 use ZipArchive;
 
 class Maker{
-    const RAW_FOLDER = '/raw';
     
-    private IdmlDocument $document;
+    private IdmlDocument $idmlDocument;
+    const GRAPHIC_PATH = "Resources/Graphic.xml";
+    const FONTS_PATH = "Resources/Fonts.xml";
+    const STYLES_PATH = "Resources/Styles.xml";
+    const BACKINGSTORY_PATH = "XML/BackingStory.xml";
+    const TAGS_PATH = "XML/Tags.xml";
 
     public function __construct(IdmlDocument $document, $targetFolder){
-        $this->document = $document;
+        $this->idmlDocument = $document;
         $this->targetFolder = $targetFolder;
-        mkdir($this->getRootFolder(),0775, true);
-        mkdir($this->getRawFolder(),0775, true);
     }
 
-    private function getRootFolder():string{
-        return $this->targetFolder.'/'.$this->getDocument()->getName();
-    }
-
-    private function getRawFolder():string{
-        return $this->getRootFolder().self::RAW_FOLDER;
-    }
-
-
-    public function exec(){
+    public function generate(){
         
-        $document =$this->document ; 
-        $filename = $document->getName() ;
+        $document = $this->getDocument() ; 
+        $documentName = $document->getName() ;
 
         $zip = new ZipArchive(); 
-        if($zip->open($this->targetFolder."/$filename.idml", ZipArchive::CREATE) == TRUE)
-        {
-        $zip->addFile(__DIR__."/rawFiles/META-INF/container.xml", "META-INF/container.xml");
-        $zip->addFile(__DIR__."/rawFiles/mimetype", "mimetype");
 
-        $zip->close();
-        }
-        else
+        $serializer = SerializerBuilder::create()->build();
+        try{
+            if($zip->open($this->targetFolder."/$documentName.idml", ZipArchive::CREATE) == TRUE)
+            {
+                $zip->addFile(__DIR__."/rawFiles/META-INF/container.xml", "META-INF/container.xml");
+                $zip->addFile(__DIR__."/rawFiles/mimetype", "mimetype");
+                
+                $filesToAdd = [
+                    self::BACKINGSTORY_PATH => $document->getBackingStory(),
+                    self::TAGS_PATH => $document->getTags(),
+                    self::FONTS_PATH => $document->getFonts(),
+                    self::GRAPHIC_PATH => $document->getGraphic(),
+                    self::STYLES_PATH => $document->getStyles()
+                ];
+                
+                foreach ($filesToAdd as $filePath => $fileContent) {
+                    $styleSerialized = $serializer->serialize($fileContent, 'xml');
+                    $zip->addFromString($filePath, $styleSerialized);
+                }
+                $newLine = '<?aid style="50" type="document" readerVersion="6.0" featureSet="257" product="17.2(105)" ?>'."\n";
+                $designMap = $document->getDesignMap();
+                $designMapSerialized = $serializer->serialize($designMap, 'xml');
+                $position = strpos($designMapSerialized, "\n") + 1;
+                $designMapSerialized = substr_replace($designMapSerialized, $newLine, $position, 0);
+
+                $zip->addFromString("designmap.xml", $designMapSerialized);
+                $zip->close();
+            }
+        }catch(Exception $e)
         {
-         throw new Exception("cant open Zip file");
+            throw new Exception("Cant create ZipFile");
         }
     }
-
 
     /**
      * Get the value of document
      */
     public function getDocument(): IdmlDocument
     {
-        return $this->document;
+        return $this->idmlDocument;
     }
 }

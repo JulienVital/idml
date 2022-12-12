@@ -66,5 +66,6 @@ class Designmap extends IdpkgWrapper
         $this->styles = new IdpkgStyles();
         $this->tags = new IdpkgTags();
         $this->backingStory = new IdpkgBackingStory();
+        $this->setName('undefined');
     }
 }

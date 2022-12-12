@@ -6,7 +6,7 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
- * @XmlRoot("IdpkgIdpkgBackingStory") 
+ * @XmlRoot("IdpkgBackingStory") 
 */
 class IdpkgBackingStory{
     
