@@ -8,11 +8,14 @@ use ZipArchive;
 class Maker{
     
     private IdmlDocument $idmlDocument;
+    private string $targetFolder;
+
     const GRAPHIC_PATH = "Resources/Graphic.xml";
     const FONTS_PATH = "Resources/Fonts.xml";
     const STYLES_PATH = "Resources/Styles.xml";
     const BACKINGSTORY_PATH = "XML/BackingStory.xml";
     const TAGS_PATH = "XML/Tags.xml";
+    const SPREADS_PATH = "Spreads/Spread_";
 
     public function __construct(IdmlDocument $document, $targetFolder){
         $this->idmlDocument = $document;
@@ -40,6 +43,13 @@ class Maker{
                     self::GRAPHIC_PATH => $document->getGraphic(),
                     self::STYLES_PATH => $document->getStyles()
                 ];
+
+                $spreads = $document->getSpreads();
+                foreach ($spreads as $spread) {
+                    $spreadSerialized = $serializer->serialize($spread, 'xml');
+                    $name= self::SPREADS_PATH.$spread->getName().'.xml';
+                    $zip->addFromString($name, $spreadSerialized);
+                }
                 
                 foreach ($filesToAdd as $filePath => $fileContent) {
                     $styleSerialized = $serializer->serialize($fileContent, 'xml');
