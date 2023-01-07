@@ -16,6 +16,7 @@ class Maker{
     const BACKINGSTORY_PATH = "XML/BackingStory.xml";
     const TAGS_PATH = "XML/Tags.xml";
     const SPREADS_PATH = "Spreads/Spread_";
+    const STORIES_PATH = "Stories/Story_";
 
     public function __construct(IdmlDocument $document, $targetFolder){
         $this->idmlDocument = $document;
@@ -50,7 +51,14 @@ class Maker{
                     $name= self::SPREADS_PATH.$spread->getName().'.xml';
                     $zip->addFromString($name, $spreadSerialized);
                 }
-                
+
+                $stories = $document->getStories();
+                foreach ($stories as $story) {
+                    $storySerialized = $serializer->serialize($story, 'xml');
+                    $name= self::STORIES_PATH.$story->getName().'.xml';
+                    $zip->addFromString($name, $storySerialized);
+                }
+
                 foreach ($filesToAdd as $filePath => $fileContent) {
                     $styleSerialized = $serializer->serialize($fileContent, 'xml');
                     $zip->addFromString($filePath, $styleSerialized);

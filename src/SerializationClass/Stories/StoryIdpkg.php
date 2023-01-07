@@ -14,4 +14,12 @@ class StoryIdpkg extends IdpkgWrapper
      * @SerializedName("Story")
     */
     private Story $story;
+
+    /**
+     * Get the value of spread
+     */
+    public function getName()
+    {
+        return $this->story->getId();
+    }
 }
