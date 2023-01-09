@@ -1,8 +1,8 @@
 <?php
 namespace Jvital\Idml\SerializationClass\Trait;
 
-use JMS\Serializer\Annotation\XmlAttribute;
-use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\XmlList;
+use JMS\Serializer\Annotation\Type;
 use Jvital\Idml\SerializationClass\Spread\TextFrame as SpreadTextFrame;
 
 /**
@@ -11,16 +11,17 @@ use Jvital\Idml\SerializationClass\Spread\TextFrame as SpreadTextFrame;
 trait TextFrame {
 
     /**
-     * @SerializedName("TextFrame")
-     */
-    private SpreadTextFrame $textFrame;
+    * @Type("array<Jvital\Idml\SerializationClass\Spread\TextFrame>")
+    * @XmlList(inline = true, entry = "TextFrame")
+    */
+    private array $textFrame;
 
 
 
     /**
      * Get the value of textFrame
      */
-    public function getTextFrame(): SpreadTextFrame
+    public function getTextFrame(): array
     {
         return $this->textFrame;
     }
@@ -28,7 +29,7 @@ trait TextFrame {
     /**
      * Set the value of textFrame
      */
-    public function setTextFrame(SpreadTextFrame $textFrame): self
+    public function setTextFrame(array $textFrame): self
     {
         $this->textFrame = $textFrame;
 

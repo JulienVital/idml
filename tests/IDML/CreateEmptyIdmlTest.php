@@ -45,7 +45,6 @@ class CreateEmptyIdmlTest extends TestCase{
     $this->assertFileExists("./temp/$namefile.idml");
   }
 
-
   public function testMetaInfContainer(){
     $namefile = 'testFile';
 

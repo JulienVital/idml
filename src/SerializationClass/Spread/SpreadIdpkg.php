@@ -15,4 +15,12 @@ class SpreadIdpkg extends IdpkgWrapper
     * @SerializedName("Spread")
     */
     private Spread $spread;
+
+    /**
+     * Get the value of spread
+     */
+    public function getName()
+    {
+        return $this->spread->getSelf();
+    }
 }
