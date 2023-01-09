@@ -170,10 +170,10 @@ class SpreadCreationTest extends TestCase{
     public function testTextFrame(){
         $spread = new Spread("test");
         $textFrame = new TextFrame('name');
-        $spread->setTextFrame($textFrame);
+        $spread->setTextFrame([$textFrame]);
 
         $spreadSerialized = $this->serializer->serialize($spread, 'xml');
         $spreadDeSerialized = $this->serializer->deSerialize($spreadSerialized, Spread::class,'xml');
-        $this->assertEquals($spreadDeSerialized->getTextFrame(),$textFrame);
+        $this->assertEquals($spreadDeSerialized->getTextFrame(),[$textFrame]);
     }
 }
