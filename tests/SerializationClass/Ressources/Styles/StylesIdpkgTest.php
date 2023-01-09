@@ -12,6 +12,8 @@ class StylesIdpkgTest extends TestCase{
      */
     private $serializer;
 
+    private $xmlExpect;
+
     public function __construct(){
         parent::__construct();
         $this->serializer = SerializerBuilder::create()->build();
@@ -26,5 +28,10 @@ class StylesIdpkgTest extends TestCase{
         $this->assertEquals($styleSerialized, $this->xmlExpect['StylesIdpkg']);
     }
 
-    
+    public function testDeserializeSerializeIsSameFull(){
+        $fileLoaded= file_get_contents(__DIR__.'/expects/styles.xml');
+        $styleDeSerialized = $this->serializer->deSerialize($fileLoaded, StylesIdpkg::class,'xml');
+        $styleSerialized = $this->serializer->serialize($styleDeSerialized, 'xml');
+        $this->assertEquals($styleSerialized, $fileLoaded);
+    }
 }
