@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ParagraphStyle Self="ParagraphStyle/Style de paragraphe 2" Name="Style de paragraphe 2" Imported="false" NextStyle="ParagraphStyle/Style de paragraphe 2" FontStyle="Bold" PointSize="14" Tracking="20" Capitalization="SmallCaps" Underline="true" StrikeThru="true">
+<ParagraphStyle Self="ParagraphStyle/Style de paragraphe 2" Name="Style de paragraphe 2" Imported="false" FontStyle="Bold" NextStyle="ParagraphStyle/Style de paragraphe 2" PointSize="14" Tracking="20" Capitalization="SmallCaps" Underline="true" StrikeThru="true">
   <Properties>
     <BasedOn type="string">$ID/[No paragraph style]</BasedOn>
     <Leading type="unit">18</Leading>
