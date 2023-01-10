@@ -1,6 +1,7 @@
 <?php
 namespace Jvital\Idml\SerializationClass\Ressources\Styles;
 use JMS\Serializer\Annotation\XmlRoot;
+use Jvital\Idml\SerializationClass\Trait\AutoLeadingAttribute;
 use Jvital\Idml\SerializationClass\Trait\BaselineShiftAttribute;
 use Jvital\Idml\SerializationClass\Trait\CapitalizationAttribute;
 use Jvital\Idml\SerializationClass\Trait\FillColorAttribute;
@@ -55,6 +56,7 @@ class ParagraphStyle{
     use LeftIndentAttribute;
     use RightIndentAttribute;
     use FirstLineIndentAttribute;
+    use AutoLeadingAttribute;
     use Properties;
     use FontStyleAttribute;
     use PointSizeAttribute;
