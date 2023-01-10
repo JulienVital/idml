@@ -8,6 +8,7 @@ use Jvital\Idml\SerializationClass\Trait\FillColorAttribute;
 use Jvital\Idml\SerializationClass\Trait\FirstLineIndentAttribute;
 use Jvital\Idml\SerializationClass\Trait\FontStyleAttribute;
 use Jvital\Idml\SerializationClass\Trait\HorizontalScaleAttribute;
+use Jvital\Idml\SerializationClass\Trait\HyphenationAttribute;
 use Jvital\Idml\SerializationClass\Trait\ImportedAttribute;
 use Jvital\Idml\SerializationClass\Trait\JustificationAttribute;
 use Jvital\Idml\SerializationClass\Trait\LastLineIndentAttribute;
@@ -57,6 +58,9 @@ class ParagraphStyle{
     use RightIndentAttribute;
     use FirstLineIndentAttribute;
     use AutoLeadingAttribute;
+    use HyphenationAttribute;
+    use UnderlineAttribute;
+    use SkewAttribute;
     use Properties;
     use FontStyleAttribute;
     use PointSizeAttribute;
