@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <idPkg:Styles xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="17.0">
-  <ParagraphStyle Self="ParagraphStyle/$ID/[No paragraph style]" Name="$ID/[No paragraph style]" Imported="false" SplitDocument="false" FillColor="Color/Black" FontStyle="Regular" PointSize="12" Ligatures="true" StrokeWeight="1" Tracking="0" 
-  Capitalization="Normal" 
-  StrokeColor="Swatch/None" 
-  HyphenateLadderLimit="3" 
-  VerticalScale="100" 
-  LeftIndent="0" 
-  RightIndent="0" 
-  FirstLineIndent="0" 
+  <ParagraphStyle Self="ParagraphStyle/$ID/[No paragraph style]" Name="$ID/[No paragraph style]" Imported="false" SplitDocument="false" FillColor="Color/Black" FontStyle="Regular" PointSize="12" Ligatures="true" StrokeWeight="1" Tracking="0" Capitalization="Normal" StrokeColor="Swatch/None" LeftIndent="0" RightIndent="0" FirstLineIndent="0" 
   AutoLeading="120" 
   AppliedLanguage="$ID/English: USA" 
   Hyphenation="true" 
