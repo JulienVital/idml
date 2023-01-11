@@ -34,6 +34,8 @@ use Jvital\Idml\SerializationClass\Trait\StrokeColorAttribute;
 use Jvital\Idml\SerializationClass\Trait\StrokeWeightAttribute;
 use Jvital\Idml\SerializationClass\Trait\TrackingAttribute;
 use Jvital\Idml\SerializationClass\Trait\UnderlineAttribute;
+use Jvital\Idml\SerializationClass\Trait\UnderlineOffsetAttribute;
+use Jvital\Idml\SerializationClass\Trait\UnderlineWeightAttribute;
 use Jvital\Idml\SerializationClass\Trait\VerticalScaleAttribute;
 
 /** 
@@ -61,6 +63,11 @@ class ParagraphStyle{
     use HyphenationAttribute;
     use UnderlineAttribute;
     use SkewAttribute;
+    use LastLineIndentAttribute;
+    use JustificationAttribute;
+    use UnderlineOffsetAttribute;
+    use UnderlineWeightAttribute;
+    use StrikeThroughOffsetAttribute;
     use Properties;
     use FontStyleAttribute;
     use PointSizeAttribute;
@@ -76,8 +83,6 @@ class ParagraphStyle{
     use FirstLineIndentAttribute; 
     use SpaceBeforeAttribute; 
     use SpaceAfterAttribute; 
-    use LastLineIndentAttribute; 
-    use JustificationAttribute;
     use ParagraphBorderOnAttribute;
     use ParagraphBorderTopLineWeightAttribute;
     use ParagraphBorderBottomLineWeightAttribute;
