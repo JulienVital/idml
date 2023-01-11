@@ -29,6 +29,8 @@ use Jvital\Idml\SerializationClass\Trait\SkewAttribute;
 use Jvital\Idml\SerializationClass\Trait\SpaceAfterAttribute;
 use Jvital\Idml\SerializationClass\Trait\SpaceBeforeAttribute;
 use Jvital\Idml\SerializationClass\Trait\SplitDocumentAttribute;
+use Jvital\Idml\SerializationClass\Trait\StrikeThroughOffsetAttribute;
+use Jvital\Idml\SerializationClass\Trait\StrikeThroughWeightAttribute;
 use Jvital\Idml\SerializationClass\Trait\StrikeThruAttribute;
 use Jvital\Idml\SerializationClass\Trait\StrokeColorAttribute;
 use Jvital\Idml\SerializationClass\Trait\StrokeWeightAttribute;
@@ -68,19 +70,11 @@ class ParagraphStyle{
     use UnderlineOffsetAttribute;
     use UnderlineWeightAttribute;
     use StrikeThroughOffsetAttribute;
-    use Properties;
-    use FontStyleAttribute;
-    use PointSizeAttribute;
-    use CapitalizationAttribute;
-    use UnderlineAttribute;
+    use StrikeThroughWeightAttribute;
     use StrikeThruAttribute;
     use HorizontalScaleAttribute;
     use BaselineShiftAttribute;
     use VerticalScaleAttribute;
-    use SkewAttribute;
-    use LeftIndentAttribute; 
-    use RightIndentAttribute; 
-    use FirstLineIndentAttribute; 
     use SpaceBeforeAttribute; 
     use SpaceAfterAttribute; 
     use ParagraphBorderOnAttribute;
@@ -88,4 +82,5 @@ class ParagraphStyle{
     use ParagraphBorderBottomLineWeightAttribute;
     use ParagraphBorderLeftLineWeightAttribute;
     use ParagraphBorderRightLineWeightAttribute;
+    use Properties;
 }

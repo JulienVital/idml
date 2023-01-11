@@ -13,7 +13,7 @@ trait UnderlineWeightAttribute {
      * @XmlAttribute
      * @SerializedName("UnderlineWeight")
      */
-    private string $underlineOffset;
+    private string $underlineWeight;
 
     /**
      * Get the value of UnderlineWeight

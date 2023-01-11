@@ -28,7 +28,7 @@ class StylesIdpkgTest extends TestCase{
         $this->assertEquals($styleSerialized, $this->xmlExpect['StylesIdpkg']);
     }
 
-    public function testDeserializeSerializeIsSameFull(){
+    public function testDeserializeSerializeIsSameWithBigParagraphStyle(){
         $fileLoaded= file_get_contents(__DIR__.'/expects/styles.xml');
         $styleDeSerialized = $this->serializer->deSerialize($fileLoaded, StylesIdpkg::class,'xml');
         $styleSerialized = $this->serializer->serialize($styleDeSerialized, 'xml');
