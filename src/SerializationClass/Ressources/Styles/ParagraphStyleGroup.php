@@ -4,12 +4,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlList;
-use Jvital\Idml\SerializationClass\Utils\IdpkgWrapper;
+use Jvital\Idml\SerializationClass\Trait\NameAttribute;
+use Jvital\Idml\SerializationClass\Trait\SelfAttribute;
+
 
 /** 
- * @XmlRoot("idPkg:Styles") 
+ * @XmlRoot("ParagraphStyleGroup") 
 */
-class StylesIdpkg extends IdpkgWrapper{
+class ParagraphStyleGroup{
+
+    use SelfAttribute;
+    use NameAttribute;
 
     /**
      * @SerializedName("ParagraphStyle")
@@ -17,9 +22,4 @@ class StylesIdpkg extends IdpkgWrapper{
      * @XmlList(inline = true, entry = "ParagraphStyle")
      */
     private array $paragraphStyle;
-
-    /**
-     * @SerializedName("RootParagraphStyleGroup")
-     */
-    private RootParagraphStyleGroup $rootParagraphStyleGroup;
 }
