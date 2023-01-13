@@ -6,8 +6,11 @@ use Jvital\Idml\SerializationClass\Trait\CornerRadiusAttribute;
 use Jvital\Idml\SerializationClass\Trait\EndCapAttribute;
 use Jvital\Idml\SerializationClass\Trait\EndJoinAttribute;
 use Jvital\Idml\SerializationClass\Trait\FillColorAttribute;
+use Jvital\Idml\SerializationClass\Trait\LeftLineEndAttribute;
 use Jvital\Idml\SerializationClass\Trait\NameAttribute;
+use Jvital\Idml\SerializationClass\Trait\RightLineEndAttribute;
 use Jvital\Idml\SerializationClass\Trait\SelfAttribute;
+use Jvital\Idml\SerializationClass\Trait\StrokeColorAttribute;
 use Jvital\Idml\SerializationClass\Trait\StrokeTypeAttribute;
 use Jvital\Idml\SerializationClass\Trait\StrokeWeightAttribute;
 
@@ -25,4 +28,7 @@ class ObjectStyle{
     use EndCapAttribute;
     use EndJoinAttribute;
     use StrokeTypeAttribute;
+    use LeftLineEndAttribute;
+    use RightLineEndAttribute;
+    use StrokeColorAttribute;
 }
