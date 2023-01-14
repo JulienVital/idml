@@ -18,8 +18,4 @@ class StylesIdpkg extends IdpkgWrapper{
      */
     private array $paragraphStyle;
 
-    /**
-     * @SerializedName("RootParagraphStyleGroup")
-     */
-    private RootParagraphStyleGroup $rootParagraphStyleGroup;
 }
