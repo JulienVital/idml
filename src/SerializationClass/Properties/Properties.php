@@ -5,6 +5,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
 use Jvital\Idml\SerializationClass\Trait\AppliedFontValue;
 use Jvital\Idml\SerializationClass\Trait\BasedOnValue;
+use Jvital\Idml\SerializationClass\Trait\InsetSpacingValue;
 use Jvital\Idml\SerializationClass\Trait\Label;
 use Jvital\Idml\SerializationClass\Trait\LeadingValue;
 use Jvital\Idml\SerializationClass\Trait\ParagraphBorderColorValue;
@@ -24,6 +25,7 @@ class Properties
     use AppliedFontValue;
     use ParagraphBorderColorValue;
     use ParagraphBorderTypeValue;
+    use InsetSpacingValue;
     /**
      * @SerializedName("PathGeometry")
      */

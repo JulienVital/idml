@@ -4,15 +4,14 @@ namespace Jvital\Idml\SerializationClass\Spread;
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\SerializedName;
-
-
+use Jvital\Idml\SerializationClass\Trait\Properties;
 
 /** 
  * @XmlRoot("TextFramePreference") 
 */
 class TextFramePreference
 {
-
+    use Properties;
     /**
      * @XmlAttribute
      * @SerializedName("TextColumnCount")
