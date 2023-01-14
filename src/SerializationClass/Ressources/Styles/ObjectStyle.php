@@ -22,6 +22,7 @@ use Jvital\Idml\SerializationClass\Trait\TopLeftCornerRadiusAttribute;
 use Jvital\Idml\SerializationClass\Trait\TopRightCornerOptionAttribute;
 use Jvital\Idml\SerializationClass\Trait\TopRightCornerRadiusAttribute;
 use JMS\Serializer\Annotation\SerializedName;
+use Jvital\Idml\SerializationClass\Spread\TextFramePreference;
 
 /** 
  * @XmlRoot("ObjectStyle") 
@@ -60,6 +61,16 @@ class ObjectStyle{
     private RootParagraphStyleGroup $rootParagraphStyleGroup;
 
     /**
+     * @SerializedName("TextFramePreference")
+     */
+    private TextFramePreference $textFramePreference;
+
+    /**
+     * @SerializedName("BaselineFrameGridOption")
+     */
+    private BaselineFrameGridOption $baselineFrameGridOption;
+
+    /**
      * Get the value of transformAttributeOption
      */
     public function getTransformAttributeOption(): TransformAttributeOption
@@ -73,6 +84,24 @@ class ObjectStyle{
     public function setTransformAttributeOption(TransformAttributeOption $transformAttributeOption): self
     {
         $this->transformAttributeOption = $transformAttributeOption;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of textFramePreference
+     */
+    public function getTextFramePreference(): TextFramePreference
+    {
+        return $this->textFramePreference;
+    }
+
+    /**
+     * Set the value of textFramePreference
+     */
+    public function setTextFramePreference(TextFramePreference $textFramePreference): self
+    {
+        $this->textFramePreference = $textFramePreference;
 
         return $this;
     }
