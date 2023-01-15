@@ -91,6 +91,11 @@ class ObjectStyle{
     private FrameFittingOption $frameFittingOption;
 
     /**
+     * @SerializedName("TextFrameFootnoteOptionsObject")
+     */
+    private TextFrameFootnoteOptionsObject $TextFrameFootnoteOptionsObject;
+
+    /**
      * Get the value of transformAttributeOption
      */
     public function getTransformAttributeOption(): TransformAttributeOption
