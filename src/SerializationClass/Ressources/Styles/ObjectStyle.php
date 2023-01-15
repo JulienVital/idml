@@ -86,6 +86,11 @@ class ObjectStyle{
     private StoryPreference $storyPreference;
 
     /**
+     * @SerializedName("FrameFittingOption")
+     */
+    private FrameFittingOption $frameFittingOption;
+
+    /**
      * Get the value of transformAttributeOption
      */
     public function getTransformAttributeOption(): TransformAttributeOption
@@ -117,6 +122,24 @@ class ObjectStyle{
     public function setTextFramePreference(TextFramePreference $textFramePreference): self
     {
         $this->textFramePreference = $textFramePreference;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of frameFittingOption
+     */
+    public function getFrameFittingOption(): FrameFittingOption
+    {
+        return $this->frameFittingOption;
+    }
+
+    /**
+     * Set the value of frameFittingOption
+     */
+    public function setFrameFittingOption(FrameFittingOption $frameFittingOption): self
+    {
+        $this->frameFittingOption = $frameFittingOption;
 
         return $this;
     }
