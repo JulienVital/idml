@@ -3,6 +3,7 @@ namespace Jvital\Idml\SerializationClass\Properties;
 
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
+use Jvital\Idml\SerializationClass\Properties\Value\TextWrapOffset;
 use Jvital\Idml\SerializationClass\Trait\AppliedFontValue;
 use Jvital\Idml\SerializationClass\Trait\BasedOnValue;
 use Jvital\Idml\SerializationClass\Trait\BaselineFrameGridColorValue;
@@ -28,8 +29,14 @@ class Properties
     use ParagraphBorderTypeValue;
     use InsetSpacingValue;
     use BaselineFrameGridColorValue;
+
     /**
      * @SerializedName("PathGeometry")
      */
     private PathGeometry $pathGeometry;
+
+    /**
+     * @SerializedName("TextWrapOffset")
+     */
+    private TextWrapOffset $textWrapOffset;
 }

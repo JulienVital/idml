@@ -76,6 +76,11 @@ class ObjectStyle{
     private AnchoredObjectSetting $anchoredObjectSetting;
 
     /**
+     * @SerializedName("TextWrapPreference")
+     */
+    private TextWrapPreference $textWrapPreference;
+
+    /**
      * Get the value of transformAttributeOption
      */
     public function getTransformAttributeOption(): TransformAttributeOption
