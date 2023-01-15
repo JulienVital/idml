@@ -79,6 +79,11 @@ class ObjectStyle{
      * @SerializedName("TextWrapPreference")
      */
     private TextWrapPreference $textWrapPreference;
+    
+    /**
+     * @SerializedName("StoryPreference")
+     */
+    private StoryPreference $storyPreference;
 
     /**
      * Get the value of transformAttributeOption
