@@ -71,6 +71,11 @@ class ObjectStyle{
     private BaselineFrameGridOption $baselineFrameGridOption;
 
     /**
+     * @SerializedName("AnchoredObjectSetting")
+     */
+    private AnchoredObjectSetting $anchoredObjectSetting;
+
+    /**
      * Get the value of transformAttributeOption
      */
     public function getTransformAttributeOption(): TransformAttributeOption
