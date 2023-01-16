@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CellStyle Self="CellStyle/Body 48pt Indent" ExtendedKeyboardShortcut="0 0 0" TextTopInset="12" TextLeftInset="48" TextBottomInset="0" TextRightInset="48" AppliedParagraphStyle="ParagraphStyle/$ID/NormalParagraphStyle" TopInset="12" LeftInset="48" BottomInset="0" RightInset="48" KeyboardShortcut="0 0" Name="Body 48pt Indent">
+  <Properties>
+    <BasedOn type="string">$ID/[None]</BasedOn>
+  </Properties>
+</CellStyle>
