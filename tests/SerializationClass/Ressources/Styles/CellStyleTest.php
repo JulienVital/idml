@@ -26,7 +26,6 @@ class CellStyleTest extends TestCase{
         $objectSerialized = $this->serializer->serialize($objectDeserialized, 'xml');
 
         $this->assertEquals($objectSerialized, $this->objectStyle);
-        $this->assertTrue(true);
     }
 
 }
