@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RootTableStyleGroup Self="u78">
-  <TableStyle Self="TableStyle/$ID/[No table style]">
+  <TableStyle Self="TableStyle/$ID/[No table style]" GraphicLeftInset="0" GraphicTopInset="0" GraphicRightInset="0" GraphicBottomInset="0" ClipContentToGraphicCell="false" TextTopInset="4" TextLeftInset="4" TextBottomInset="4" TextRightInset="4" ClipContentToTextCell="false" Name="$ID/[No table style]" StrokeOrder="BestJoins" TopBorderStrokeWeight="1" TopBorderStrokeTint="100" TopBorderStrokeGapTint="100" LeftBorderStrokeWeight="1" TopBorderStrokeType="StrokeStyle/$ID/Solid" TopBorderStrokeColor="Color/Black" TopBorderStrokeGapColor="Color/Paper" TopBorderStrokeOverprint="false" TopBorderStrokeGapOverprint="false" LeftBorderStrokeOverprint="false" LeftBorderStrokeGapOverprint="false" LeftBorderStrokeType="StrokeStyle/$ID/Solid" LeftBorderStrokeGapColor="Color/Paper" LeftBorderStrokeColor="Color/Black" LeftBorderStrokeTint="100" LeftBorderStrokeGapTint="100" BottomBorderStrokeWeight="1">
     <Properties>
       <BasedOn type="string">$ID/[No table style]</BasedOn>
     </Properties>
