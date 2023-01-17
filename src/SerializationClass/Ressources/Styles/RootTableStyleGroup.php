@@ -14,5 +14,10 @@ class RootTableStyleGroup{
 
     use SelfAttribute;
 
-
+    /**
+     * @SerializedName("TableStyle")
+     * @Type("array<Jvital\Idml\SerializationClass\Ressources\Styles\TableStyle>")
+     * @XmlList(inline = true, entry = "TableStyle")
+     */
+    private array $tableStyle;
 }
