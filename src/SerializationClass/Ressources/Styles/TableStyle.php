@@ -177,65 +177,307 @@ class TableStyle
      * @SerializedName("LeftBorderStrokeTint")
      */
     private int $leftBorderStrokeTint;
+
     /**
      * @XmlAttribute
      * @SerializedName("LeftBorderStrokeGapTint")
      */
     private int $leftBorderStrokeGapTint;
+
     /**
      * @XmlAttribute
      * @SerializedName("BottomBorderStrokeWeight")
      */
     private int $bottomBorderStrokeWeight;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("BottomBorderStrokeGapTint")
+     */
+    private int $bottomBorderStrokeGapTint;
+
+    
+    /**
+     * @XmlAttribute
+     * @SerializedName("BottomBorderStrokeTint")
+     */
+    private int $bottomBorderStrokeTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("BottomBorderStrokeType")
+     */
+    private string $bottomBorderStrokeType;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("BottomBorderStrokeColor")
+     */
+    private string $bottomBorderStrokeColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("BottomBorderStrokeGapColor")
+     */
+    private string $bottomBorderStrokeGapColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("BottomBorderStrokeOverprint")
+     */
+    private bool $bottomBorderStrokeOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("BottomBorderStrokeGapOverprint")
+     */
+    private bool $bottomBorderStrokeGapOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightBorderStrokeWeight")
+     */
+    private int $rightBorderStrokeWeight;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightBorderStrokeType")
+     */
+    private string $rightBorderStrokeType;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightBorderStrokeColor")
+     */
+    private string $rightBorderStrokeColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightBorderStrokeTint")
+     */
+    private int $RightBorderStrokeTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightBorderStrokeOverprint")
+     */
+    private bool $RightBorderStrokeOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightBorderStrokeGapColor")
+     */
+    private string $RightBorderStrokeGapColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightBorderStrokeGapTint")
+     */
+    private int $RightBorderStrokeGapTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightBorderStrokeGapOverprint")
+     */
+    private bool $RightBorderStrokeGapOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SpaceBefore")
+     */
+    private int $SpaceBefore;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SpaceAfter")
+     */
+    private int $SpaceAfter;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SkipFirstAlternatingStrokeRows")
+     */
+    private int $SkipFirstAlternatingStrokeRows;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SkipLastAlternatingStrokeRows")
+     */
+    private int $SkipLastAlternatingStrokeRows;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowStrokeCount")
+     */
+    private int $StartRowStrokeCount;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowStrokeColor")
+     */
+    private string $StartRowStrokeColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowStrokeWeight")
+     */
+    private int $StartRowStrokeWeight;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowStrokeType")
+     */
+    private string $StartRowStrokeType;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowStrokeTint")
+     */
+    private int $StartRowStrokeTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowStrokeGapOverprint")
+     */
+    private bool $StartRowStrokeGapOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowStrokeGapColor")
+     */
+    private string $StartRowStrokeGapColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowStrokeGapTint")
+     */
+    private int $StartRowStrokeGapTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowStrokeOverprint")
+     */
+    private bool $StartRowStrokeOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowStrokeCount")
+     */
+    private int $EndRowStrokeCount;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowStrokeColor")
+     */
+    private string $EndRowStrokeColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowStrokeWeight")
+     */
+    private float $EndRowStrokeWeight;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowStrokeType")
+     */
+    private string $EndRowStrokeType;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowStrokeTint")
+     */
+    private int $EndRowStrokeTint;
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowStrokeOverprint")
+     */
+    private bool $EndRowStrokeOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowStrokeGapColor")
+     */
+    private string $EndRowStrokeGapColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowStrokeGapTint")
+     */
+    private int $EndRowStrokeGapTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowStrokeGapOverprint")
+     */
+    private bool $EndRowStrokeGapOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SkipFirstAlternatingStrokeColumns")
+     */
+    private int $SkipFirstAlternatingStrokeColumns;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SkipLastAlternatingStrokeColumns")
+     */
+    private int $SkipLastAlternatingStrokeColumns;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnStrokeCount")
+     */
+    private int $StartColumnStrokeCount;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnStrokeWeight")
+     */
+    private int $StartColumnStrokeWeight;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnStrokeTint")
+     */
+    private int $StartColumnStrokeTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnStrokeGapTint")
+     */
+    private int $StartColumnStrokeGapTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnStrokeGapOverprint")
+     */
+    private bool $StartColumnStrokeGapOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnStrokeOverprint")
+     */
+    private bool $StartColumnStrokeOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnStrokeColor")
+     */
+    private string $StartColumnStrokeColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnStrokeType")
+     */
+    private string $StartColumnStrokeType;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnStrokeGapColor")
+     */
+    private string $StartColumnStrokeGapColor;
 // 
-// BottomBorderStrokeGapTint="100"
-// BottomBorderStrokeTint="100"
-// BottomBorderStrokeType="StrokeStyle/$ID/Solid"
-// BottomBorderStrokeColor="Color/Black"
-// BottomBorderStrokeGapColor="Color/Paper"
-// BottomBorderStrokeOverprint="false"
-// BottomBorderStrokeGapOverprint="false"
-// RightBorderStrokeWeight="1"
-// RightBorderStrokeType="StrokeStyle/$ID/Solid"
-// RightBorderStrokeColor="Color/Black"
-// RightBorderStrokeTint="100"
-// RightBorderStrokeOverprint="false"
-// RightBorderStrokeGapColor="Color/Paper"
-// RightBorderStrokeGapTint="100"
-// RightBorderStrokeGapOverprint="false"
-// SpaceBefore="4"
-// SpaceAfter="-4"
-// SkipFirstAlternatingStrokeRows="0"
-// SkipLastAlternatingStrokeRows="0"
-// StartRowStrokeCount="0"
-// StartRowStrokeColor="Color/Black"
-// StartRowStrokeWeight="1"
-// StartRowStrokeType="StrokeStyle/$ID/Solid"
-// StartRowStrokeTint="100"
-// StartRowStrokeGapOverprint="false"
-// StartRowStrokeGapColor="Color/Paper"
-// StartRowStrokeGapTint="100"
-// StartRowStrokeOverprint="false"
-// EndRowStrokeCount="0"
-// EndRowStrokeColor="Color/Black"
-// EndRowStrokeWeight="0.25"
-// EndRowStrokeType="StrokeStyle/$ID/Solid"
-// EndRowStrokeTint="100"
-// EndRowStrokeOverprint="false"
-// EndRowStrokeGapColor="Color/Paper"
-// EndRowStrokeGapTint="100"
-// EndRowStrokeGapOverprint="false"
-// SkipFirstAlternatingStrokeColumns="0"
-// SkipLastAlternatingStrokeColumns="0"
-// StartColumnStrokeCount="0"
-// StartColumnStrokeColor="Color/Black"
-// StartColumnStrokeWeight="1"
-// StartColumnStrokeType="StrokeStyle/$ID/Solid"
-// StartColumnStrokeTint="100"
-// StartColumnStrokeOverprint="false"
-// StartColumnStrokeGapColor="Color/Paper"
-// StartColumnStrokeGapTint="100"
-// StartColumnStrokeGapOverprint="false"
 // EndColumnStrokeCount="0"
 // EndColumnStrokeColor="Color/Black"
 // EndColumnStrokeWeight="0.25"
