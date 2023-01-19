@@ -477,46 +477,240 @@ class TableStyle
      * @SerializedName("StartColumnStrokeGapColor")
      */
     private string $StartColumnStrokeGapColor;
-// 
-// EndColumnStrokeCount="0"
-// EndColumnStrokeColor="Color/Black"
-// EndColumnStrokeWeight="0.25"
-// EndColumnLineStyle="StrokeStyle/$ID/Solid"
-// EndColumnStrokeTint="100"
-// EndColumnStrokeOverprint="false"
-// EndColumnStrokeGapColor="Color/Paper"
-// EndColumnStrokeGapTint="100"
-// EndColumnStrokeGapOverprint="false"
-// ColumnFillsPriority="false"
-// SkipFirstAlternatingFillRows="0"
-// SkipLastAlternatingFillRows="0"
-// StartRowFillColor="Color/Black"
-// StartRowFillCount="0"
-// StartRowFillTint="20"
-// StartRowFillOverprint="false"
-// EndRowFillCount="0"
-// EndRowFillColor="Swatch/None"
-// EndRowFillTint="100"
-// EndRowFillOverprint="false"
-// SkipFirstAlternatingFillColumns="0"
-// SkipLastAlternatingFillColumns="0"
-// StartColumnFillCount="0"
-// StartColumnFillColor="Color/Black"
-// StartColumnFillTint="20"
-// StartColumnFillOverprint="false"
-// EndColumnFillCount="0"
-// EndColumnFillColor="Swatch/None"
-// EndColumnFillTint="100"
-// EndColumnFillOverprint="false"
-// HeaderRegionSameAsBodyRegion="true"
-// FooterRegionSameAsBodyRegion="true"
-// LeftColumnRegionSameAsBodyRegion="true"
-// RightColumnRegionSameAsBodyRegion="true"
-// HeaderRegionCellStyle="n"
-// FooterRegionCellStyle="n"
-// LeftColumnRegionCellStyle="n"
-// RightColumnRegionCellStyle="n"
-// BodyRegionCellStyle="CellStyle/$ID/[None]"
-//     />
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnStrokeCount")
+     */
+    private int $EndColumnStrokeCount;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnStrokeWeight")
+     */
+    private float $EndColumnStrokeWeight;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnStrokeTint")
+     */
+    private int $EndColumnStrokeTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnStrokeGapTint")
+     */
+    private int $EndColumnStrokeGapTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnStrokeGapOverprint")
+     */
+    private bool $EndColumnStrokeGapOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnStrokeOverprint")
+     */
+    private bool $EndColumnStrokeOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnStrokeColor")
+     */
+    private string $EndColumnStrokeColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnLineStyle")
+     */
+    private string $EndColumnLineStyle;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnStrokeGapColor")
+     */
+    private string $EndColumnStrokeGapColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("ColumnFillsPriority")
+     */
+    private bool $ColumnFillsPriority;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SkipFirstAlternatingFillRows")
+     */
+    private int $SkipFirstAlternatingFillRows;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SkipLastAlternatingFillRows")
+     */
+    private int $SkipLastAlternatingFillRows;
+
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowFillColor")
+     */
+    private string $StartRowFillColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowFillCount")
+     */
+    private int $StartRowFillCount;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowFillTint")
+     */
+    private int $StartRowFillTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartRowFillOverprint")
+     */
+    private bool $StartRowFillOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowFillCount")
+     */
+    private int $EndRowFillCount;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowFillColor")
+     */
+    private string $EndRowFillColor;
+    
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowFillTint")
+     */
+    private int $EndRowFillTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndRowFillOverprint")
+     */
+    private bool $EndRowFillOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SkipFirstAlternatingFillColumns")
+     */
+    private int $SkipFirstAlternatingFillColumns;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("SkipLastAlternatingFillColumns")
+     */
+    private int $SkipLastAlternatingFillColumns;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnFillCount")
+     */
+    private int $StartColumnFillCount;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnFillColor")
+     */
+    private string $StartColumnFillColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnFillTint")
+     */
+    private int $StartColumnFillTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("StartColumnFillOverprint")
+     */
+    private bool $StartColumnFillOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnFillCount")
+     */
+    private int $EndColumnFillCount;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnFillColor")
+     */
+    private string $EndColumnFillColor;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnFillTint")
+     */
+    private int $EndColumnFillTint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("EndColumnFillOverprint")
+     */
+    private bool $EndColumnFillOverprint;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("HeaderRegionSameAsBodyRegion")
+     */
+    private bool $HeaderRegionSameAsBodyRegion;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("FooterRegionSameAsBodyRegion")
+     */
+    private bool $FooterRegionSameAsBodyRegion;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("LeftColumnRegionSameAsBodyRegion")
+     */
+    private bool $LeftColumnRegionSameAsBodyRegion;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightColumnRegionSameAsBodyRegion")
+     */
+    private bool $RightColumnRegionSameAsBodyRegion;
+
+        /**
+     * @XmlAttribute
+     * @SerializedName("HeaderRegionCellStyle")
+     */
+    private string $HeaderRegionCellStyle;
+
+        /**
+     * @XmlAttribute
+     * @SerializedName("FooterRegionCellStyle")
+     */
+    private string $FooterRegionCellStyle;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("LeftColumnRegionCellStyle")
+     */
+    private string $LeftColumnRegionCellStyle;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("RightColumnRegionCellStyle")
+     */
+    private string $RightColumnRegionCellStyle;
+
+    /**
+     * @XmlAttribute
+     * @SerializedName("BodyRegionCellStyle")
+     */
+    private string $BodyRegionCellStyle;
 
 }
