@@ -33,4 +33,9 @@ class StylesIdpkg extends IdpkgWrapper{
      * @SerializedName("RootCellStyleGroup")
      */
     private RootCellStyleGroup $rootCellStyleGroup;
+
+    /**
+     * @SerializedName("RootTableStyleGroup")
+     */
+    private RootTableStyleGroup $RootTableStyleGroup;
 }
