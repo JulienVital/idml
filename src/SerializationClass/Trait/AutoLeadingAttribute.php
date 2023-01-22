@@ -13,12 +13,12 @@ trait AutoLeadingAttribute {
      * @XmlAttribute
      * @SerializedName("AutoLeading")
      */
-    private int $autoLeading;
+    private ?int $autoLeading = null;
 
     /**
      * Get the value of autoLeading
      */
-    public function getAutoLeading(): int
+    public function getAutoLeading(): ?int
     {
         return $this->autoLeading;
     }

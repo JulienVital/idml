@@ -194,25 +194,6 @@ class CellStyle
 
         return $this;
     }
-
-    /**
-     * Get the value of appliedParagraphStyle
-     */
-    public function getAppliedParagraphStyle(): string
-    {
-        return $this->appliedParagraphStyle;
-    }
-
-    /**
-     * Set the value of appliedParagraphStyle
-     */
-    public function setAppliedParagraphStyle(string $appliedParagraphStyle): self
-    {
-        $this->appliedParagraphStyle = $appliedParagraphStyle;
-
-        return $this;
-    }
-
     /**
      * Get the value of topInset
      */

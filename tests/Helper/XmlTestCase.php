@@ -31,6 +31,13 @@ abstract class XmlTestCase extends TestCase{
         return $this->xml_is_equal(new SimpleXMLElement($expectedXml), new SimpleXMLElement($xmlSerialized));
     }
 
+    /**
+     * Mit Licence
+     * https://jevon.org/wiki/Comparing_Two_SimpleXML_Documents
+     * @param SimpleXMLElement $xml1 
+     * @param SimpleXMLElement $xml2 
+     * @return string|true 
+     */
     protected function xml_is_equal(SimpleXMLElement $xml1, SimpleXMLElement $xml2) {
 
         if ($xml1->getName() !== $xml2->getName()) return "Mismatched rootName ". $xml1->getName() ." | ". $xml2->getName();
