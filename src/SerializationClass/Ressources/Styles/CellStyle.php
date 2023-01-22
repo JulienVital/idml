@@ -4,6 +4,7 @@ namespace Jvital\Idml\SerializationClass\Ressources\Styles;
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\SerializedName;
+use Jvital\Idml\SerializationClass\Trait\AppliedParagraphStyleAttribute;
 use Jvital\Idml\SerializationClass\Trait\Properties;
 
 /** 
@@ -48,11 +49,7 @@ class CellStyle
      */
     private int $textRightInset;
 
-    /**
-     * @XmlAttribute
-     * @SerializedName("AppliedParagraphStyle")
-     */
-    private string $appliedParagraphStyle;
+    use AppliedParagraphStyleAttribute;
 
     /**
      * @XmlAttribute

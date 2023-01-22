@@ -16,6 +16,11 @@
             "Jvital\\Idml\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": { 
+            "Jvital\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "julien",

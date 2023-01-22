@@ -2,11 +2,11 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Ressources\Styles\CellStyle;
 use Jvital\Idml\SerializationClass\Ressources\Styles\RootCellStyleGroup;
+use Jvital\Tests\Helper\XmlTestCase;
 use PHPUnit\Framework\TestCase;
 
-class CellStyleTest extends TestCase{
+class CellStyleTest extends XmlTestCase{
 
     /**
      * @var Serializer
@@ -25,7 +25,9 @@ class CellStyleTest extends TestCase{
         $objectDeserialized = $this->serializer->deSerialize($this->objectStyle, RootCellStyleGroup::class,'xml');
         $objectSerialized = $this->serializer->serialize($objectDeserialized, 'xml');
 
-        $this->assertEquals($objectSerialized, $this->objectStyle);
+        $result = $this->xmlIsSame($objectSerialized, $this->objectStyle);
+
+        $this->assertTrue($result);
     }
 
 }
