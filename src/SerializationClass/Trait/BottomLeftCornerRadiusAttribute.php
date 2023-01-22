@@ -13,12 +13,12 @@ trait BottomLeftCornerRadiusAttribute {
      * @XmlAttribute
      * @SerializedName("BottomLeftCornerRadius")
      */
-    private string $bottomLeftCornerRadius;
+    private int $bottomLeftCornerRadius;
 
     /**
      * Get the value of bottomLeftCornerRadius
      */
-    public function getBottomLeftCornerRadius(): string
+    public function getBottomLeftCornerRadius(): int
     {
         return $this->bottomLeftCornerRadius;
     }
@@ -26,7 +26,7 @@ trait BottomLeftCornerRadiusAttribute {
     /**
      * Set the value of bottomLeftCornerRadius
      */
-    public function setBottomLeftCornerRadius(string $bottomLeftCornerRadius): self
+    public function setBottomLeftCornerRadius(int $bottomLeftCornerRadius): self
     {
         $this->bottomLeftCornerRadius = $bottomLeftCornerRadius;
 
