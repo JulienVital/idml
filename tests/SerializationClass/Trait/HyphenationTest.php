@@ -32,8 +32,7 @@ Class HyphenationTest extends XmlTestCase{
         '<?xml version="1.0" encoding="UTF-8"?>
             <result Hyphenation="true"/>';
 
-        $result = $this->xmlIsSame($expectedXml, $xmlSerialized);
-        $this->assertTrue($result);
+        $this->assertXmlStringEqualsXmlString($expectedXml, $xmlSerialized);
     }
 
     public function testDeserializeXml(){

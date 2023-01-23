@@ -25,9 +25,8 @@ class CellStyleTest extends XmlTestCase{
         $objectDeserialized = $this->serializer->deSerialize($this->objectStyle, RootCellStyleGroup::class,'xml');
         $objectSerialized = $this->serializer->serialize($objectDeserialized, 'xml');
 
-        $result = $this->xmlIsSame($objectSerialized, $this->objectStyle);
+        $this->assertXmlStringEqualsXmlString($objectSerialized, $this->objectStyle);
 
-        $this->assertTrue($result);
     }
 
 }

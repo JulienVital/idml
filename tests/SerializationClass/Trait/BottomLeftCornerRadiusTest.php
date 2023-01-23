@@ -32,8 +32,7 @@ Class BottomLeftCornerRadiusTest extends XmlTestCase{
         '<?xml version="1.0" encoding="UTF-8"?>
             <result BottomLeftCornerRadius="26"/>';
 
-        $result = $this->xmlIsSame($expectedXml, $xmlSerialized);
-        $this->assertTrue($result);
+        $this->assertXmlStringEqualsXmlString($expectedXml, $xmlSerialized);
     }
 
     public function testDeserializeXml(){

@@ -20,4 +20,21 @@ class InsetSpacing
      */
     private array $listItem;
 
+    /**
+     * Get the value of listItem
+     */
+    public function getListItem(): array
+    {
+        return $this->listItem;
+    }
+
+    /**
+     * Set the value of listItem
+     */
+    public function setListItem(array $listItem): self
+    {
+        $this->listItem = $listItem;
+
+        return $this;
+    }
 }

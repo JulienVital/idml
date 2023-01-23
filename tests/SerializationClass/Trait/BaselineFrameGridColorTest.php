@@ -37,8 +37,7 @@ Class BaselineFrameGridColorTest extends XmlTestCase{
                 <BaselineFrameGridColor type="enumeration">LightBlue</BaselineFrameGridColor>
             </result>';
 
-        $result = $this->xmlIsSame($expectedXml, $xmlSerialized);
-        $this->assertTrue($result);
+        $this->assertXmlStringEqualsXmlString($expectedXml, $xmlSerialized);
     }
 
     public function testDeserializeXml(){
