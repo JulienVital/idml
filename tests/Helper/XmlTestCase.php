@@ -1,12 +1,10 @@
 <?php
 namespace Jvital\Tests\Helper;
 
-use DOMDocument;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 
 use PHPUnit\Framework\TestCase;
-use SimpleXMLElement;
 
 abstract class XmlTestCase extends TestCase{
 

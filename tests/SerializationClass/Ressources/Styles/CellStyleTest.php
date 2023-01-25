@@ -4,7 +4,6 @@ use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Ressources\Styles\RootCellStyleGroup;
 use Jvital\Tests\Helper\XmlTestCase;
-use PHPUnit\Framework\TestCase;
 
 class CellStyleTest extends XmlTestCase{
 
