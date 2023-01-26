@@ -3,28 +3,23 @@
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Ressources\Styles\ObjectStyle;
-use PHPUnit\Framework\TestCase;
+use Jvital\Tests\Helper\XmlTestCase;
 
-class ObjectStyleTest extends TestCase{
+class ObjectStyleTest extends XmlTestCase{
 
-    /**
-     * @var Serializer
-     */
-    private $serializer;
     private $objectStyle;
 
     public function __construct(){
         parent::__construct();
-        $this->serializer = SerializerBuilder::create()->build();
         $this->objectStyle = file_get_contents(__DIR__.'/expects/ObjectStyle.xml');
     }
 
     public function testDeserializeSerializeIsSame(){
 
-        $objectDeserialized = $this->serializer->deSerialize($this->objectStyle, ObjectStyle::class,'xml');
-        $objectSerialized = $this->serializer->serialize($objectDeserialized, 'xml');
+        $objectDeserialized = $this->deSerialize($this->objectStyle, ObjectStyle::class,'xml');
+        $objectSerialized = $this->serialize($objectDeserialized, 'xml');
 
-        $this->assertEquals($objectSerialized, $this->objectStyle);
+        $this->assertXmlStringEqualsXmlString($objectSerialized, $this->objectStyle);
     }
 
 }

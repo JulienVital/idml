@@ -13,12 +13,12 @@ trait StrokeWeightAttribute {
      * @XmlAttribute
      * @SerializedName("StrokeWeight")
      */
-    private int $strokeWeight;
+    private float $strokeWeight;
 
     /**
      * Get the value of strokeWeight
      */
-    public function getStrokeWeight(): int
+    public function getStrokeWeight(): float
     {
         return $this->strokeWeight;
     }
@@ -26,7 +26,7 @@ trait StrokeWeightAttribute {
     /**
      * Set the value of strokeWeight
      */
-    public function setStrokeWeight(int $strokeWeight): self
+    public function setStrokeWeight(float $strokeWeight): self
     {
         $this->strokeWeight = $strokeWeight;
 
