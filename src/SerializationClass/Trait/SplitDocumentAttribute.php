@@ -26,7 +26,9 @@ trait SplitDocumentAttribute {
     }
 
     /**
-     * Set the value of splitDocument
+     * 
+     * @param bool $splitDocument 
+     * @return SplitDocumentAttribute 
      */
     public function setSplitDocument(bool $splitDocument): self
     {
