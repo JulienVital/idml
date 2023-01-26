@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add Ligatures value 
  */
-trait LigatureAttribute {
+trait LigaturesAttribute {
     
     /**
      * @XmlAttribute
@@ -17,9 +17,9 @@ trait LigatureAttribute {
 
 
     /**
-     * Get the value of ligature
+     * Get the value of ligatures
      */
-    public function isLigature(): bool
+    public function isLigatures(): bool
     {
         return $this->ligatures;
     }
@@ -27,7 +27,7 @@ trait LigatureAttribute {
     /**
      * Set the value of ligature
      */
-    public function setLigature(bool $ligatures): self
+    public function setLigatures(bool $ligatures): self
     {
         $this->ligatures = $ligatures;
 

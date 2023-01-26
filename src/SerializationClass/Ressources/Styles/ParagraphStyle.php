@@ -13,7 +13,7 @@ use Jvital\Idml\SerializationClass\Trait\ImportedAttribute;
 use Jvital\Idml\SerializationClass\Trait\JustificationAttribute;
 use Jvital\Idml\SerializationClass\Trait\LastLineIndentAttribute;
 use Jvital\Idml\SerializationClass\Trait\LeftIndentAttribute;
-use Jvital\Idml\SerializationClass\Trait\LigatureAttribute;
+use Jvital\Idml\SerializationClass\Trait\LigaturesAttribute;
 use Jvital\Idml\SerializationClass\Trait\NameAttribute;
 use Jvital\Idml\SerializationClass\Trait\NextStyleAttribute;
 use Jvital\Idml\SerializationClass\Trait\ParagraphBorderBottomLineWeightAttribute;
@@ -53,7 +53,7 @@ class ParagraphStyle{
     use FontStyleAttribute;
     use NextStyleAttribute;
     use PointSizeAttribute;
-    use LigatureAttribute;
+    use LigaturesAttribute;
     use StrokeWeightAttribute;
     use TrackingAttribute;
     use CapitalizationAttribute;
