@@ -13,22 +13,22 @@ trait TransformAttrRefAnchorPointAttribute {
      * @XmlAttribute
      * @SerializedName("TransformAttrRefAnchorPoint")
      */
-    private string $transformAttrRefAnchorPointAttribute;
+    private string $transformAttrRefAnchorPoint;
 
     /**
-     * Get the value of transformAttrRefAnchorPointAttribute
+     * Get the value of transformAttrRefAnchorPoint
      */
-    public function getTransformAttrRefAnchorPointAttribute(): string
+    public function getTransformAttrRefAnchorPoint(): string
     {
-        return $this->transformAttrRefAnchorPointAttribute;
+        return $this->transformAttrRefAnchorPoint;
     }
 
     /**
-     * Set the value of transformAttrRefAnchorPointAttribute
+     * Set the value of transformAttrRefAnchorPoint
      */
-    public function setTransformAttrRefAnchorPointAttribute(string $transformAttrRefAnchorPointAttribute): self
+    public function setTransformAttrRefAnchorPoint(string $transformAttrRefAnchorPoint): self
     {
-        $this->transformAttrRefAnchorPointAttribute = $transformAttrRefAnchorPointAttribute;
+        $this->transformAttrRefAnchorPoint = $transformAttrRefAnchorPoint;
 
         return $this;
     }
