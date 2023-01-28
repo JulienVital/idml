@@ -13,22 +13,22 @@ trait TransformAttrLeftReferenceAttribute {
      * @XmlAttribute
      * @SerializedName("TransformAttrLeftReference")
      */
-    private string $transformAttrLeftReferenceAttribute;
+    private string $transformAttrLeftReference;
 
     /**
-     * Get the value of transformAttrLeftReferenceAttribute
+     * Get the value of transformAttrLeftReference
      */
-    public function getTransformAttrLeftReferenceAttribute(): string
+    public function getTransformAttrLeftReference(): string
     {
-        return $this->transformAttrLeftReferenceAttribute;
+        return $this->transformAttrLeftReference;
     }
 
     /**
-     * Set the value of transformAttrLeftReferenceAttribute
+     * Set the value of transformAttrLeftReference
      */
-    public function setTransformAttrLeftReferenceAttribute(string $transformAttrLeftReferenceAttribute): self
+    public function setTransformAttrLeftReference(string $transformAttrLeftReference): self
     {
-        $this->transformAttrLeftReferenceAttribute = $transformAttrLeftReferenceAttribute;
+        $this->transformAttrLeftReference = $transformAttrLeftReference;
 
         return $this;
     }

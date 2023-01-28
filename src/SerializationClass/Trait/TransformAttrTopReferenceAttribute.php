@@ -13,22 +13,22 @@ trait TransformAttrTopReferenceAttribute {
      * @XmlAttribute
      * @SerializedName("TransformAttrTopReference")
      */
-    private string $transformAttrTopReferenceAttribute;
+    private string $transformAttrTopReference;
 
     /**
-     * Get the value of transformAttrTopReferenceAttribute
+     * Get the value of transformAttrTopReference
      */
-    public function getTransformAttrTopReferenceAttribute(): string
+    public function getTransformAttrTopReference(): string
     {
-        return $this->transformAttrTopReferenceAttribute;
+        return $this->transformAttrTopReference;
     }
 
     /**
-     * Set the value of transformAttrTopReferenceAttribute
+     * Set the value of transformAttrTopReference
      */
-    public function setTransformAttrTopReferenceAttribute(string $transformAttrTopReferenceAttribute): self
+    public function setTransformAttrTopReference(string $transformAttrTopReference): self
     {
-        $this->transformAttrTopReferenceAttribute = $transformAttrTopReferenceAttribute;
+        $this->transformAttrTopReference = $transformAttrTopReference;
 
         return $this;
     }
