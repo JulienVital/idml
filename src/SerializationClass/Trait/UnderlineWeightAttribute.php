@@ -13,20 +13,20 @@ trait UnderlineWeightAttribute {
      * @XmlAttribute
      * @SerializedName("UnderlineWeight")
      */
-    private string $underlineWeight;
+    private float $underlineWeight;
 
     /**
      * Get the value of UnderlineWeight
      */
-    public function getUnderlineWeight(): string
+    public function getUnderlineWeight(): float
     {
-        return $this->UnderlineWeight;
+        return $this->underlineWeight;
     }
 
     /**
      * Set the value of UnderlineWeight
      */
-    public function setUnderlineWeight(string $underlineWeight): self
+    public function setUnderlineWeight(float $underlineWeight): self
     {
         $this->underlineWeight = $underlineWeight;
 

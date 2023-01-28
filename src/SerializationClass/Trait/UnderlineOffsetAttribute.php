@@ -13,12 +13,12 @@ trait UnderlineOffsetAttribute {
      * @XmlAttribute
      * @SerializedName("UnderlineOffset")
      */
-    private string $underlineOffset;
+    private float $underlineOffset;
 
     /**
      * Get the value of UnderlineOffset
      */
-    public function getUnderlineOffset(): string
+    public function getUnderlineOffset(): float
     {
         return $this->underlineOffset;
     }
@@ -26,7 +26,7 @@ trait UnderlineOffsetAttribute {
     /**
      * Set the value of UnderlineOffset
      */
-    public function setUnderlineOffset(string $underlineOffset): self
+    public function setUnderlineOffset(float $underlineOffset): self
     {
         $this->underlineOffset = $underlineOffset;
 
