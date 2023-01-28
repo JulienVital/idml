@@ -13,12 +13,12 @@ trait TopRightCornerRadiusAttribute {
      * @XmlAttribute
      * @SerializedName("TopRightCornerRadius")
      */
-    private string $topRightCornerRadius;
+    private float $topRightCornerRadius;
 
     /**
      * Get the value of topRightCornerRadius
      */
-    public function getTopRightCornerRadius(): string
+    public function getTopRightCornerRadius(): float
     {
         return $this->topRightCornerRadius;
     }
@@ -26,7 +26,7 @@ trait TopRightCornerRadiusAttribute {
     /**
      * Set the value of topRightCornerRadius
      */
-    public function setTopRightCornerRadius(string $topRightCornerRadius): self
+    public function setTopRightCornerRadius(float $topRightCornerRadius): self
     {
         $this->topRightCornerRadius = $topRightCornerRadius;
 
