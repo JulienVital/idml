@@ -31,21 +31,4 @@ class Cell
      */
     private XmlElement $xmlElement;
 
-    /**
-     * Get the value of xmlElement
-     */
-    public function getXmlElement(): XmlElement
-    {
-        return $this->xmlElement;
-    }
-
-    /**
-     * Set the value of xmlElement
-     */
-    public function setXmlElement(XmlElement $xmlElement): self
-    {
-        $this->xmlElement = $xmlElement;
-
-        return $this;
-    }
 }

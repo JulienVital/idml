@@ -34,6 +34,7 @@ class StoryTest extends TestCase
     $this->assertEquals($attributesStory[0],'pageID' );
     $this->assertEquals($storyElement->children()->nodeName(),'ParagraphStyleRange' );
     $this->assertEquals($storyElement->children()->children()->nodeName(),'CharacterStyleRange' );
+    $this->assertEquals($story->getParagraphStyleRange(), $paragraphStyleRange );
 
   }
 
@@ -56,6 +57,7 @@ class StoryTest extends TestCase
     $storyElement = $crawler->first();
     
     $this->assertEquals($storyElement->nodeName(),'Story' );
+    $this->assertEquals($story->getId(),'pageID' );
 
   }
 
@@ -69,6 +71,7 @@ class StoryTest extends TestCase
     $XmlSerialized = $serializer->serialize($xmlDeSerialized, 'xml');
     
     $this->assertEquals($xmlExpect,$XmlSerialized);
+    $this->assertEquals("u1a3",$xmlDeSerialized->getName());
 
   }
 }

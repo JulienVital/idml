@@ -105,6 +105,23 @@ class TextFrameCreationTest extends TestCase{
         $textFramePreference->setTextColumnMaxWidth(0);
         $textFramePreference->setAutoSizingType("HeightOnly" );
         $textFramePreference->setAutoSizingReferencePoint("TopCenterPoint");
+        $textFramePreference->setTextColumnGutter(12);
+        $textFramePreference->setUseFixedColumnWidth(false);
+        $textFramePreference->setFirstBaselineOffset("AscentOffset");
+        $textFramePreference->setMinimumFirstBaselineOffset(32);
+        $textFramePreference->setVerticalThreshold(62);
+        $textFramePreference->setIgnoreWrap(false);
+        $textFramePreference->setUseFlexibleColumnWidth(true);
+        $textFramePreference->setVerticalBalanceColumns(true);
+        $textFramePreference->setFootnotesEnableOverrides(false);
+        $textFramePreference->setFootnotesSpanAcrossColumns(false);
+        $textFramePreference->setColumnRuleOverprintOverride(true);
+        $textFramePreference->setColumnRuleInsetChainOverride(true);
+        $textFramePreference->setColumnRuleOverride(true);
+        $textFramePreference->setUseNoLineBreaksForAutoSizing(true);
+        $textFramePreference->setMinimumHeightForAutoSizing(true);
+        $textFramePreference->setUseMinimumWidthForAutoSizing(true);
+        $textFramePreference->setUseMinimumHeightForAutoSizing(true);
 
         $textFramePreferenceSerialized = $this->serializer->serialize($textFramePreference, 'xml');
 
@@ -116,5 +133,58 @@ class TextFrameCreationTest extends TestCase{
         $this->assertEquals($textFramePreferenceDeserialized->getTextColumnMaxWidth(),0);
         $this->assertEquals($textFramePreferenceDeserialized->getAutoSizingType(),"HeightOnly" );
         $this->assertEquals($textFramePreferenceDeserialized->getAutoSizingReferencePoint(),"TopCenterPoint");
+        $this->assertEquals($textFramePreferenceDeserialized->getTextColumnGutter(),12);
+        $this->assertEquals($textFramePreferenceDeserialized->isUseFixedColumnWidth(),false);
+        $this->assertEquals($textFramePreferenceDeserialized->getFirstBaselineOffset(),"AscentOffset");
+        $this->assertEquals($textFramePreferenceDeserialized->getMinimumFirstBaselineOffset(),32);
+        $this->assertEquals($textFramePreferenceDeserialized->getVerticalThreshold(),62);
+        $this->assertEquals($textFramePreferenceDeserialized->isIgnoreWrap(),false);
+        $this->assertEquals($textFramePreferenceDeserialized->isUseFlexibleColumnWidth(),true);
+        $this->assertEquals($textFramePreferenceDeserialized->isVerticalBalanceColumns(),true);
+        $this->assertEquals($textFramePreferenceDeserialized->isFootnotesEnableOverrides(),false);
+        $this->assertEquals($textFramePreferenceDeserialized->isFootnotesSpanAcrossColumns(),false);
+        $this->assertEquals($textFramePreferenceDeserialized->isColumnRuleOverprintOverride(),true);
+        $this->assertEquals($textFramePreferenceDeserialized->isColumnRuleInsetChainOverride(),true);
+        $this->assertEquals($textFramePreferenceDeserialized->isColumnRuleOverride(),true);
+        $this->assertEquals($textFramePreferenceDeserialized->isUseNoLineBreaksForAutoSizing(),true);
+        $this->assertEquals($textFramePreferenceDeserialized->isUseMinimumWidthForAutoSizing(),true);
+        $this->assertEquals($textFramePreferenceDeserialized->getMinimumHeightForAutoSizing(),true);
+        $this->assertEquals($textFramePreferenceDeserialized->isUseMinimumHeightForAutoSizing(),true);
+    }
+
+    public function testTextFramePreference2(){
+
+        $textFramePreference = new TextFramePreference();
+
+        $textFramePreference->setMinimumWidthForAutoSizing(68);
+        $textFramePreference->setColumnRuleOffset(38);
+        $textFramePreference->setColumnRuleTopInset(98);
+        $textFramePreference->setColumnRuleBottomInset(18);
+        $textFramePreference->setColumnRuleStrokeWidth(63);
+        $textFramePreference->setColumnRuleStrokeTint(73);
+        $textFramePreference->setFootnotesMinimumSpacing(173);
+        $textFramePreference->setFootnotesSpaceBetween(17);
+
+        $textFramePreference->setColumnRuleStrokeColor("n");
+        $textFramePreference->setColumnRuleStrokeType("n");
+
+
+
+        $textFramePreferenceSerialized = $this->serializer->serialize($textFramePreference, 'xml');
+        $textFramePreferenceDeserialized = $this->serializer->deSerialize($textFramePreferenceSerialized, TextFramePreference::class,'xml');
+
+        $this->assertEquals($textFramePreferenceDeserialized->getMinimumWidthForAutoSizing(),68);
+        $this->assertEquals($textFramePreferenceDeserialized->getColumnRuleOffset(),38);
+        $this->assertEquals($textFramePreferenceDeserialized->getColumnRuleTopInset(),98);
+        $this->assertEquals($textFramePreferenceDeserialized->getColumnRuleBottomInset(),18);
+        $this->assertEquals($textFramePreferenceDeserialized->getColumnRuleStrokeWidth(),63);
+        $this->assertEquals($textFramePreferenceDeserialized->getColumnRuleStrokeTint(),73);
+        $this->assertEquals($textFramePreferenceDeserialized->getFootnotesMinimumSpacing(),173);
+        $this->assertEquals($textFramePreferenceDeserialized->getFootnotesSpaceBetween(),17);
+
+        $this->assertEquals($textFramePreferenceDeserialized->getColumnRuleStrokeColor(),"n");
+        $this->assertEquals($textFramePreferenceDeserialized->getColumnRuleStrokeType(),"n");
+
+
     }
 }
