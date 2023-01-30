@@ -3,6 +3,7 @@ namespace Jvital\Idml\SerializationClass\Designmap;
 
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\Type;
 use Jvital\Idml\SerializationClass\Trait\AccurateLABSpotsAttribute;
@@ -61,6 +62,13 @@ class Designmap extends IdpkgWrapper
     */
     private array $stories;
 
+    
+    /**
+    * @XmlAttribute
+    * @SerializedName("ActiveLayer")
+    */
+    private string $activeLayer;
+
     public function __construct()
     {
         $this->graphic = new IdpkgGraphic();
@@ -69,5 +77,23 @@ class Designmap extends IdpkgWrapper
         $this->tags = new IdpkgTags();
         $this->backingStory = new IdpkgBackingStory();
         $this->setName('undefined');
+    }
+
+    /**
+     * Set the value of activeLayer
+     */
+    public function setActiveLayer(string $activeLayer): self
+    {
+        $this->activeLayer = $activeLayer;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of activeLayer
+     */
+    public function getActiveLayer(): string
+    {
+        return $this->activeLayer;
     }
 }

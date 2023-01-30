@@ -1,59 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <?aid style="50" type="document" readerVersion="6.0" featureSet="257" product="17.2(105)"?>
-<Document xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="17.0" Self="d" StoryList="ub147 uedd4 uedee uee07 uee44 uee9b ueecd ueefb uef2e uefd9 ueff2 uf00c uf027 uf040 uf058 uf06f uf086 uf0a1 uf0b8 uf0d0 uf0e7 uf0fe uf115 uf12c uf143 uf15a uf171 uf199 uf1b0 uf1c7 uf356 uf36e uf3a2 uf3b9 uf437 uf459 uf474 uf49a uf53d uf556 uf5ee uf606 uf61d uf634 uf66a uf681 uf6b6 uf6e9 uf76a uf783 uf7a2 uf7c8 uf7e5 uf7fe uf817 uf89e uf8ba uf8d3 uf8f6 uf90e uf927 uf945 uf9e4 ufad5 ufafe ufb66 ufb7f ufbfa ufc11 ufc29 ufc40 ufccb ufce2 ufd18 ufd31 ufd4c ufd64 ufd7c ufdaa ufdcd ufde2 uff57 uff6f uffa2 uffbc uffd4 u100f0 u10121 u10142 u1015a u10172 u101a7 u101c1 u101db u10219 u10231 u1024d u10265 u1027e u10299 u102b0 u102c8 u10300 u1031a u10333 u1034b u10362 u10382 u1039b u103d8 u107dd u107f5 u1080e u10825 u1083d u10a20 u10a37 u10a4e u10a65 u10a7c u10a93 u10aaa u10ac1 u10ad8 u10aef u10b06 u10b1d u10b34 u10b4b u10b74 u10b8b u10ba2 u10bb9 u10bd1 u10be8 u10c00 u10c17 u10c2e u10c45 u10c5c u10c73 u10c8a u10ca1 u10cb8 u10ccf u10ce6 u10cfd u10d14 u10d2c u10d43 u10d5a u10d82 u10d9a u10db1 u10dc8 u10ddf u10e06 u10e1d u10e35 u10e4c u10e73 u10e8a u10ea2 u10eb9 u10ee2 u10efa u10f11 u10f28 u10f40 u10f57 u10f81 u10f98 u10faf u10fc6 u10fdd u10ff4 u1100b u11022 u11039 u11062 u11079 u11096 u110ad u110c4 u110f5 u1110c u11123 u1113a u11163 u1117a u11191 u111a8 u111bf u111d6 u111ed u11204 u1121b u11243 u1125b u11272 u1128a u112a1 u112b8 u112e1 u112f8 u1130f u1133b u11352 u11369 u11380 u11397 u113c0 u113d7 u113ee u11406 u1141d u11434 u1144b u11462 u11489 u114a0 u114b7 u114cf u114f5 u1152a u11544 u1155d u11574 u1159a u115b4 u8f" Name="Sans titre-2" ZeroPoint="0 0" ActiveLayer="ub10f" CMYKProfile="U.S. Web Coated (SWOP) v2" RGBProfile="sRGB IEC61966-2.1" SolidColorIntent="UseColorSettings" AfterBlendingIntent="UseColorSettings" DefaultImageIntent="UseColorSettings" RGBPolicy="PreserveEmbeddedProfiles" CMYKPolicy="CombinationOfPreserveAndSafeCmyk" AccurateLABSpots="false">
-	<Properties>
-		<Label>
-			<KeyValuePair Key="kAdobeDPS_Version" Value="2" />
-		</Label>
-	</Properties>
+<Document xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="17.0" Self="d" StoryList="ub147 uedd4 uedee uee07 uee44 uee9b ueecd ueefb uef2e uefd9 ueff2 uf00c uf027 uf040 uf058 uf06f uf086 uf0a1 uf0b8 uf0d0 uf0e7 uf0fe uf115 uf12c uf143 uf15a uf171 uf199 uf1b0 uf1c7 uf356 uf36e uf3a2 uf3b9 uf437 uf459 uf474 uf49a uf53d uf556 uf5ee uf606 uf61d uf634 uf66a uf681 uf6b6 uf6e9 uf76a uf783 uf7a2 uf7c8 uf7e5 uf7fe uf817 uf89e uf8ba uf8d3 uf8f6 uf90e uf927 uf945 uf9e4 ufad5 ufafe ufb66 ufb7f ufbfa ufc11 ufc29 ufc40 ufccb ufce2 ufd18 ufd31 ufd4c ufd64 ufd7c ufdaa ufdcd ufde2 uff57 uff6f uffa2 uffbc uffd4 u100f0 u10121 u10142 u1015a u10172 u101a7 u101c1 u101db u10219 u10231 u1024d u10265 u1027e u10299 u102b0 u102c8 u10300 u1031a u10333 u1034b u10362 u10382 u1039b u103d8 u107dd u107f5 u1080e u10825 u1083d u10a20 u10a37 u10a4e u10a65 u10a7c u10a93 u10aaa u10ac1 u10ad8 u10aef u10b06 u10b1d u10b34 u10b4b u10b74 u10b8b u10ba2 u10bb9 u10bd1 u10be8 u10c00 u10c17 u10c2e u10c45 u10c5c u10c73 u10c8a u10ca1 u10cb8 u10ccf u10ce6 u10cfd u10d14 u10d2c u10d43 u10d5a u10d82 u10d9a u10db1 u10dc8 u10ddf u10e06 u10e1d u10e35 u10e4c u10e73 u10e8a u10ea2 u10eb9 u10ee2 u10efa u10f11 u10f28 u10f40 u10f57 u10f81 u10f98 u10faf u10fc6 u10fdd u10ff4 u1100b u11022 u11039 u11062 u11079 u11096 u110ad u110c4 u110f5 u1110c u11123 u1113a u11163 u1117a u11191 u111a8 u111bf u111d6 u111ed u11204 u1121b u11243 u1125b u11272 u1128a u112a1 u112b8 u112e1 u112f8 u1130f u1133b u11352 u11369 u11380 u11397 u113c0 u113d7 u113ee u11406 u1141d u11434 u1144b u11462 u11489 u114a0 u114b7 u114cf u114f5 u1152a u11544 u1155d u11574 u1159a u115b4 u8f" Name="Sans titre-2" ZeroPoint="0 0" ActiveLayer="ub10f" AccurateLABSpots="false">
 	<idPkg:Graphic src="Resources/Graphic.xml" />
 	<idPkg:Fonts src="Resources/Fonts.xml" />
 	<idPkg:Styles src="Resources/Styles.xml" />
-	<idPkg:Preferences src="Resources/Preferences.xml" />
-	<AdjustLayoutPreference EnableAdjustLayout="false" AllowLockedObjectsToAdjust="true" AllowFontSizeAndLeadingAdjustment="false" ImposeFontSizeRestriction="false" MinimumFontSize="6" MaximumFontSize="324" EnableAutoAdjustMargins="false" />
-	<HTMLFXLExportPreference EpubPageRange="" EpubPageRangeFormat="ExportAllPages" />
-	<PublishExportPreference PublishCover="FirstPage" CoverImageFile="" PublishPageRange="" PublishPageRangeFormat="ExportAllPages" ImageConversion="Automatic" ImageExportResolution="Ppi96" PublishDescription="" PublishFileName="" PublishFormat="PublishByPages" CoverPage="$ID/" GIFOptionsPalette="AdaptivePalette" JPEGOptionsQuality="High" PublishPdf="false" />
-	<EndnoteOption EndnoteTitle="Notes de fin" EndnoteTitleStyle="ParagraphStyle/$ID/NormalParagraphStyle" StartEndnoteNumberAt="1" EndnoteMarkerStyle="CharacterStyle/$ID/[No character style]" EndnoteTextStyle="ParagraphStyle/$ID/NormalParagraphStyle" EndnoteSeparatorText="&#x9;" EndnotePrefix="" EndnoteSuffix="">
-		<Properties>
-			<EndnoteNumberingStyle type="enumeration">Arabic</EndnoteNumberingStyle>
-			<RestartEndnoteNumbering type="enumeration">Continuous</RestartEndnoteNumbering>
-			<EndnoteMarkerPositioning type="enumeration">SuperscriptMarker</EndnoteMarkerPositioning>
-			<ScopeValue type="enumeration">EndnoteDocumentScope</ScopeValue>
-			<FrameCreateOption type="enumeration">NewPage</FrameCreateOption>
-			<ShowEndnotePrefixSuffix type="enumeration">NoPrefixSuffix</ShowEndnotePrefixSuffix>
-		</Properties>
-	</EndnoteOption>
-	<TextFrameFootnoteOptionsObject EnableOverrides="false" SpanFootnotesAcross="false" MinimumSpacingOption="12" SpaceBetweenFootnotes="6" />
-	<LinkedStoryOption UpdateWhileSaving="false" WarnOnUpdateOfEditedStory="true" RemoveForcedLineBreaks="false" ApplyStyleMappings="false" />
-	<LinkedPageItemOption UpdateLinkWhileSaving="false" WarnOnUpdateOfEditedPageItem="true" PreserveSizeAndShape="false" PreserveAppearance="false" PreserveInteractivity="false" PreserveFrameContent="false" PreserveOthers="false" />
-	<TaggedPDFPreference StructureOrder="UseXMLStructure" />
-	<WatermarkPreference WatermarkVisibility="false" WatermarkDoPrint="false" WatermarkDrawInBack="true" WatermarkText="" WatermarkFontFamily="Minion Pro" WatermarkFontStyle="Regular" WatermarkFontPointSize="48" WatermarkOpacity="50" WatermarkRotation="0" WatermarkHorizontalPosition="WatermarkHCenter" WatermarkHorizontalOffset="0" WatermarkVerticalPosition="WatermarkVCenter" WatermarkVerticalOffset="0">
-		<Properties>
-			<WatermarkFontColor type="enumeration">Red</WatermarkFontColor>
-		</Properties>
-	</WatermarkPreference>
-	<ConditionalTextPreference ShowConditionIndicators="ShowIndicators" ActiveConditionSet="n" />
-	<TextVariable Self="dTextVariablenChapter Number" Name="Chapter Number" VariableType="ChapterNumberType">
-		<ChapterNumberVariablePreference TextBefore="" Format="Current" TextAfter="" />
-	</TextVariable>
-	<TextVariable Self="dTextVariablenCreation Date" Name="Creation Date" VariableType="CreationDateType">
-		<DateVariablePreference TextBefore="" Format="MM/dd/yy" TextAfter="" />
-	</TextVariable>
-	<TextVariable Self="dTextVariablenFile Name" Name="File Name" VariableType="FileNameType">
-		<FileNameVariablePreference TextBefore="" IncludePath="false" IncludeExtension="false" TextAfter="" />
-	</TextVariable>
-	<TextVariable Self="dTextVariablenLast Page Number" Name="Last Page Number" VariableType="LastPageNumberType">
-		<PageNumberVariablePreference TextBefore="" Format="Current" TextAfter="" Scope="SectionScope" />
-	</TextVariable>
-	<TextVariable Self="dTextVariablenModification Date" Name="Modification Date" VariableType="ModificationDateType">
-		<DateVariablePreference TextBefore="" Format="MMMM d, yyyy h:mm aa" TextAfter="" />
-	</TextVariable>
-	<TextVariable Self="dTextVariablenOutput Date" Name="Output Date" VariableType="OutputDateType">
-		<DateVariablePreference TextBefore="" Format="MM/dd/yy" TextAfter="" />
-	</TextVariable>
-	<TextVariable Self="dTextVariablenRunning Header" Name="Running Header" VariableType="MatchParagraphStyleType">
-		<MatchParagraphStylePreference TextBefore="" TextAfter="" AppliedParagraphStyle="ParagraphStyle/$ID/NormalParagraphStyle" SearchStrategy="FirstOnPage" ChangeCase="None" DeleteEndPunctuation="false" />
-	</TextVariable>
 	<idPkg:Tags src="XML/Tags.xml" />
 	<Layer Self="u2c01" Name="Placeholders" Visible="true" Locked="false" IgnoreWrap="false" ShowGuides="true" LockGuides="false" UI="true" Expendable="true" Printable="true">
 		<Properties>
