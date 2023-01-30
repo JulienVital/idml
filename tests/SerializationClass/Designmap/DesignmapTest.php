@@ -28,7 +28,7 @@ class DesignmapTest extends XmlTestCase{
 
         $propertiesDeSerialized = $this->deSerialize($this->xmlExpect['designmapExpect'], Designmap::class,'xml');
         $propertiesSerialized = $serializer->serialize($propertiesDeSerialized, 'xml');
-        var_dump($propertiesSerialized);
+
         $this->assertXmlStringEqualsXmlString($propertiesSerialized, $this->xmlExpect['designmapExpect']);
     }
 
