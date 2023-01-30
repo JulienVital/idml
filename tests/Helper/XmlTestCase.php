@@ -1,9 +1,10 @@
 <?php
 namespace Jvital\Tests\Helper;
 
+use JMS\Serializer\EventDispatcher\EventDispatcher;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-
+use Jvital\Idml\Builder\CustomSerializationSubscriber;
 use PHPUnit\Framework\TestCase;
 
 abstract class XmlTestCase extends TestCase{
@@ -15,7 +16,12 @@ abstract class XmlTestCase extends TestCase{
 
     public function __construct(){
         parent::__construct();
-        $this->serializer = SerializerBuilder::create()->build();
+        $builder = SerializerBuilder::create();
+
+        $builder->configureListeners(function(EventDispatcher $dispatcher) {
+            $dispatcher->addSubscriber(new CustomSerializationSubscriber());
+        });
+        $this->serializer = $builder->build();
     }
 
     protected function serialize($classToSerialize){

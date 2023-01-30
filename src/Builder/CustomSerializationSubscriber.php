@@ -25,10 +25,10 @@ class CustomSerializationSubscriber implements EventSubscriberInterface
     {
         new XmlSerializationVisitor();
         $visitor = $event->getVisitor();
-        $doc = $visitor->getDocument();
+        $document = $visitor->getDocument();
 
-        $pi = $doc->createProcessingInstruction('aid', 'style="50" type="document" readerVersion="6.0" featureSet="257" product="17.2(105)"');
-        $doc->insertBefore($pi, $doc->firstChild);
+        $aid = $document->createProcessingInstruction('aid', 'style="50" type="document" readerVersion="6.0" featureSet="257" product="17.2(105)"');
+        $document->insertBefore($aid, $document->firstChild);
 
     }
 }

@@ -5,6 +5,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\Type;
+use Jvital\Idml\SerializationClass\Trait\AccurateLABSpotsAttribute;
 use Jvital\Idml\SerializationClass\Trait\NameAttribute;
 use Jvital\Idml\SerializationClass\Trait\SelfAttribute;
 use Jvital\Idml\SerializationClass\Trait\StoryListAttribute;
@@ -21,6 +22,7 @@ class Designmap extends IdpkgWrapper
     use StoryListAttribute;
     use NameAttribute;
     use ZeroPointAttribute;
+    use AccurateLABSpotsAttribute;
 
     /**
     * @SerializedName("idPkg:Graphic")
