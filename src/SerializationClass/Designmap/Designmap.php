@@ -46,15 +46,15 @@ class Designmap extends IdpkgWrapper
     private IdpkgTags $tags;
 
     /**
-    * @SerializedName("idPkg:BackingStory")
-    */
-    private IdpkgBackingStory $backingStory;
-
-    /**
     * @Type("array<Jvital\Idml\SerializationClass\Designmap\IdpkgSpread>")
     * @XmlList(inline = true, entry = "idPkg:Spread")
     */
     private array $spreads;
+
+    /**
+    * @SerializedName("idPkg:BackingStory")
+    */
+    private IdpkgBackingStory $backingStory;
 
     /**
     * @Type("array<Jvital\Idml\SerializationClass\Designmap\IdpkgStory>")

@@ -26,10 +26,10 @@ class DesignmapTest extends XmlTestCase{
         });
         $serializer = $builder->build();
 
-        $propertiesDeSerialized = $this->deSerialize($this->xmlExpect['designmapExpect'], Designmap::class,'xml');
-        $propertiesSerialized = $serializer->serialize($propertiesDeSerialized, 'xml');
+        $documentDeSerialized = $this->deSerialize($this->xmlExpect['designmapExpect'], Designmap::class,'xml');
+        $documentSerialized = $serializer->serialize($documentDeSerialized, 'xml');
 
-        $this->assertXmlStringEqualsXmlString($propertiesSerialized, $this->xmlExpect['designmapExpect']);
+        $this->assertXmlStringEqualsXmlString($this->xmlExpect['designmapExpect'],$documentSerialized);
     }
 
     public function testStoryList(){
