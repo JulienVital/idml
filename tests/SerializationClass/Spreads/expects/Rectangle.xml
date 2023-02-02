@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rectangle Self="u104" ContentType="GraphicType" StoryTitle="$ID/" ItemLayer="ub9" Locked="false" AppliedObjectStyle="ObjectStyle/$ID/[None]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
+  <Properties>
+    <PathGeometry>
+      <GeometryPathType PathOpen="false">
+        <PathPointArray>
+          <PathPointType Anchor="155.90551181102364 -232.44094488188978" LeftDirection="155.90551181102364 -232.44094488188978" RightDirection="155.90551181102364 -232.44094488188978" />
+          <PathPointType Anchor="155.90551181102364 -131.81102362204726" LeftDirection="155.90551181102364 -131.81102362204726" RightDirection="155.90551181102364 -131.81102362204726" />
+          <PathPointType Anchor="274.25196850393706 -131.81102362204726" LeftDirection="274.25196850393706 -131.81102362204726" RightDirection="274.25196850393706 -131.81102362204726" />
+          <PathPointType Anchor="274.25196850393706 -232.44094488188978" LeftDirection="274.25196850393706 -232.44094488188978" RightDirection="274.25196850393706 -232.44094488188978" />
+        </PathPointArray>
+      </GeometryPathType>
+  </PathGeometry>
+  </Properties>
+</Rectangle>

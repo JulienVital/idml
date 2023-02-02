@@ -5,6 +5,7 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
 use Jvital\Idml\SerializationClass\Trait\NameAttribute;
 use Jvital\Idml\SerializationClass\Trait\SelfAttribute;
+use Jvital\Idml\SerializationClass\Trait\VisibleAttribute;
 
 /** 
  * @XmlRoot("Color") 
@@ -48,11 +49,8 @@ class Color {
      */
     private string $swatchCreatorID;
 
-    /**
-     * @SerializedName("Visible")
-     * @XmlAttribute
-     */
-    private bool $visible;
+    use VisibleAttribute;
+
     /**
      * @SerializedName("ColorEditable")
      * @XmlAttribute
