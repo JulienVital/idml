@@ -5,7 +5,7 @@ use Jvital\Idml\SerializationClass\XML\Tags\XmlTag;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 
-class XLMTagTest extends TestCase
+class XlmTagTest extends TestCase
 {
 
 

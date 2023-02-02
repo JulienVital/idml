@@ -10,7 +10,7 @@ Class testStrokeWeightAttributeTest{
     use StrokeWeightAttribute;
 }
 
-Class StrokeWeightAttributeTest extends XmlTestCase{
+Class StrokeWeightTest extends XmlTestCase{
 
     /**
      * @var Serializer

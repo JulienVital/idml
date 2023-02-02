@@ -10,7 +10,7 @@ Class testStrikeThroughOffsetAttributeTest{
     use StrikeThroughOffsetAttribute;
 }
 
-Class StrikeThroughOffsetAttributeTest extends XmlTestCase{
+Class StrikeThroughOffsetTest extends XmlTestCase{
 
     /**
      * @var Serializer

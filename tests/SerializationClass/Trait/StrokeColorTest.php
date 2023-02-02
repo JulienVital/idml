@@ -10,7 +10,7 @@ Class testStrokeColorAttributeTest{
     use StrokeColorAttribute;
 }
 
-Class StrokeColorAttributeTest extends XmlTestCase{
+Class StrokeColorTest extends XmlTestCase{
 
     /**
      * @var Serializer

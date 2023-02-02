@@ -9,7 +9,7 @@ Class testCornerOptionAttribute{
     use CornerOptionAttribute;
 }
 
-Class CornerOptionAttributeTest extends XmlTestCase{
+Class CornerOptionTest extends XmlTestCase{
 
     /**
      * @var Serializer
