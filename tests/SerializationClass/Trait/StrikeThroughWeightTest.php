@@ -10,7 +10,7 @@ Class testStrikeThroughWeightAttributeTest{
     use StrikeThroughWeightAttribute;
 }
 
-Class StrikeThroughWeightAttributeTest extends XmlTestCase{
+Class StrikeThroughWeightTest extends XmlTestCase{
 
     /**
      * @var Serializer
