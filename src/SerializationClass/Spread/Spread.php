@@ -42,4 +42,9 @@ class Spread
     * @SerializedName("FlattenerPreference")
     */
     private FlattenerPreference $flattenerPreference;
+
+    /**
+    * @SerializedName("Rectangle")
+    */
+    private Rectangle $rectangle;
 }
