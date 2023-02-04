@@ -14,9 +14,7 @@ trait ItemTransformAttribute {
      * @XmlAttribute
      * @SerializedName("ItemTransform")
      */
-    private ?string $itemTransform = "1 0 0 1 0 0";
-
-
+    private string $itemTransform;
 
     /**
      * Get the value of itemTransform
