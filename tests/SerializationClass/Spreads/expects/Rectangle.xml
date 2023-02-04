@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Rectangle Self="u104" ContentType="GraphicType" StoryTitle="$ID/" ItemLayer="ub9" Locked="false" AppliedObjectStyle="ObjectStyle/$ID/[None]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
   <Image Self="u107" Space="$ID/#Links_RGB" AppliedObjectStyle="ObjectStyle/$ID/[None]" ItemTransform="0.179491757195396 0 0 0.2051878965745761 155.90551181102367 -230.3149606299213" Visible="true" Name="$ID/">
+    <Link AssetID="$ID/" AssetURL="$ID/" LinkResourceURI="file:C:/Users/Julien/Desktop/snowclash.png" Self="u10a"/>
     <Properties>
       <Profile type="string">$ID/None</Profile>
       <GraphicBounds Left="0.0" Top="0.0" Right="659.3420140406812" Bottom="480.066995433488" />
     </Properties>
-    <Link Self="u10a" AssetURL="$ID/" AssetID="$ID/" RenditionData="Actual" LinkResourceURI="file:C:/Users/Julien/Desktop/snowclash.png" LinkResourceFormat="$ID/Portable Network Graphics (PNG)" StoredState="Normal" LinkClassID="35906" LinkClientID="257" LinkResourceModified="false" LinkObjectModified="false" ShowInUI="true" CanEmbed="true" CanUnembed="true" CanPackage="true" ImportPolicy="NoAutoImport" ExportPolicy="NoAutoExport" LinkImportStamp="file 133127422017199638 770245" LinkImportModificationTime="2022-11-12T16:56:41" LinkImportTime="2023-02-02T00:17:49" LinkResourceSize="0~bc0c5" />
   </Image>
   <Properties>
     <PathGeometry>

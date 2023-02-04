@@ -9,7 +9,7 @@ use Jvital\Idml\SerializationClass\Trait\Properties;
 use Jvital\Idml\SerializationClass\Trait\SelfAttribute;
 use Jvital\Idml\SerializationClass\Trait\SpaceAttribute;
 use Jvital\Idml\SerializationClass\Trait\VisibleAttribute;
-
+use JMS\Serializer\Annotation\SerializedName;
 /** 
  * @XmlRoot("Image") 
 */
@@ -22,4 +22,9 @@ class Image
     use NameAttribute;
     use VisibleAttribute;
     use Properties;
+
+    /**
+     * @SerializedName("Link")
+     */
+    private Link $link;
 }
