@@ -1,13 +1,11 @@
 <?php
 
-use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\Builder\IdmlDocument;
 use Jvital\Idml\Builder\Loader;
 
 use PHPUnit\Framework\TestCase;
 
 
-class LoadIdmlTest extends TestCase{
+class LoadAndGenerateSame extends TestCase{
 
 
   public function testLoadIdml(){

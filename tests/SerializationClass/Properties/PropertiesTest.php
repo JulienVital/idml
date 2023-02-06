@@ -15,7 +15,7 @@ class PropertiesTest extends TestCase{
      * @var Serializer
      */
     private $serializer;
-
+    private $xmlExpect;
     public function __construct(){
         parent::__construct();
         $this->serializer = SerializerBuilder::create()->build();
