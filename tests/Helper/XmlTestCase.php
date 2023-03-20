@@ -7,7 +7,7 @@ use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Builder\CustomSerializationSubscriber;
 use PHPUnit\Framework\TestCase;
 
-abstract class XmlTestCase extends TestCase{
+class XmlTestCase extends TestCase{
 
     /**
      * @var Serializer
