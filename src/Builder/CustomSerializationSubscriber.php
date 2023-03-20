@@ -1,7 +1,6 @@
 <?php
 namespace Jvital\Idml\Builder;
 
-use DOMDocument;
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
 use JMS\Serializer\EventDispatcher\ObjectEvent;
 use JMS\Serializer\XmlSerializationVisitor;

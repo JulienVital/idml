@@ -4,6 +4,8 @@ use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
 use Jvital\Idml\Builder\CustomSerializationSubscriber;
 use Jvital\Idml\SerializationClass\Designmap\Designmap;
+use Jvital\Idml\SerializationClass\Designmap\IdpkgSpread;
+use Jvital\Idml\SerializationClass\Designmap\IdpkgStory;
 use Jvital\Tests\Helper\XmlTestCase;
 
 class DesignmapTest extends XmlTestCase{
@@ -48,5 +50,35 @@ class DesignmapTest extends XmlTestCase{
         $designmapSerialized = $this->serialize($designmap, 'xml');
 
         $this->assertEquals($designmapSerialized, $this->xmlExpect['IDMLdesignmapEmpty']);
+    }
+
+    public function testWrapperSpread(){
+        $wrapperSpread = new IdpkgSpread();
+        $wrapperSpread->setSrc("test src");
+
+        $wrapperSerialized = $this->serialize($wrapperSpread, 'xml');
+        $wrapperDeSerialized = $this->deSerialize($wrapperSerialized, IdpkgSpread::class,'xml');
+
+        $this->assertEquals($wrapperDeSerialized->getSrc(), "test src");
+    }
+
+    public function testWrapperStory(){
+        $wrapperSpread = new IdpkgStory();
+        $wrapperSpread->setSrc("test src");
+
+        $wrapperSerialized = $this->serialize($wrapperSpread, 'xml');
+        $wrapperDeSerialized = $this->deSerialize($wrapperSerialized, IdpkgStory::class,'xml');
+
+        $this->assertEquals($wrapperDeSerialized->getSrc(), "test src");
+    }
+
+    public function testActiveLayer(){
+        $wrapperSpread = new Designmap();
+        $wrapperSpread->setActiveLayer("test ActiveLayer");
+
+        $wrapperSerialized = $this->serialize($wrapperSpread, 'xml');
+        $wrapperDeSerialized = $this->deSerialize($wrapperSerialized, Designmap::class,'xml');
+
+        $this->assertEquals($wrapperDeSerialized->getActiveLayer(), "test ActiveLayer");
     }
 }

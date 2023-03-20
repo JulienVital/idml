@@ -82,4 +82,28 @@ Class InsetSpacingTest extends XmlTestCase{
         $this->assertEquals($objectDeserialized->getInsetSpacing(),$insetSpacing);
     }
 
+    public function testSetGetter(){
+
+        $listItem = new ListItem();
+        $listItem->setType("unit");
+        $listItem->setValue("1");
+        $listItem2 = new ListItem();
+        $listItem2->setType("unit");
+        $listItem2->setValue("2");
+
+        $insetSpacing = new InsetSpacing();
+        $insetSpacing->setListItem([ $listItem,  $listItem2]);
+
+        $myClass = new testInsetSpacing();
+        $myClass->setInsetSpacing($insetSpacing);
+
+        $xmlSerialized = $this->serialize($myClass, 'xml');
+
+        $xmlDeserialized = $this->serializer->deserialize($xmlSerialized,testInsetSpacing::class, "xml");
+        $this->assertEquals(
+          $xmlDeserialized->getInsetSpacing()->getListItem(),
+          [ $listItem,  $listItem2],
+      ); 
+    }
+
 }

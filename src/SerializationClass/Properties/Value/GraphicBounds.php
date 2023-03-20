@@ -33,22 +33,4 @@ class GraphicBounds
      * @SerializedName("Bottom")
      */
     private float $bottom;
-
-    /**
-     * Get the value of left
-     */
-    public function getLeft(): float
-    {
-        return $this->left;
-    }
-
-    /**
-     * Set the value of left
-     */
-    public function setLeft(float $left): self
-    {
-        $this->left = $left;
-
-        return $this;
-    }
 }
