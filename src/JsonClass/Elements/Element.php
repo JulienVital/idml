@@ -5,14 +5,17 @@ namespace Jvital\Idml\JsonClass\Elements;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Discriminator;
 
-
-class Element
+/** 
+ * @Discriminator(field = "type", 
+ *    map = {
+ *       "TEXT": "Jvital\Idml\JsonClass\Elements\Text", 
+ *       "TABLE": "Jvital\Idml\JsonClass\Elements\Table", 
+ *       "BLOCK": "Jvital\Idml\JsonClass\Elements\Block", 
+ *       "PICTURE": "Jvital\Idml\JsonClass\Elements\Picture", 
+ * }) 
+ */
+abstract class Element
 {
-    /**
-     * @SerializedName("type")
-
-     */
-    private string $type;
 
     /**
      * @SerializedName("id")
@@ -35,24 +38,6 @@ class Element
     private string $styleName;
 
     /**
-     * Set the value of type
-     */
-    public function setType(string $type): self
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of type
-     */
-    public function getType(): string
-    {
-        return $this->type;
-    }
-
-    /**
      * Get the value of id
      */
     public function getId(): string
@@ -73,9 +58,9 @@ class Element
     /**
      * Get the value of label
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
-        return $this->label ?? $this->id;
+        return $this->label ?? null;
     }
 
     /**

@@ -2,12 +2,12 @@
 
 namespace Jvital\Idml\JsonClass\Elements;
 
-class Text extends Element
+class Picture extends Element
 {
 
     public function getType(): string
     {
-        return "TEXT";
+        return "PICTURE";
     }
 
     // /**

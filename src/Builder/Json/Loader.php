@@ -13,4 +13,9 @@ class Loader{
     }
 
 
+    public function export(Document $document):string{
+        $serializer = SerializerBuilder::create()->build();
+        $documentDeserialized = $serializer->serialize($document,'json');
+        return $documentDeserialized;
+    }
 }

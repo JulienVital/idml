@@ -2,17 +2,24 @@
 
 use Jvital\Idml\Builder\Json\Loader;
 use Jvital\Idml\JsonClass\Document;
+use Jvital\Idml\JsonClass\Elements\Block;
+use Jvital\Idml\JsonClass\Elements\Picture;
+use Jvital\Idml\JsonClass\Elements\Table;
+use Jvital\Idml\JsonClass\Elements\Text;
 use PHPUnit\Framework\TestCase;
 
 class DocumentJsonTest extends TestCase{
 
     private Document $document;
+    private $loader;
+    private string $jsonTest;
 
     public function __construct(){
         parent::__construct();
         
-        $loader = new Loader();
-        $this->document = $loader->load(file_get_contents('tempJson'));
+        $this->loader = new Loader();
+        $this->jsonTest =file_get_contents('tempJson');
+        $this->document = $this->loader->load($this->jsonTest);
     }
 
     public function testDeserializeName(){
@@ -82,12 +89,12 @@ class DocumentJsonTest extends TestCase{
         $this->assertEquals($elementsFirstPage[2]->getLabel(), "block-569");
     }
 
-    public function testDeserializeElementsLabelReturnIdIfEmpty(){
+    public function testDeserializeElementsLabelReturnNullIfEmpty(){
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
-        $this->assertEquals($elementsFirstPage[0]->getLabel(), "Text-5694");
-        $this->assertEquals($elementsFirstPage[1]->getLabel(), "Table-569");
-        $this->assertEquals($elementsFirstPage[3]->getLabel(), "Picture-569");
+        $this->assertNull($elementsFirstPage[0]->getLabel());
+        $this->assertNull($elementsFirstPage[1]->getLabel());
+        $this->assertNull($elementsFirstPage[3]->getLabel());
     }
 
     public function testDeserializeElementsParentId(){
@@ -113,4 +120,17 @@ class DocumentJsonTest extends TestCase{
         $this->assertEquals($elementsFirstPage[3]->getStyleName(), "picture");
     }
 
+    public function testDeserializeElementsInstance(){
+
+        $elementsFirstPage = $this->document->getPages()[0]->getElements();
+        $this->assertEquals($elementsFirstPage[0]::class, Text::class);
+        $this->assertEquals($elementsFirstPage[1]::class, Table::class);
+        $this->assertEquals($elementsFirstPage[2]::class, Block::class);
+        $this->assertEquals($elementsFirstPage[3]::class, Picture::class);
+    }
+
+    public function testDeserializeElementsSize(){
+
+        $this->assertTrue(false);
+    }
 }
