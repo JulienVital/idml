@@ -1,0 +1,159 @@
+{
+    "pages": [
+        {
+            "name": "Page1",
+            "elements": [
+                {
+                    "type": "TEXT",
+                    "id": "Text-5694",
+                    "parentId": "Block-569",
+                    "value": "Sed ut perspiciatis unde omnis ",
+                    "size": {
+                        "width": "66.542707495mm",
+                        "left": "6.61458325mm",
+                        "top": "17.19791645mm",
+                        "height": "25.082499684000002mm"
+                    },
+                    "properties": {},
+                    "styleName": "text"
+                },
+                {
+                    "type": "TABLE",
+                    "id": "Table-569",
+                    "parentId": "Block-569",
+                    "value": {
+                        "header": [
+                            "Column 1",
+                            "Column 2",
+                            "Column 3",
+                            "Column 4",
+                            "Column 5"
+                        ],
+                        "body": [
+                            [
+                                "Column 1",
+                                "Column 2",
+                                "Column 3",
+                                "Column 4",
+                                "Column 5"
+                            ],
+                            [
+                                "Column 1",
+                                "Column 2",
+                                "Column 3",
+                                "Column 4",
+                                "Column 5"
+                            ],
+                            [
+                                "Column 1",
+                                "Column 2",
+                                "Column 3",
+                                "Column 4",
+                                "Column 5"
+                            ],
+                            [
+                                "Column 1",
+                                "Column 2",
+                                "Column 3",
+                                "Column 4",
+                                "Column 5"
+                            ]
+                        ],
+                        "footer": [
+                            "Column 1",
+                            "Column 2",
+                            "Column 3",
+                            "Column 4",
+                            "Column 5"
+                        ]
+                    },
+                    "size": {
+                        "width": "97.92229043300001mm",
+                        "left": "27.301030906050002mm",
+                        "top": "19.84374975mm",
+                        "height": "57.546874275mm"
+                    },
+                    "properties": {},
+                    "styleName": "table"
+                },
+                {
+                    "type": "BLOCK",
+                    "id": "Block-569",
+                    "label": "block-569",
+                    "size": {
+                        "width": "120mm",
+                        "left": "9.78958321mm",
+                        "top": "15.874999800000001mm"
+                    },
+                    "properties": {},
+                    "styleName": "block"
+                },
+                {
+                    "type": "PICTURE",
+                    "id": "Picture-569",
+                    "parentId": "Block-569",
+                    "value": "https://picsum.photos/226",
+                    "size": {
+                        "width": "67.918540811mm",
+                        "left": "8.20208323mm",
+                        "top": "74.61249906mm",
+                        "height": "67.918540811mm"
+                    },
+                    "properties": {},
+                    "styleName": "picture"
+                }
+            ],
+            "pagePosition": 1
+        },
+        {
+            "name": "Page2",
+            "elements": [
+            ],
+            "pagePosition": 2
+        }
+    ],
+    "name": "Current Document test",
+    "properties": {
+        "backgroundColor": "#ffffff",
+        "width": 210,
+        "height": 290,
+        "measurementUnit": "mm"
+    },
+    "styles": [
+        {
+            "styleValue": {
+                "font-size": "10pt",
+                "color": "#978bc6",
+                "font-family": "BodoniT",
+                "text-align": "justify",
+                "line-height": "6.6pt",
+                "letter-spacing": "0em"
+            },
+            "name": "text"
+        },
+        {
+            "styleValue": {
+                "border-radius": "60mm"
+            },
+            "name": "picture"
+        },
+        {
+            "styleValue": {
+                "border-width": "1mm",
+                "border-style": "solid",
+                "border-radius": "0mm",
+                "background-color": "#cdcdcd",
+                "text-align": "left",
+                "line-height": "11.1pt",
+                "word-spacing": "em",
+                "transform": " scale(0.8813705739018916, 0.8748083941383152) ",
+                "letter-spacing": "0em"
+            },
+            "name": "table"
+        },
+        {
+            "styleValue": {},
+            "name": "block"
+        }
+    ]
+}
