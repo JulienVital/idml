@@ -37,6 +37,7 @@ abstract class Element
      */
     private string $styleName;
 
+    private Size $size;
     /**
      * Get the value of id
      */
@@ -105,6 +106,24 @@ abstract class Element
     public function setStyleName(string $styleName): self
     {
         $this->styleName = $styleName;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of size
+     */
+    public function getSize(): Size
+    {
+        return $this->size;
+    }
+
+    /**
+     * Set the value of size
+     */
+    public function setSize(Size $size): self
+    {
+        $this->size = $size;
 
         return $this;
     }

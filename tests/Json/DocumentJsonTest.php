@@ -4,30 +4,35 @@ use Jvital\Idml\Builder\Json\Loader;
 use Jvital\Idml\JsonClass\Document;
 use Jvital\Idml\JsonClass\Elements\Block;
 use Jvital\Idml\JsonClass\Elements\Picture;
+use Jvital\Idml\JsonClass\Elements\Size;
 use Jvital\Idml\JsonClass\Elements\Table;
 use Jvital\Idml\JsonClass\Elements\Text;
 use PHPUnit\Framework\TestCase;
 
-class DocumentJsonTest extends TestCase{
+class DocumentJsonTest extends TestCase
+{
 
     private Document $document;
     private $loader;
     private string $jsonTest;
 
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
-        
+
         $this->loader = new Loader();
-        $this->jsonTest =file_get_contents('tempJson');
+        $this->jsonTest = file_get_contents('tempJson');
         $this->document = $this->loader->load($this->jsonTest);
     }
 
-    public function testDeserializeName(){
+    public function testDeserializeName()
+    {
 
         $this->assertEquals($this->document->getName(), "Current Document test");
     }
 
-    public function testDeserializeDocumentProperties(){
+    public function testDeserializeDocumentProperties()
+    {
 
         $this->assertEquals($this->document->getProperties()->getBackgroundColor(), "#ffffff");
         $this->assertEquals($this->document->getProperties()->getWidth(), 210);
@@ -35,37 +40,40 @@ class DocumentJsonTest extends TestCase{
         $this->assertEquals($this->document->getProperties()->getMeasurementUnit(), "mm");
     }
 
-    public function testDeserializeDocumentStyles(){
+    public function testDeserializeDocumentStyles()
+    {
         $styles = $this->document->getStyles();
         $this->assertEquals(count($styles), 4);
         $this->assertEquals($styles[0]->getName(), 'text');
         $this->assertEquals($styles[0]->getStyleValue(), [
-            "font-size"=> "10pt",
-            "color"=> "#978bc6",
-            "font-family"=> "BodoniT",
-            "text-align"=> "justify",
-            "line-height"=> "6.6pt",
-            "letter-spacing"=> "0em"
+            "font-size" => "10pt",
+            "color" => "#978bc6",
+            "font-family" => "BodoniT",
+            "text-align" => "justify",
+            "line-height" => "6.6pt",
+            "letter-spacing" => "0em"
         ]);
     }
 
-    public function testDeserializePage(){
+    public function testDeserializePage()
+    {
 
         $this->assertEquals(count($this->document->getPages()), 2);
         $this->assertEquals($this->document->getPages()[0]->getName(), "Page1");
         $this->assertEquals($this->document->getPages()[0]->getPagePosition(), 1);
         $this->assertEquals($this->document->getPages()[1]->getName(), "Page2");
         $this->assertEquals($this->document->getPages()[1]->getPagePosition(), 2);
-
     }
 
-    public function testDeserializeEveryElements(){
+    public function testDeserializeEveryElements()
+    {
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
         $this->assertEquals(count($elementsFirstPage), 4);
     }
 
-    public function testDeserializeElementsType(){
+    public function testDeserializeElementsType()
+    {
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
         $this->assertEquals($elementsFirstPage[0]->getType(), "TEXT");
@@ -74,7 +82,8 @@ class DocumentJsonTest extends TestCase{
         $this->assertEquals($elementsFirstPage[3]->getType(), "PICTURE");
     }
 
-    public function testDeserializeElementsId(){
+    public function testDeserializeElementsId()
+    {
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
         $this->assertEquals($elementsFirstPage[0]->getId(), "Text-5694");
@@ -83,13 +92,15 @@ class DocumentJsonTest extends TestCase{
         $this->assertEquals($elementsFirstPage[3]->getId(), "Picture-569");
     }
 
-    public function testDeserializeElementsLabel(){
+    public function testDeserializeElementsLabel()
+    {
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
         $this->assertEquals($elementsFirstPage[2]->getLabel(), "block-569");
     }
 
-    public function testDeserializeElementsLabelReturnNullIfEmpty(){
+    public function testDeserializeElementsLabelReturnNullIfEmpty()
+    {
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
         $this->assertNull($elementsFirstPage[0]->getLabel());
@@ -97,7 +108,8 @@ class DocumentJsonTest extends TestCase{
         $this->assertNull($elementsFirstPage[3]->getLabel());
     }
 
-    public function testDeserializeElementsParentId(){
+    public function testDeserializeElementsParentId()
+    {
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
         $this->assertEquals($elementsFirstPage[0]->getParentId(), "Block-569");
@@ -105,13 +117,15 @@ class DocumentJsonTest extends TestCase{
         $this->assertEquals($elementsFirstPage[3]->getParentId(), "Block-569");
     }
 
-    public function testDeserializeElementsParentIdIsNullIfEmpty(){
+    public function testDeserializeElementsParentIdIsNullIfEmpty()
+    {
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
         $this->assertNull($elementsFirstPage[2]->getParentId());
     }
 
-    public function testDeserializeElementsStyleName(){
+    public function testDeserializeElementsStyleName()
+    {
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
         $this->assertEquals($elementsFirstPage[0]->getStyleName(), "text");
@@ -120,7 +134,8 @@ class DocumentJsonTest extends TestCase{
         $this->assertEquals($elementsFirstPage[3]->getStyleName(), "picture");
     }
 
-    public function testDeserializeElementsInstance(){
+    public function testDeserializeElementsInstance()
+    {
 
         $elementsFirstPage = $this->document->getPages()[0]->getElements();
         $this->assertEquals($elementsFirstPage[0]::class, Text::class);
@@ -129,8 +144,20 @@ class DocumentJsonTest extends TestCase{
         $this->assertEquals($elementsFirstPage[3]::class, Picture::class);
     }
 
-    public function testDeserializeElementsSize(){
+    public function testDeserializeElementsSize()
+    {
+        $elementsFirstPage = $this->document->getPages()[0]->getElements();
+        $this->assertNotNull($elementsFirstPage[0]->getSize());
+        $this->assertNotNull($elementsFirstPage[1]->getSize());
+        $this->assertNotNull($elementsFirstPage[2]->getSize());
+        $this->assertNotNull($elementsFirstPage[3]->getSize());
+    }
 
-        $this->assertTrue(false);
+    public function testDeserializeElementsSizeContain()
+    {
+
+        $elementsFirstPage = $this->document->getPages()[0]->getElements();
+        $this->assertEquals($elementsFirstPage[0]->getSize(), new Size("6.61458325mm","17.19791645mm", "66.542707495mm","25.082499684000002mm"));
+        $this->assertEquals($elementsFirstPage[1]->getSize(), new Size("27.301030906050002mm","19.84374975mm", "97.92229043300001mm","57.546874275mm"));
     }
 }
