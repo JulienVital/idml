@@ -160,4 +160,12 @@ class DocumentJsonTest extends TestCase
         $this->assertEquals($elementsFirstPage[0]->getSize(), new Size("6.61458325mm","17.19791645mm", "66.542707495mm","25.082499684000002mm"));
         $this->assertEquals($elementsFirstPage[1]->getSize(), new Size("27.301030906050002mm","19.84374975mm", "97.92229043300001mm","57.546874275mm"));
     }
+
+    public function testDeserializeElementsProperties()
+    {
+
+        $elementsFirstPage = $this->document->getPages()[0]->getElements();
+        $this->assertEquals($elementsFirstPage[0]->getProperties(),["color"=> "#978bc6"] );
+        $this->assertEquals($elementsFirstPage[1]->getProperties(), []);
+    }
 }

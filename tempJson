@@ -14,7 +14,9 @@
                         "top": "17.19791645mm",
                         "height": "25.082499684000002mm"
                     },
-                    "properties": {},
+                    "properties": {
+                        "color": "#978bc6"
+                    },
                     "styleName": "text"
                 },
                 {

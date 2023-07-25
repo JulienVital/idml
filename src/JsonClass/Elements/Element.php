@@ -4,6 +4,7 @@ namespace Jvital\Idml\JsonClass\Elements;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Discriminator;
+use JMS\Serializer\Annotation\Type;
 
 /** 
  * @Discriminator(field = "type", 
@@ -38,6 +39,11 @@ abstract class Element
     private string $styleName;
 
     private Size $size;
+
+    /**
+     * @Type("array<string, string>")
+     */
+    private array $properties;
     /**
      * Get the value of id
      */
@@ -124,6 +130,24 @@ abstract class Element
     public function setSize(Size $size): self
     {
         $this->size = $size;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of properties
+     */
+    public function getProperties(): array
+    {
+        return $this->properties;
+    }
+
+    /**
+     * Set the value of properties
+     */
+    public function setProperties(array $properties): self
+    {
+        $this->properties = $properties;
 
         return $this;
     }

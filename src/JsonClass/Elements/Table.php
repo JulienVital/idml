@@ -10,15 +10,4 @@ class Table extends Element
         return "TABLE";
     }
 
-    // /**
-    //  * Set the value of type
-    //  */
-    // public function setType(string $type): self
-    // {
-    //     $this->type = $type;
-
-    //     return $this;
-    // }
-
-    
 }
