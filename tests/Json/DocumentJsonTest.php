@@ -16,10 +16,7 @@ class DocumentJsonTest extends TestCase
     private $loader;
     private string $jsonTest;
 
-    public function __construct()
-    {
-        parent::__construct();
-
+    protected function setUp():void{
         $this->loader = new Loader();
         $this->jsonTest = file_get_contents('tempJson');
         $this->document = $this->loader->load($this->jsonTest);

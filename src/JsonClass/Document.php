@@ -18,7 +18,7 @@ class Document{
      * @Type("array<Jvital\Idml\JsonClass\Page>")
      * @var Page[]
      */
-    private array $pages;
+    private array $pages = [];
     /**
      * Get the value of name
      */

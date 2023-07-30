@@ -29,8 +29,8 @@ class IdpkgSpread{
      */
     public function setSrc(string $src): self
     {
-        $this->src = $src;
-
+        $this->src = "Spreads/Spread_$src.xml";
+        
         return $this;
     }
 }

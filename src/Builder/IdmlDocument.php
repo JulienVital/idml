@@ -6,6 +6,8 @@ use Jvital\Idml\SerializationClass\Designmap\IdpkgBackingStory;
 use Jvital\Idml\SerializationClass\Ressources\Fonts\FontIdpkg;
 use Jvital\Idml\SerializationClass\Ressources\Graphics\GraphicIdpkg;
 use Jvital\Idml\SerializationClass\Ressources\Styles\StylesIdpkg;
+use Jvital\Idml\SerializationClass\Spread\Page;
+use Jvital\Idml\SerializationClass\Spread\Spread;
 use Jvital\Idml\SerializationClass\Spread\SpreadIdpkg;
 use Jvital\Idml\SerializationClass\Stories\StoryIdpkg;
 use Jvital\Idml\SerializationClass\XML\Tags\Tags;
@@ -189,5 +191,44 @@ class IdmlDocument{
         $this->styles = $styles;
 
         return $this;
+    }
+
+    /**
+     * Add pages
+     */
+    public function addPages(array $pages): self
+    {   
+        if (!$pages){
+            return $this;
+        }
+        $spreads =  [];
+        if (count($pages) > 1) {
+            $page = array_shift($pages);
+            $spread = new Spread(uniqid());
+            $spread->addPage(new Page(uniqid()));
+            $spread->setBindingLocation(0);
+
+            $this->addSpread($spread->getSpreadIdpkg());      
+        }
+        
+        for ($i = 0; $i < count($pages); $i += 2) {
+            $spread = new Spread(uniqid());
+        
+            $page1 = $pages[$i];
+            $page2 = isset($pages[$i + 1]) ? $pages[$i + 1] : null;
+        
+            // Ajouter les pages au spread
+            $spread->addPage(new Page(uniqid()));
+            if ($page2) {
+                $spread->addPage(new Page(uniqid()));
+            }
+            $this->addSpread($spread->getSpreadIdpkg());      
+        }
+        return $this;
+    }
+
+    private function addSpread(SpreadIdpkg $spread){
+        $this->spreads[] = $spread;
+        $this->designMap->addSpread($spread);
     }
 }

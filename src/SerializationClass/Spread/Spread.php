@@ -2,6 +2,7 @@
 namespace Jvital\Idml\SerializationClass\Spread;
 
 use JMS\Serializer\Annotation\XmlRoot;
+use JMS\Serializer\Annotation\Exclude;
 use Jvital\Idml\SerializationClass\Trait\AllowPageShuffleAttribute;
 use Jvital\Idml\SerializationClass\Trait\BindingLocationAttribute;
 use Jvital\Idml\SerializationClass\Trait\FlattenerOverrideAttribute;
@@ -34,7 +35,7 @@ class Spread
     use Page;
     use TextFrame;
     
-    function __construct($self){
+    function __construct(string $self){
         $this->self = $self;
     }
 
@@ -47,4 +48,21 @@ class Spread
     * @SerializedName("Rectangle")
     */
     private Rectangle $rectangle;
+
+    /**
+    * @Exclude
+    */
+    public function getSpreadIdpkg():SpreadIdpkg{
+        return new SpreadIdpkg($this);
+    }
+
+    /**
+    * @Exclude
+    */
+    public function addPage($page):self{
+
+        $this->page[] = $page;
+        $this->setPageCount(count($this->page));
+        return $this;
+    }
 }

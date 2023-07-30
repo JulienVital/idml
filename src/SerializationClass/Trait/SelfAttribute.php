@@ -19,4 +19,5 @@ trait SelfAttribute {
     function getSelf(){
         return $this->self;
     }
+    
 }

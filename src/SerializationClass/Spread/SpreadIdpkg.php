@@ -11,6 +11,10 @@ use Jvital\Idml\SerializationClass\Utils\IdpkgWrapper;
 class SpreadIdpkg extends IdpkgWrapper
 {
 
+    public function __construct(Spread $spread) {
+        $this->spread = $spread;
+    }
+
     /**
     * @SerializedName("Spread")
     */
@@ -22,5 +26,13 @@ class SpreadIdpkg extends IdpkgWrapper
     public function getName()
     {
         return $this->spread->getSelf();
+    }
+
+    /**
+     * Get the value of spread
+     */
+    public function getSpread(): Spread
+    {
+        return $this->spread;
     }
 }

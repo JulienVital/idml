@@ -6,6 +6,7 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\Type;
+use Jvital\Idml\SerializationClass\Spread\SpreadIdpkg;
 use Jvital\Idml\SerializationClass\Trait\AccurateLABSpotsAttribute;
 use Jvital\Idml\SerializationClass\Trait\NameAttribute;
 use Jvital\Idml\SerializationClass\Trait\SelfAttribute;
@@ -95,5 +96,20 @@ class Designmap extends IdpkgWrapper
     public function getActiveLayer(): string
     {
         return $this->activeLayer;
+    }
+
+    public function addSpread(SpreadIdpkg $spreadIdpkg): self
+    {
+        $spread = new IdpkgSpread();
+        $spread->setSrc($spreadIdpkg->getName());
+        $this->spreads[] = $spread;
+        return $this;
+    }
+
+    
+    public function getSpread(): array
+    {
+
+        return $this->spreads;
     }
 }
