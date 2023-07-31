@@ -15,8 +15,8 @@ class Document{
     private array $styles;
 
     /**
-     * @Type("array<Jvital\Idml\JsonClass\Page>")
-     * @var Page[]
+     * @Type("array<Jvital\Idml\JsonClass\PageJson>")
+     * @var PageJson[]
      */
     private array $pages = [];
     /**
@@ -86,6 +86,17 @@ class Document{
      */
     public function setPages(array $pages): self
     {
+        $this->pages = $pages;
+
+        return $this;
+    }
+
+    public function addPages(array $pages): self
+    {
+
+        if (!$pages){
+            return $this;
+        }
         $this->pages = $pages;
 
         return $this;

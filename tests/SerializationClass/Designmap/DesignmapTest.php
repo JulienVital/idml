@@ -59,7 +59,7 @@ class DesignmapTest extends XmlTestCase{
         $wrapperSerialized = $this->serialize($wrapperSpread, 'xml');
         $wrapperDeSerialized = $this->deSerialize($wrapperSerialized, IdpkgSpread::class,'xml');
 
-        $this->assertEquals($wrapperDeSerialized->getSrc(), "test src");
+        $this->assertEquals($wrapperDeSerialized->getSrc(), "Spreads/Spread_test src.xml");
     }
 
     public function testWrapperStory(){

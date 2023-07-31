@@ -17,6 +17,14 @@ trait Page {
      * @XmlList(inline = true, entry = "Page")
      */
     private array $page;
+    
 
+    /**
+     * Get the value of page
+     */
+    public function getPages(): array
+    {
+        return $this->page;
+    }
 }
 

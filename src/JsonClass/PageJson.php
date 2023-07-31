@@ -4,9 +4,10 @@ namespace Jvital\Idml\JsonClass;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 
-class Page
+class PageJson
 {
     private string $name;
+    
     /**
      * @SerializedName("pagePosition")
      */

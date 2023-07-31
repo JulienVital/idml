@@ -201,15 +201,13 @@ class IdmlDocument{
         if (!$pages){
             return $this;
         }
-        $spreads =  [];
-        if (count($pages) > 1) {
+        
             $page = array_shift($pages);
             $spread = new Spread(uniqid());
             $spread->addPage(new Page(uniqid()));
             $spread->setBindingLocation(0);
 
             $this->addSpread($spread->getSpreadIdpkg());      
-        }
         
         for ($i = 0; $i < count($pages); $i += 2) {
             $spread = new Spread(uniqid());
@@ -230,5 +228,13 @@ class IdmlDocument{
     private function addSpread(SpreadIdpkg $spread){
         $this->spreads[] = $spread;
         $this->designMap->addSpread($spread);
+    }
+
+    public function getPages(){
+        $pages = [];
+        foreach ($this->spreads as $idpkgSpread) {
+            $pages = array_merge($pages, $idpkgSpread->getSpread()->getPages());
+        }
+        return $pages;
     }
 }

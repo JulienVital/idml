@@ -1,7 +1,6 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Spread\FlattenerPreference;
 use Jvital\Idml\SerializationClass\Spread\RasterVectorBalance;
 use PHPUnit\Framework\TestCase;
 

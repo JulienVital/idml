@@ -10,6 +10,7 @@ class Converter{
 
         $jsonDocument = new Document();
         $jsonDocument->setName($idmlDocument->getName());
+        $jsonDocument->addPages($idmlDocument->getPages());
         return $jsonDocument;
     }
 
