@@ -1,15 +1,13 @@
 <?php
 
 use Jvital\Idml\Builder\IdmlDocument;
-
+use Jvital\Idml\JsonClass\Elements\Text;
 use Jvital\Idml\JsonClass\PageJson;
 use PHPUnit\Framework\TestCase;
 
 
 class PageTest extends TestCase{
-        // make test for check number of spread when add page
-        // first page binding location 0 page count 1
-        // other binding 1 page count 2
+
     public function testAddOnePageCreateOneSpread(){
         
         $idmlDocument = new IdmlDocument("document name");
@@ -41,4 +39,5 @@ class PageTest extends TestCase{
         $this->assertEquals($idmlDocument->getSpreads()[1]->getSpread()->getBindingLocation(), 1);
         $this->assertEquals($idmlDocument->getSpreads()[1]->getSpread()->getPageCount(), 2);
     }
+
 }

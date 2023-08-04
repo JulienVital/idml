@@ -6,6 +6,8 @@ class Document{
 
     private string $name;
 
+    private string $id;
+
     private DocumentProperties $properties;
     
     /**
@@ -98,6 +100,24 @@ class Document{
             return $this;
         }
         $this->pages = $pages;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of id
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of id
+     */
+    public function setId(string $id): self
+    {
+        $this->id = $id;
 
         return $this;
     }

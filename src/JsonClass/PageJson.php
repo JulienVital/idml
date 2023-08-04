@@ -7,6 +7,8 @@ use JMS\Serializer\Annotation\Type;
 class PageJson
 {
     private string $name;
+
+    private string $id;
     
     /**
      * @SerializedName("pagePosition")
@@ -69,6 +71,24 @@ class PageJson
     public function setElements(array $elements): self
     {
         $this->elements = $elements;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of id
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of id
+     */
+    public function setId(string $id): self
+    {
+        $this->id = $id;
 
         return $this;
     }

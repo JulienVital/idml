@@ -203,26 +203,34 @@ class IdmlDocument{
         }
         
             $page = array_shift($pages);
-            $spread = new Spread(uniqid());
-            $spread->addPage(new Page(uniqid()));
-            $spread->setBindingLocation(0);
+            $spread = $this->createFirstSpread($page);
 
             $this->addSpread($spread->getSpreadIdpkg());      
         
         for ($i = 0; $i < count($pages); $i += 2) {
-            $spread = new Spread(uniqid());
-        
+            
             $page1 = $pages[$i];
             $page2 = isset($pages[$i + 1]) ? $pages[$i + 1] : null;
-        
-            // Ajouter les pages au spread
-            $spread->addPage(new Page(uniqid()));
-            if ($page2) {
-                $spread->addPage(new Page(uniqid()));
-            }
+            $spread = $this->createSpread($page1, $page2);
             $this->addSpread($spread->getSpreadIdpkg());      
         }
         return $this;
+    }
+
+    private function createSpread($page1, $page2 = null){
+        $spread = new Spread(uniqid());
+        $spread->addPage(new Page(uniqid()));
+        if ($page2) {
+            $spread->addPage(new Page(uniqid()));
+        }
+        return $spread;
+    }
+
+    private function createFirstSpread($page1){
+        $spread = new Spread(uniqid());
+        $spread->addPage(new Page(uniqid()));
+        $spread->setBindingLocation(0);
+        return $spread;
     }
 
     private function addSpread(SpreadIdpkg $spread){

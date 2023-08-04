@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<idPkg:Story xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="17.0">
+	<Story Self="uf0" AppliedTOCStyle="n" UserText="true" IsEndnoteStory="false" TrackChanges="false" StoryTitle="$ID/" AppliedNamedGrid="n">
+		<XMLElement Self="di3i4" MarkupTag="XMLTag/Article" XMLContent="uf0">
+			<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Style de paragraphe custom 1">
+				<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
+					<Content>Text 1</Content>
+					<Br />
+					<Content>text3</Content>
+				</CharacterStyleRange>
+			</ParagraphStyleRange>
+		</XMLElement>
+	</Story>
+</idPkg:Story>
