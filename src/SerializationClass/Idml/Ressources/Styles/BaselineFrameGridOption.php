@@ -4,7 +4,7 @@ namespace Jvital\Idml\SerializationClass\Idml\Ressources\Styles;
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\SerializedName;
-use Jvital\Idml\SerializationClass\Trait\Properties;
+use Jvital\Idml\SerializationClass\Idml\Trait\Properties;
 
 /** 
  * @XmlRoot("BaselineFrameGridOption") 

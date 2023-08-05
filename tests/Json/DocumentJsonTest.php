@@ -1,12 +1,12 @@
 <?php
 
 use Jvital\Idml\Builder\Json\Loader;
-use Jvital\Idml\JsonClass\Document;
-use Jvital\Idml\JsonClass\Elements\Block;
-use Jvital\Idml\JsonClass\Elements\Picture;
-use Jvital\Idml\JsonClass\Elements\Size;
-use Jvital\Idml\JsonClass\Elements\Table;
-use Jvital\Idml\JsonClass\Elements\Text;
+use Jvital\Idml\SerializationClass\Json\Document;
+use Jvital\Idml\SerializationClass\Json\Elements\Block;
+use Jvital\Idml\SerializationClass\Json\Elements\Picture;
+use Jvital\Idml\SerializationClass\Json\Elements\Size;
+use Jvital\Idml\SerializationClass\Json\Elements\Table;
+use Jvital\Idml\SerializationClass\Json\Elements\Text;
 use PHPUnit\Framework\TestCase;
 
 class DocumentJsonTest extends TestCase

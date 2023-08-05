@@ -6,13 +6,13 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\Type;
-use Jvital\Idml\SerializationClass\Spread\SpreadIdpkg;
-use Jvital\Idml\SerializationClass\Trait\AccurateLABSpotsAttribute;
-use Jvital\Idml\SerializationClass\Trait\NameAttribute;
-use Jvital\Idml\SerializationClass\Trait\SelfAttribute;
-use Jvital\Idml\SerializationClass\Trait\StoryListAttribute;
-use Jvital\Idml\SerializationClass\Trait\ZeroPointAttribute;
-use Jvital\Idml\SerializationClass\Utils\IdpkgWrapper;
+use Jvital\Idml\SerializationClass\Idml\Spread\SpreadIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Trait\AccurateLABSpotsAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\NameAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\StoryListAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\ZeroPointAttribute;
+use Jvital\Idml\SerializationClass\Idml\Utils\IdpkgWrapper;
 
 /** 
  * @XmlRoot("Document") 

@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Trait\CornerOptionAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\CornerOptionAttribute;
 use Jvital\Tests\Helper\XmlTestCase;
 
 Class testCornerOptionAttribute{

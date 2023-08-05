@@ -1,7 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Spread\RasterVectorBalance;
+use Jvital\Idml\SerializationClass\Idml\Spread\RasterVectorBalance;
 use PHPUnit\Framework\TestCase;
 
 class RasterVectorBalanceTest extends TestCase{

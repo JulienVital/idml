@@ -2,7 +2,7 @@
 namespace Jvital\Idml\Converter;
 
 use Jvital\Idml\Builder\IdmlDocument;
-use Jvital\Idml\JsonClass\Document;
+use Jvital\Idml\SerializationClass\Json\Document;
 
 class Converter{
     

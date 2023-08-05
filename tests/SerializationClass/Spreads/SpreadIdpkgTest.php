@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Spread\SpreadIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Spread\SpreadIdpkg;
 use PHPUnit\Framework\TestCase;
 
 class SpreadIdpkgTest extends TestCase{

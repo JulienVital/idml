@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Trait\TransformAttrRefAnchorPointAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\TransformAttrRefAnchorPointAttribute;
 
 use Jvital\Tests\Helper\XmlTestCase;
 

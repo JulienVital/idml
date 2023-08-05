@@ -1,8 +1,8 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Stories\CharacterStyleRange;
-use Jvital\Idml\SerializationClass\XML\BackingStory\XmlElement;
+use Jvital\Idml\SerializationClass\Idml\Stories\CharacterStyleRange;
+use Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlElement;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DomCrawler\Crawler;
 

@@ -1,7 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Stories\Table\Cell;
+use Jvital\Idml\SerializationClass\Idml\Stories\Table\Cell;
 use PHPUnit\Framework\TestCase;
 
 class CellCreationTest extends TestCase{

@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Trait\UnderlineOffsetAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\UnderlineOffsetAttribute;
 
 use Jvital\Tests\Helper\XmlTestCase;
 

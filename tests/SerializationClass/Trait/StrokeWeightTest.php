@@ -3,7 +3,7 @@
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 
-use Jvital\Idml\SerializationClass\Trait\StrokeWeightAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\StrokeWeightAttribute;
 use Jvital\Tests\Helper\XmlTestCase;
 
 Class testStrokeWeightAttributeTest{

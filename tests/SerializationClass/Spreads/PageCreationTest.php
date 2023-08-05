@@ -5,9 +5,9 @@ use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionDirectionOptions;
 use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionDurationOptions;
 use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionTypeOptions;
-use Jvital\Idml\SerializationClass\Spread\MarginPreference;
-use Jvital\Idml\SerializationClass\Spread\Page;
-use Jvital\Idml\SerializationClass\Spread\Spread;
+use Jvital\Idml\SerializationClass\Idml\Spread\MarginPreference;
+use Jvital\Idml\SerializationClass\Idml\Spread\Page;
+use Jvital\Idml\SerializationClass\Idml\Spread\Spread;
 use PHPUnit\Framework\TestCase;
 
 class PageCreationTest extends TestCase{

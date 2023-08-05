@@ -2,8 +2,8 @@
 
 use Jvital\Idml\Builder\IdmlDocument;
 use Jvital\Idml\Converter\Converter;
-use Jvital\Idml\JsonClass\Document;
-use Jvital\Idml\JsonClass\PageJson;
+use Jvital\Idml\SerializationClass\Json\Document;
+use Jvital\Idml\SerializationClass\Json\PageJson;
 use PHPUnit\Framework\TestCase;
 
 

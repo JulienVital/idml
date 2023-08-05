@@ -1,7 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Spread\MarginPreference;
+use Jvital\Idml\SerializationClass\Idml\Spread\MarginPreference;
 use PHPUnit\Framework\TestCase;
 
 class MarginPreferenceTest extends TestCase{

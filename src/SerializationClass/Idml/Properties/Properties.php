@@ -6,16 +6,16 @@ use JMS\Serializer\Annotation\SerializedName;
 use Jvital\Idml\SerializationClass\Idml\Properties\Value\GraphicBounds;
 use Jvital\Idml\SerializationClass\Idml\Properties\Value\Profile;
 use Jvital\Idml\SerializationClass\Idml\Properties\Value\TextWrapOffset;
-use Jvital\Idml\SerializationClass\Trait\AppliedFontValue;
-use Jvital\Idml\SerializationClass\Trait\BasedOnValue;
-use Jvital\Idml\SerializationClass\Trait\BaselineFrameGridColorValue;
-use Jvital\Idml\SerializationClass\Trait\InsetSpacingValue;
-use Jvital\Idml\SerializationClass\Trait\Label;
-use Jvital\Idml\SerializationClass\Trait\LeadingValue;
-use Jvital\Idml\SerializationClass\Trait\ParagraphBorderColorValue;
-use Jvital\Idml\SerializationClass\Trait\ParagraphBorderTypeValue;
-use Jvital\Idml\SerializationClass\Trait\RasterVectorBalance;
-use Jvital\Idml\SerializationClass\Utils\Properties\PathGeometry;
+use Jvital\Idml\SerializationClass\Idml\Trait\AppliedFontValue;
+use Jvital\Idml\SerializationClass\Idml\Trait\BasedOnValue;
+use Jvital\Idml\SerializationClass\Idml\Trait\BaselineFrameGridColorValue;
+use Jvital\Idml\SerializationClass\Idml\Trait\InsetSpacingValue;
+use Jvital\Idml\SerializationClass\Idml\Trait\Label;
+use Jvital\Idml\SerializationClass\Idml\Trait\LeadingValue;
+use Jvital\Idml\SerializationClass\Idml\Trait\ParagraphBorderColorValue;
+use Jvital\Idml\SerializationClass\Idml\Trait\ParagraphBorderTypeValue;
+use Jvital\Idml\SerializationClass\Idml\Trait\RasterVectorBalance;
+use Jvital\Idml\SerializationClass\Idml\Utils\Properties\PathGeometry;
 
 /** 
  * @XmlRoot("Properties") 

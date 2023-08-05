@@ -6,11 +6,11 @@ use Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgBackingStory;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\FontIdpkg;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Graphics\GraphicIdpkg;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\StylesIdpkg;
-use Jvital\Idml\SerializationClass\Spread\Page;
-use Jvital\Idml\SerializationClass\Spread\Spread;
-use Jvital\Idml\SerializationClass\Spread\SpreadIdpkg;
-use Jvital\Idml\SerializationClass\Stories\StoryIdpkg;
-use Jvital\Idml\SerializationClass\XML\Tags\Tags;
+use Jvital\Idml\SerializationClass\Idml\Spread\Page;
+use Jvital\Idml\SerializationClass\Idml\Spread\Spread;
+use Jvital\Idml\SerializationClass\Idml\Spread\SpreadIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Stories\StoryIdpkg;
+use Jvital\Idml\SerializationClass\Idml\XML\Tags\Tags;
 
 class IdmlDocument{
     

@@ -3,11 +3,11 @@ namespace Jvital\Idml\SerializationClass\Idml\Ressources\Fonts;
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
-use Jvital\Idml\SerializationClass\Trait\FontFamilyAttribute;
-use Jvital\Idml\SerializationClass\Trait\FontStyleNameAttribute;
-use Jvital\Idml\SerializationClass\Trait\NameAttribute;
-use Jvital\Idml\SerializationClass\Trait\PostScriptNameAttribute;
-use Jvital\Idml\SerializationClass\Trait\SelfAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\FontFamilyAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\FontStyleNameAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\NameAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\PostScriptNameAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("Font") 

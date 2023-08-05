@@ -1,6 +1,6 @@
 <?php
 
-use Jvital\Idml\SerializationClass\Spread\Rectangle;
+use Jvital\Idml\SerializationClass\Idml\Spread\Rectangle;
 use Jvital\Tests\Helper\XmlTestCase;
 
 class RectangleTest extends XmlTestCase{

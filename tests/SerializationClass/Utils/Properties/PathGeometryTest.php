@@ -2,10 +2,10 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Utils\Properties\GeometryPathType;
-use Jvital\Idml\SerializationClass\Utils\Properties\PathGeometry;
-use Jvital\Idml\SerializationClass\Utils\Properties\PathPointArray;
-use Jvital\Idml\SerializationClass\Utils\Properties\PathPointType;
+use Jvital\Idml\SerializationClass\Idml\Utils\Properties\GeometryPathType;
+use Jvital\Idml\SerializationClass\Idml\Utils\Properties\PathGeometry;
+use Jvital\Idml\SerializationClass\Idml\Utils\Properties\PathPointArray;
+use Jvital\Idml\SerializationClass\Idml\Utils\Properties\PathPointType;
 use PHPUnit\Framework\TestCase;
 
 class PathGeometryTest extends TestCase{

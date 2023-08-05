@@ -1,7 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Stories\StoryIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Stories\StoryIdpkg;
 use PHPUnit\Framework\TestCase;
 
 use function PHPUnit\Framework\assertTrue;

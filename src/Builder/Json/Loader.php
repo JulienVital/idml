@@ -2,7 +2,7 @@
 namespace Jvital\Idml\Builder\Json;
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\JsonClass\Document;
+use Jvital\Idml\SerializationClass\Json\Document;
 
 class Loader{
 

@@ -4,10 +4,10 @@ use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Idml\Enums\ContentTypeOptions;
 use Jvital\Idml\SerializationClass\Idml\Properties\Properties;
-use Jvital\Idml\SerializationClass\Spread\KeyValuePair;
-use Jvital\Idml\SerializationClass\Spread\Label;
-use Jvital\Idml\SerializationClass\Spread\TextFrame;
-use Jvital\Idml\SerializationClass\Spread\TextFramePreference;
+use Jvital\Idml\SerializationClass\Idml\Spread\KeyValuePair;
+use Jvital\Idml\SerializationClass\Idml\Spread\Label;
+use Jvital\Idml\SerializationClass\Idml\Spread\TextFrame;
+use Jvital\Idml\SerializationClass\Idml\Spread\TextFramePreference;
 use PHPUnit\Framework\TestCase;
 
 class TextFrameCreationTest extends TestCase{

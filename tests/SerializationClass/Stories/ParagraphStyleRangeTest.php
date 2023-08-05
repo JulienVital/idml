@@ -1,9 +1,9 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Stories\CharacterStyleRange;
-use Jvital\Idml\SerializationClass\Stories\ParagraphStyleRange;
-use Jvital\Idml\SerializationClass\XML\BackingStory\XmlElement;
+use Jvital\Idml\SerializationClass\Idml\Stories\CharacterStyleRange;
+use Jvital\Idml\SerializationClass\Idml\Stories\ParagraphStyleRange;
+use Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlElement;
 use Jvital\Tests\Helper\XmlTestCase;
 use Symfony\Component\DomCrawler\Crawler;
 

@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Trait\EndJoinAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\EndJoinAttribute;
 use Jvital\Tests\Helper\XmlTestCase;
 
 Class testEndJoinAttribute{

@@ -4,7 +4,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlList;
-use Jvital\Idml\SerializationClass\Trait\SelfAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 
 /** 

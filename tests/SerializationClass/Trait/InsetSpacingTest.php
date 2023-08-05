@@ -4,7 +4,7 @@ use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Idml\Properties\Value\InsetSpacing;
 use Jvital\Idml\SerializationClass\Idml\Properties\Value\ListItem;
-use Jvital\Idml\SerializationClass\Trait\InsetSpacingValue;
+use Jvital\Idml\SerializationClass\Idml\Trait\InsetSpacingValue;
 use Jvital\Tests\Helper\XmlTestCase;
 
 Class testInsetSpacing{

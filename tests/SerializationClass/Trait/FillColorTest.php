@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Trait\FillColorAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\FillColorAttribute;
 use Jvital\Tests\Helper\XmlTestCase;
 
 Class testFillColorAttribute{

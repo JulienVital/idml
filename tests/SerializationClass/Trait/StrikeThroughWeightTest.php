@@ -3,7 +3,7 @@
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 
-use Jvital\Idml\SerializationClass\Trait\StrikeThroughWeightAttribute;
+use Jvital\Idml\SerializationClass\Idml\Trait\StrikeThroughWeightAttribute;
 use Jvital\Tests\Helper\XmlTestCase;
 
 Class testStrikeThroughWeightAttributeTest{

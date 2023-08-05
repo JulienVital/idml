@@ -1,7 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\XML\BackingStory\XmlAttribute;
+use Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlAttribute;
 use PHPUnit\Framework\TestCase;
 
 class XMLAttributeTest extends TestCase

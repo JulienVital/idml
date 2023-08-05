@@ -2,8 +2,8 @@
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Idml\Enums\TableDirectionOptions;
-use Jvital\Idml\SerializationClass\Stories\Table\Row;
-use Jvital\Idml\SerializationClass\Stories\Table\Table;
+use Jvital\Idml\SerializationClass\Idml\Stories\Table\Row;
+use Jvital\Idml\SerializationClass\Idml\Stories\Table\Table;
 use PHPUnit\Framework\TestCase;
 
 class TableCreationTest extends TestCase{
