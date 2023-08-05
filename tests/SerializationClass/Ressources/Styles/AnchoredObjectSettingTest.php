@@ -1,6 +1,6 @@
 <?php
 
-use Jvital\Idml\SerializationClass\Ressources\Styles\AnchoredObjectSetting;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\AnchoredObjectSetting;
 use Jvital\Tests\Helper\XmlTestCase;
 
 class AnchoredObjectSettingTest extends XmlTestCase{

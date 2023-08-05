@@ -2,8 +2,8 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Ressources\Styles\CellStyle;
-use Jvital\Idml\SerializationClass\Ressources\Styles\RootCellStyleGroup;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\CellStyle;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\RootCellStyleGroup;
 use Jvital\Tests\Helper\XmlTestCase;
 
 class CellStyleTest extends XmlTestCase{

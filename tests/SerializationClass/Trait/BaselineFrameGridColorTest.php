@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Properties\Value\BaselineFrameGridColor;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\BaselineFrameGridColor;
 use Jvital\Idml\SerializationClass\Trait\BaselineFrameGridColorValue;
 use Jvital\Tests\Helper\XmlTestCase;
 

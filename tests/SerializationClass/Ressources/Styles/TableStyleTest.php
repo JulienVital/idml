@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Ressources\Styles\RootTableStyleGroup;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\RootTableStyleGroup;
 use PHPUnit\Framework\TestCase;
 
 class TableStyleTest  extends TestCase{

@@ -3,7 +3,7 @@ namespace Jvital\Idml\SerializationClass\Trait;
 
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\SerializedName;
-use Jvital\Idml\SerializationClass\Enums\PageTransitionDirectionOptions;
+use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionDirectionOptions;
 
 /**
  * This trait add a PageTransitionDirectionAttribute

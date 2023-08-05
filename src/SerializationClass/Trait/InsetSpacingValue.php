@@ -2,8 +2,8 @@
 namespace Jvital\Idml\SerializationClass\Trait;
 
 use JMS\Serializer\Annotation\SerializedName;
-use Jvital\Idml\SerializationClass\Properties\Value\AppliedFont;
-use Jvital\Idml\SerializationClass\Properties\Value\InsetSpacing;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\AppliedFont;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\InsetSpacing;
 
 /**
  * This trait InsetSpacing

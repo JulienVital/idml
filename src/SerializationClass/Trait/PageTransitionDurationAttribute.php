@@ -3,8 +3,8 @@ namespace Jvital\Idml\SerializationClass\Trait;
 
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\SerializedName;
-use Jvital\Idml\SerializationClass\Enums\PageTransitionDurationOptions;
-use Jvital\Idml\SerializationClass\Enums\PageTransitionTypeOptions;
+use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionDurationOptions;
+use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionTypeOptions;
 
 /**
  * This trait add a PageTransitionType Attribute

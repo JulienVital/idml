@@ -1,6 +1,6 @@
 <?php
 
-use Jvital\Idml\SerializationClass\Ressources\Styles\FrameFittingOption;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\FrameFittingOption;
 use Jvital\Tests\Helper\XmlTestCase;
 
 class FrameFittingOptionTest extends XmlTestCase{

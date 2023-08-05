@@ -3,9 +3,9 @@ namespace Jvital\Idml\Builder;
 
 use Jvital\Idml\SerializationClass\Idml\Designmap\Designmap;
 use Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgBackingStory;
-use Jvital\Idml\SerializationClass\Ressources\Fonts\FontIdpkg;
-use Jvital\Idml\SerializationClass\Ressources\Graphics\GraphicIdpkg;
-use Jvital\Idml\SerializationClass\Ressources\Styles\StylesIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\FontIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Graphics\GraphicIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\StylesIdpkg;
 use Jvital\Idml\SerializationClass\Spread\Page;
 use Jvital\Idml\SerializationClass\Spread\Spread;
 use Jvital\Idml\SerializationClass\Spread\SpreadIdpkg;

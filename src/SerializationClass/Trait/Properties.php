@@ -2,7 +2,7 @@
 namespace Jvital\Idml\SerializationClass\Trait;
 
 use JMS\Serializer\Annotation\SerializedName;
-use Jvital\Idml\SerializationClass\Properties\Properties as UtilsProperties;
+use Jvital\Idml\SerializationClass\Idml\Properties\Properties as UtilsProperties;
 
 /**
  * This trait add a Properties child

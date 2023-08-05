@@ -1,7 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Enums\TableDirectionOptions;
+use Jvital\Idml\SerializationClass\Idml\Enums\TableDirectionOptions;
 use Jvital\Idml\SerializationClass\Stories\Table\Row;
 use Jvital\Idml\SerializationClass\Stories\Table\Table;
 use PHPUnit\Framework\TestCase;

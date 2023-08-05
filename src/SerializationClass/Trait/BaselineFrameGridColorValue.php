@@ -2,7 +2,7 @@
 namespace Jvital\Idml\SerializationClass\Trait;
 
 use JMS\Serializer\Annotation\SerializedName;
-use Jvital\Idml\SerializationClass\Properties\Value\BaselineFrameGridColor;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\BaselineFrameGridColor;
 
 /**
  * This trait BaselineFrameGridColor

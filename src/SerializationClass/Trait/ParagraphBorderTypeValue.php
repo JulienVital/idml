@@ -2,7 +2,7 @@
 namespace Jvital\Idml\SerializationClass\Trait;
 
 use JMS\Serializer\Annotation\SerializedName;
-use Jvital\Idml\SerializationClass\Properties\Value\ParagraphBorderType;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\ParagraphBorderType;
 
 /**
  * This trait ParagraphBorderType

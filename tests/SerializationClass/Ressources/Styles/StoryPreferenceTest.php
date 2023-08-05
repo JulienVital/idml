@@ -1,6 +1,6 @@
 <?php
 
-use Jvital\Idml\SerializationClass\Ressources\Styles\StoryPreference;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\StoryPreference;
 use Jvital\Tests\Helper\XmlTestCase;
 
 class StoryPreferenceTest extends XmlTestCase{

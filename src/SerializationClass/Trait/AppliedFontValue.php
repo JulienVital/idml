@@ -2,7 +2,7 @@
 namespace Jvital\Idml\SerializationClass\Trait;
 
 use JMS\Serializer\Annotation\SerializedName;
-use Jvital\Idml\SerializationClass\Properties\Value\AppliedFont;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\AppliedFont;
 
 /**
  * This trait Leading

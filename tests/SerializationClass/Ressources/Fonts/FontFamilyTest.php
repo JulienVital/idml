@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Ressources\Fonts\FontFamily;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\FontFamily;
 use PHPUnit\Framework\TestCase;
 
 class FontFamilyTest extends TestCase{

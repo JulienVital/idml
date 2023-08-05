@@ -1,12 +1,12 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Properties\Properties;
-use Jvital\Idml\SerializationClass\Properties\Value\AppliedFont;
-use Jvital\Idml\SerializationClass\Properties\Value\BasedOn;
-use Jvital\Idml\SerializationClass\Properties\Value\Leading;
-use Jvital\Idml\SerializationClass\Properties\Value\ParagraphBorderColor;
-use Jvital\Idml\SerializationClass\Properties\Value\ParagraphBorderType;
+use Jvital\Idml\SerializationClass\Idml\Properties\Properties;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\AppliedFont;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\BasedOn;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\Leading;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\ParagraphBorderColor;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\ParagraphBorderType;
 use PHPUnit\Framework\TestCase;
 
 class PropertiesTest extends TestCase{

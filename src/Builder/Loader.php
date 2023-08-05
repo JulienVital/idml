@@ -3,9 +3,9 @@ namespace Jvital\Idml\Builder;
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Designmap\Designmap;
-use Jvital\Idml\SerializationClass\Ressources\Fonts\FontIdpkg;
-use Jvital\Idml\SerializationClass\Ressources\Graphics\GraphicIdpkg;
-use Jvital\Idml\SerializationClass\Ressources\Styles\StylesIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\FontIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Graphics\GraphicIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\StylesIdpkg;
 use Jvital\Idml\SerializationClass\Spread\SpreadIdpkg;
 use Jvital\Idml\SerializationClass\Stories\StoryIdpkg;
 use ZipArchive;

@@ -1,6 +1,6 @@
 <?php
 
-use Jvital\Idml\SerializationClass\Ressources\Styles\ContourOption;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\ContourOption;
 use Jvital\Tests\Helper\XmlTestCase;
 
 class ContourOptionTest extends XmlTestCase{

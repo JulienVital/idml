@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Ressources\Styles\ParagraphStyle;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\ParagraphStyle;
 use Jvital\Idml\SerializationClass\Spread\TextFramePreference;
 use PHPUnit\Framework\TestCase;
 

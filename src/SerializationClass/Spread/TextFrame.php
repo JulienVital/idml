@@ -2,7 +2,7 @@
 namespace Jvital\Idml\SerializationClass\Spread;
 
 use JMS\Serializer\Annotation\XmlRoot;
-use Jvital\Idml\SerializationClass\Enums\ContentTypeOptions;
+use Jvital\Idml\SerializationClass\Idml\Enums\ContentTypeOptions;
 use Jvital\Idml\SerializationClass\Trait\AppliedObjectStyleAttribute;
 use Jvital\Idml\SerializationClass\Trait\ContentTypeAttribute;
 use Jvital\Idml\SerializationClass\Trait\ItemTransformAttribute;

@@ -2,7 +2,7 @@
 namespace Jvital\Idml\SerializationClass\Trait;
 
 use JMS\Serializer\Annotation\SerializedName;
-use Jvital\Idml\SerializationClass\Properties\Value\Leading;
+use Jvital\Idml\SerializationClass\Idml\Properties\Value\Leading;
 
 /**
  * This trait Leading

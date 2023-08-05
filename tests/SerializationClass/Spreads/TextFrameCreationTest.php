@@ -2,8 +2,8 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Enums\ContentTypeOptions;
-use Jvital\Idml\SerializationClass\Properties\Properties;
+use Jvital\Idml\SerializationClass\Idml\Enums\ContentTypeOptions;
+use Jvital\Idml\SerializationClass\Idml\Properties\Properties;
 use Jvital\Idml\SerializationClass\Spread\KeyValuePair;
 use Jvital\Idml\SerializationClass\Spread\Label;
 use Jvital\Idml\SerializationClass\Spread\TextFrame;

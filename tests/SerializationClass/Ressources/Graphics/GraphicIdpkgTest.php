@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Ressources\Graphics\GraphicIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Graphics\GraphicIdpkg;
 use PHPUnit\Framework\TestCase;
 
 class GraphicIdpkgTest extends TestCase{

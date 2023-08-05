@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Ressources\Styles\StylesIdpkg;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\StylesIdpkg;
 use Jvital\Tests\Helper\XmlTestCase;
 
 class StylesIdpkgTest extends XmlTestCase{

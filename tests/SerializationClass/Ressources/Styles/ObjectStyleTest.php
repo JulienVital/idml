@@ -2,7 +2,7 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Ressources\Styles\ObjectStyle;
+use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\ObjectStyle;
 use Jvital\Tests\Helper\XmlTestCase;
 
 class ObjectStyleTest extends XmlTestCase{

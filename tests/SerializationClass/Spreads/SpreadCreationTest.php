@@ -2,9 +2,9 @@
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\SerializationClass\Enums\PageTransitionDirectionOptions;
-use Jvital\Idml\SerializationClass\Enums\PageTransitionDurationOptions;
-use Jvital\Idml\SerializationClass\Enums\PageTransitionTypeOptions;
+use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionDirectionOptions;
+use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionDurationOptions;
+use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionTypeOptions;
 use Jvital\Idml\SerializationClass\Spread\Spread;
 use Jvital\Idml\SerializationClass\Spread\TextFrame;
 use PHPUnit\Framework\TestCase;
