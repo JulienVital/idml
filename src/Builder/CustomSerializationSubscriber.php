@@ -4,7 +4,7 @@ namespace Jvital\Idml\Builder;
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
 use JMS\Serializer\EventDispatcher\ObjectEvent;
 use JMS\Serializer\XmlSerializationVisitor;
-use Jvital\Idml\SerializationClass\Designmap\Designmap;
+use Jvital\Idml\SerializationClass\Idml\Designmap\Designmap;
 
 class CustomSerializationSubscriber implements EventSubscriberInterface
 {

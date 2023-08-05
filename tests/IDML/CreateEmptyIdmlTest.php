@@ -2,7 +2,7 @@
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\Builder\IdmlDocument;
-use Jvital\Idml\SerializationClass\Designmap\IdpkgBackingStory;
+use Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgBackingStory;
 use Jvital\Idml\SerializationClass\Ressources\Fonts\FontIdpkg;
 use Jvital\Idml\SerializationClass\Ressources\Graphics\GraphicIdpkg;
 use Jvital\Idml\SerializationClass\Ressources\Styles\StylesIdpkg;

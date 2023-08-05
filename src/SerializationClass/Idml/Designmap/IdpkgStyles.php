@@ -1,19 +1,19 @@
 <?php
-namespace Jvital\Idml\SerializationClass\Designmap;
+namespace Jvital\Idml\SerializationClass\Idml\Designmap;
 
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
- * @XmlRoot("IdpkgBackingStory") 
+ * @XmlRoot("IdpkgStyles") 
 */
-class IdpkgBackingStory{
+class IdpkgStyles{
     
     /**
     * @SerializedName("src")
     * @XmlAttribute
     */
-    private string $src='XML/BackingStory.xml';
+    private string $src='Resources/Styles.xml';
 }
 

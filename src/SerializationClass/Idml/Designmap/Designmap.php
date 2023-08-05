@@ -1,5 +1,5 @@
 <?php
-namespace Jvital\Idml\SerializationClass\Designmap;
+namespace Jvital\Idml\SerializationClass\Idml\Designmap;
 
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
@@ -47,7 +47,7 @@ class Designmap extends IdpkgWrapper
     private IdpkgTags $tags;
 
     /**
-    * @Type("array<Jvital\Idml\SerializationClass\Designmap\IdpkgSpread>")
+    * @Type("array<Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgSpread>")
     * @XmlList(inline = true, entry = "idPkg:Spread")
     */
     private array $spreads;
@@ -58,7 +58,7 @@ class Designmap extends IdpkgWrapper
     private IdpkgBackingStory $backingStory;
 
     /**
-    * @Type("array<Jvital\Idml\SerializationClass\Designmap\IdpkgStory>")
+    * @Type("array<Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgStory>")
     * @XmlList(inline = true, entry = "idPkg:Story")
     */
     private array $stories;

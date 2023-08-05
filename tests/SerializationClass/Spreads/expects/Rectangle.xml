@@ -4,7 +4,7 @@
     <Link AssetID="$ID/" AssetURL="$ID/" LinkResourceURI="file:C:/Users/Julien/Desktop/snowclash.png" Self="u10a"/>
     <Properties>
       <Profile type="string">$ID/None</Profile>
-      <GraphicBounds Left="0.0" Top="0.0" Right="659.3420140406812" Bottom="480.066995433488" />
+      <GraphicBounds Left="0.0" Top="0.0" Right="659.34201404068" Bottom="480.06699543349" />
     </Properties>
   </Image>
   <Properties>

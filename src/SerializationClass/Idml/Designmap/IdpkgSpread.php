@@ -1,5 +1,5 @@
 <?php
-namespace Jvital\Idml\SerializationClass\Designmap;
+namespace Jvital\Idml\SerializationClass\Idml\Designmap;
 
 use JMS\Serializer\Annotation\XmlRoot;
 use JMS\Serializer\Annotation\SerializedName;
