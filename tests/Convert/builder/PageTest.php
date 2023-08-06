@@ -1,6 +1,6 @@
 <?php
 
-use Jvital\Idml\Builder\IdmlDocument;
+use Jvital\Idml\SerializationClass\Idml\IdmlDocument;
 use Jvital\Idml\SerializationClass\Json\Elements\Text;
 use Jvital\Idml\SerializationClass\Json\PageJson;
 use PHPUnit\Framework\TestCase;

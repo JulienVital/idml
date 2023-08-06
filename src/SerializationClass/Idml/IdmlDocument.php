@@ -1,6 +1,7 @@
 <?php
-namespace Jvital\Idml\Builder;
+namespace Jvital\Idml\SerializationClass\Idml;
 
+use Jvital\Idml\Builder\Maker\Maker;
 use Jvital\Idml\SerializationClass\Idml\Designmap\Designmap;
 use Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgBackingStory;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\FontIdpkg;

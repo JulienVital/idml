@@ -1,8 +1,9 @@
 <?php
-namespace Jvital\Idml\Builder;
+namespace Jvital\Idml\Builder\Maker;
 
 use Exception;
 use JMS\Serializer\SerializerBuilder;
+use Jvital\Idml\SerializationClass\Idml\IdmlDocument;
 use ZipArchive;
 
 class Maker{

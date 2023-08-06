@@ -1,6 +1,6 @@
 <?php
 
-use Jvital\Idml\Builder\Json\Loader;
+use Jvital\Idml\Loader\JsonLoader;
 use Jvital\Idml\SerializationClass\Json\Document;
 use Jvital\Idml\SerializationClass\Json\Elements\Block;
 use Jvital\Idml\SerializationClass\Json\Elements\Picture;
@@ -17,8 +17,8 @@ class DocumentJsonTest extends TestCase
     private string $jsonTest;
 
     protected function setUp():void{
-        $this->loader = new Loader();
-        $this->jsonTest = file_get_contents('tempJson');
+        $this->loader = new JsonLoader();
+        $this->jsonTest = file_get_contents(__DIR__.'/tempJson');
         $this->document = $this->loader->load($this->jsonTest);
     }
 

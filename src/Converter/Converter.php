@@ -1,7 +1,7 @@
 <?php
 namespace Jvital\Idml\Converter;
 
-use Jvital\Idml\Builder\IdmlDocument;
+use Jvital\Idml\SerializationClass\Idml\IdmlDocument;
 use Jvital\Idml\SerializationClass\Json\Document;
 
 class Converter{

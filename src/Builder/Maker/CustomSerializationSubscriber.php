@@ -1,5 +1,5 @@
 <?php
-namespace Jvital\Idml\Builder;
+namespace Jvital\Idml\Builder\Maker;
 
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
 use JMS\Serializer\EventDispatcher\ObjectEvent;

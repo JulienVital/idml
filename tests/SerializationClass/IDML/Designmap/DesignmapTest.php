@@ -2,7 +2,7 @@
 
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
-use Jvital\Idml\Builder\CustomSerializationSubscriber;
+use Jvital\Idml\Builder\Maker\CustomSerializationSubscriber;
 use Jvital\Idml\SerializationClass\Idml\Designmap\Designmap;
 use Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgSpread;
 use Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgStory;

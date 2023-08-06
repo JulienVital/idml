@@ -1,10 +1,10 @@
 <?php
-namespace Jvital\Idml\Builder\Json;
+namespace Jvital\Idml\Loader;
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Json\Document;
 
-class Loader{
+class JsonLoader{
 
     public function load(string $jsonFile):Document{
         $serializer = SerializerBuilder::create()->build();

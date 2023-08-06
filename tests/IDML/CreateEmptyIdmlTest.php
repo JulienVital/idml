@@ -1,7 +1,7 @@
 <?php
 
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\Builder\IdmlDocument;
+use Jvital\Idml\SerializationClass\Idml\IdmlDocument;
 use Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgBackingStory;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\FontIdpkg;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Graphics\GraphicIdpkg;
@@ -50,7 +50,7 @@ class CreateEmptyIdmlTest extends TestCase{
 
     $this->generateBaseDocument($namefile);
     $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#META-INF/container.xml");
-    $this->assertEquals($containerXml, file_get_contents('src/Builder/rawFiles/META-INF/container.xml'));
+    $this->assertEquals($containerXml, file_get_contents('src/Builder/Maker/rawFiles/META-INF/container.xml'));
   }
 
   public function testMimetype(){
@@ -58,7 +58,7 @@ class CreateEmptyIdmlTest extends TestCase{
 
     $this->generateBaseDocument($namefile);
     $containerXml = file_get_contents('zip://'.self::TARGET_FOLDER."/$namefile.idml#mimetype");
-    $this->assertEquals($containerXml, file_get_contents('src/Builder/rawFiles/mimetype'));
+    $this->assertEquals($containerXml, file_get_contents('src/Builder/Maker/rawFiles/mimetype'));
     
   }
 

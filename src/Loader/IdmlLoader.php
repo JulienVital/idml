@@ -1,7 +1,8 @@
 <?php
-namespace Jvital\Idml\Builder;
+namespace Jvital\Idml\Loader;
 
 use JMS\Serializer\SerializerBuilder;
+use Jvital\Idml\SerializationClass\Idml\IdmlDocument;
 use Jvital\Idml\SerializationClass\Designmap\Designmap;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\FontIdpkg;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Graphics\GraphicIdpkg;
@@ -10,7 +11,7 @@ use Jvital\Idml\SerializationClass\Idml\Spread\SpreadIdpkg;
 use Jvital\Idml\SerializationClass\Idml\Stories\StoryIdpkg;
 use ZipArchive;
 
-class Loader{
+class IdmlLoader{
 
     public function load($idmlFile):IdmlDocument{
         $serializer = SerializerBuilder::create()->build();

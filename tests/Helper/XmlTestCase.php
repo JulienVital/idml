@@ -4,7 +4,7 @@ namespace Jvital\Tests\Helper;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Jvital\Idml\Builder\CustomSerializationSubscriber;
+use Jvital\Idml\Builder\Maker\CustomSerializationSubscriber;
 use PHPUnit\Framework\TestCase;
 
 class XmlTestCase extends TestCase{
