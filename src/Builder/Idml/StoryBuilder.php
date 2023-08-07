@@ -16,4 +16,9 @@ class StoryBuilder{
     public function build(){
         return new StoryIdpkg($this->story);
     }
+
+    public function setId(string $id){
+        $this->story->setId($id);
+        return $this;
+    }
 }

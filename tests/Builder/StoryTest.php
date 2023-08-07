@@ -21,4 +21,14 @@ class StoryTest extends TestCase{
         $storyIdpkg = $builder->build();
         $this->assertTrue($storyIdpkg->getStory()::class === Story::class);
     }
+
+    public function testStorySetId(){
+
+        $idExpect = "CustomId";
+        $builder = new StoryBuilder();
+        $builder->setId($idExpect);
+        $storyIdpkg = $builder->build();
+        $this->assertEquals($idExpect, $storyIdpkg->getStory()->getId());
+    }
+
 }
