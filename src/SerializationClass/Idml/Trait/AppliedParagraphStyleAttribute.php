@@ -13,7 +13,7 @@ trait AppliedParagraphStyleAttribute {
      * @XmlAttribute
      * @SerializedName("AppliedParagraphStyle")
      */
-    private string $appliedParagraphStyle;
+    private string $appliedParagraphStyle = 'ParagraphStyle/$ID';
 
     /**
      * Get the value of appliedParagraphStyle
@@ -28,7 +28,7 @@ trait AppliedParagraphStyleAttribute {
      */
     public function setAppliedParagraphStyle(string $appliedParagraphStyle): self
     {
-        $this->appliedParagraphStyle = $appliedParagraphStyle;
+        $this->appliedParagraphStyle = "ParagraphStyle/$appliedParagraphStyle";
 
         return $this;
     }

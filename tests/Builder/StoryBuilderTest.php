@@ -1,12 +1,14 @@
 <?php
 
 use Jvital\Idml\Builder\Idml\StoryBuilder;
+use Jvital\Idml\SerializationClass\Idml\Stories\CharacterStyleRange;
+use Jvital\Idml\SerializationClass\Idml\Stories\ParagraphStyleRange;
 use Jvital\Idml\SerializationClass\Idml\Stories\Story;
 use Jvital\Idml\SerializationClass\Idml\Stories\StoryIdpkg;
 use PHPUnit\Framework\TestCase;
 
 
-class StoryTest extends TestCase{
+class StoryBuilderTest extends TestCase{
 
     public function testBuilderReturnStoryIdpkgClass(){
 
@@ -20,6 +22,20 @@ class StoryTest extends TestCase{
         $builder = new StoryBuilder();
         $storyIdpkg = $builder->build();
         $this->assertTrue($storyIdpkg->getStory()::class === Story::class);
+    }
+
+    public function testStoryIdpkgHaveParagraphStyleRange(){
+
+        $builder = new StoryBuilder();
+        $storyIdpkg = $builder->build();
+        $this->assertTrue($storyIdpkg->getStory()->getParagraphStyleRange()::class === ParagraphStyleRange::class);
+    }
+
+    public function testStoryIdpkgHaveCharacterStyleRange(){
+
+        $builder = new StoryBuilder();
+        $storyIdpkg = $builder->build();
+        $this->assertTrue($storyIdpkg->getStory()->getParagraphStyleRange()->getCharacterStyleRange()::class === CharacterStyleRange::class);
     }
 
     public function testStorySetId(){

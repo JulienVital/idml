@@ -31,7 +31,7 @@ Class AppliedParagraphStyleAttributeTest extends XmlTestCase{
 
         $expectedXml = 
         '<?xml version="1.0" encoding="UTF-8"?>
-            <result AppliedParagraphStyle="example"/>';
+            <result AppliedParagraphStyle="ParagraphStyle/example"/>';
 
         $this->assertXmlStringEqualsXmlString($expectedXml, $xmlSerialized);
     }
@@ -40,11 +40,11 @@ Class AppliedParagraphStyleAttributeTest extends XmlTestCase{
 
         $xmlFile = 
         '<?xml version="1.0" encoding="UTF-8"?>
-            <result AppliedParagraphStyle="example"/>';
+            <result AppliedParagraphStyle="ParagraphStyle/example"/>';
 
         $objectDeserialized = $this->deSerialize($xmlFile, testAttribute::class,'xml');
     
-        $this->assertEquals($objectDeserialized->getAppliedParagraphStyle(), "example");
+        $this->assertEquals($objectDeserialized->getAppliedParagraphStyle(), "ParagraphStyle/example");
     }
 }
 

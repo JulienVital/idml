@@ -3,11 +3,9 @@
 	<XmlStory Self="u97" AppliedTOCStyle="n" UserText="true" IsEndnoteStory="false" TrackChanges="false" StoryTitle="$ID/" AppliedNamedGrid="n">
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/$ID/NormalParagraphStyle">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
-				<Content>﻿</Content>
-				<XMLElement Self="di3" MarkupTag="XMLTag/Root">
-					<XMLElement Self="di3i4" MarkupTag="XMLTag/Article" XMLContent="uf0" />
-				</XMLElement>
 				<Content>﻿﻿</Content>
+				<XMLElement Self="di3" MarkupTag="XMLTag/Root" />
+				<Content>﻿﻿﻿</Content>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
 	</XmlStory>
