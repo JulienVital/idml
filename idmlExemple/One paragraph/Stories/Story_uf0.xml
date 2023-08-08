@@ -6,8 +6,6 @@
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Style de paragraphe custom 1">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">
 				<Content>Text 1</Content>
-				<Br />
-				<Content>text3</Content>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
 	</Story>
