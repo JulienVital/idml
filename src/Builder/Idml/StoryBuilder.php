@@ -32,4 +32,14 @@ class StoryBuilder{
         $this->story->setId($id);
         return $this;
     }
+
+    public function setParagraphStyle(string $paragraphStyle){
+        $this->paragraph->setAppliedParagraphStyle($paragraphStyle);
+        return $this;
+    }
+
+    public function setContent(string $content){
+        $this->character->setContent($content);
+        return $this;
+    }
 }

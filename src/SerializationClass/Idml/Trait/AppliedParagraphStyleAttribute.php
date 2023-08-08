@@ -20,9 +20,10 @@ trait AppliedParagraphStyleAttribute {
      */
     public function getAppliedParagraphStyle(): string
     {
-        return $this->appliedParagraphStyle;
+        return substr($this->appliedParagraphStyle, 15);
     }
 
+    
     /**
      * Set the value of appliedParagraphStyle
      */

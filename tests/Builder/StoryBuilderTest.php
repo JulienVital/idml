@@ -47,4 +47,21 @@ class StoryBuilderTest extends TestCase{
         $this->assertEquals($idExpect, $storyIdpkg->getStory()->getId());
     }
 
+    public function testStorySetParagraphStyle(){
+
+        $style = "testStyle";
+        $builder = new StoryBuilder();
+        $builder->setParagraphStyle($style);
+        $storyIdpkg = $builder->build();
+        $this->assertEquals($style, $storyIdpkg->getStory()->getParagraphStyleRange()->getAppliedParagraphStyle());
+    }
+
+    public function testStorySetContent(){
+
+        $content = "testStyle";
+        $builder = new StoryBuilder();
+        $builder->setContent($content);
+        $storyIdpkg = $builder->build();
+        $this->assertEquals($content, $storyIdpkg->getStory()->getParagraphStyleRange()->getCharacterStyleRange()->getContent());
+    }
 }

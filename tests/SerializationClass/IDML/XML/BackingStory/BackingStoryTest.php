@@ -82,7 +82,7 @@ class BackingStoryTest extends TestCase
     $xmlDeSerialized = $serializer->deserialize($xmlExpect, BackingStory::class, 'xml');
     
     $paragraphStyle = $xmlDeSerialized->getXmlStory()->getParagraphStyleRange()->getAppliedParagraphStyle();
-    $this->assertEquals($paragraphStyle ,'ParagraphStyle/$ID/NormalParagraphStyle');
+    $this->assertEquals($paragraphStyle ,'$ID/NormalParagraphStyle');
 
     $storyId = $xmlDeSerialized->getXmlStory()->getId();
     $this->assertEquals($storyId ,'ub0');

@@ -44,7 +44,7 @@ Class AppliedParagraphStyleAttributeTest extends XmlTestCase{
 
         $objectDeserialized = $this->deSerialize($xmlFile, testAttribute::class,'xml');
     
-        $this->assertEquals($objectDeserialized->getAppliedParagraphStyle(), "ParagraphStyle/example");
+        $this->assertEquals($objectDeserialized->getAppliedParagraphStyle(), "example");
     }
 }
 
