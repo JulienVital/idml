@@ -27,8 +27,8 @@ class Spread
     use AllowPageShuffleAttribute;
     use ItemTransformAttribute;
     use ShowMasterItemsAttribute;
-    use PageCountAttribute;
     use BindingLocationAttribute;
+    use PageCountAttribute;
     use PageTransitionTypeAttribute;
     use PageTransitionDirectionAttribute; 
     use PageTransitionDurationAttribute;
