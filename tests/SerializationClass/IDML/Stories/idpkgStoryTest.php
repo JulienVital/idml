@@ -11,15 +11,14 @@ class idpkgStoryTest extends TestCase
 
   public function testSerializeDeserialize(){
 
-    $this->assertTrue(true);
-    // $xmlExpect = file_get_contents(__DIR__.'/IdpkgstoryExpect.xml');
-    // $serializer = SerializerBuilder::create()->build();
+    $xmlExpect = file_get_contents(__DIR__.'/expects/IdpkgstoryExpect.xml');
+    $serializer = SerializerBuilder::create()->build();
 
-    // /** @var XmlElement */
-    // $xmlDeSerialized = $serializer->deserialize($xmlExpect, IdpkgStory::class, 'xml');
-    // $XmlSerialized = $serializer->serialize($xmlDeSerialized, 'xml');
+    /** @var XmlElement */
+    $xmlDeSerialized = $serializer->deserialize($xmlExpect, StoryIdpkg::class, 'xml');
+    $XmlSerialized = $serializer->serialize($xmlDeSerialized, 'xml');
     
-    // $this->assertEquals($XmlSerialized,$xmlExpect);
+    $this->assertEquals($xmlExpect,$XmlSerialized);
   }
 
 }
