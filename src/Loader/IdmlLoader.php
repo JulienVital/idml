@@ -3,7 +3,7 @@ namespace Jvital\Idml\Loader;
 
 use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Idml\IdmlDocument;
-use Jvital\Idml\SerializationClass\Designmap\Designmap;
+use Jvital\Idml\SerializationClass\Idml\Designmap\Designmap;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\FontIdpkg;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Graphics\GraphicIdpkg;
 use Jvital\Idml\SerializationClass\Idml\Ressources\Styles\StylesIdpkg;

@@ -12,9 +12,9 @@ class BackingStoryTest extends TestCase
 {
 
   public function testSerialize(){
-    
+
     // Create Object
-    
+
     $characterStyleRange = new CharacterStyleRange();
     $paragraphStyleRange = new ParagraphStyleRange();
     $paragraphStyleRange->setCharacterStyleRange($characterStyleRange);
@@ -34,7 +34,7 @@ class BackingStoryTest extends TestCase
     $backingStoryElement = $crawler
     ->filterXpath('//idPkg:BackingStory');
     $this->assertEquals($backingStoryElement->children()->nodeName(),'XmlStory' );
-    
+
     // $this->assertEquals($attributesStory[0],'pageID' );
     // $this->assertEquals($storyElement->children()->children()->nodeName(),'CharacterStyleRange' );
 
