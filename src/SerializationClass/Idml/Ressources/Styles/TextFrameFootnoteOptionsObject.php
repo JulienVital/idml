@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /** 
  * @XmlRoot("TextFrameFootnoteOptionsObject") 
-*/
+ */
 class TextFrameFootnoteOptionsObject
 {
 

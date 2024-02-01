@@ -1,7 +1,8 @@
 <?php
 namespace Jvital\Idml\SerializationClass\Idml\Enums;
 
-class PageTransitionTypeOptions {
+class PageTransitionTypeOptions
+{
     const BLINDS_TRANSITION = "BLINDS_TRANSITION";
     const BOX_TRANSITION = "BOX_TRANSITION";
     const COMB_TRANSITION = "COMB_TRANSITION";

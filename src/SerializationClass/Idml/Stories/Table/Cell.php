@@ -14,7 +14,7 @@ use Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlElement;
 
 /** 
  * @XmlRoot("Cell") 
-*/
+ */
 class Cell
 {
 
@@ -26,7 +26,7 @@ class Cell
     use TextTableInsetAttribute;
     use AppliedCellStyleAttribute;
     /**
-     * @var XmlElement
+     * @var                          XmlElement
      * @SerializedName("XMLElement")
      */
     private XmlElement $xmlElement;

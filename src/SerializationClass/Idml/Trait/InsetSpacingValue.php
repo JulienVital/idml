@@ -8,7 +8,8 @@ use Jvital\Idml\SerializationClass\Idml\Properties\Value\InsetSpacing;
 /**
  * This trait InsetSpacing
  */
-trait InsetSpacingValue {
+trait InsetSpacingValue
+{
     
     /**
      * @SerializedName("InsetSpacing")

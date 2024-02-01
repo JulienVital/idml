@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add Ligatures value 
  */
-trait LigaturesAttribute {
+trait LigaturesAttribute
+{
     
     /**
      * @XmlAttribute

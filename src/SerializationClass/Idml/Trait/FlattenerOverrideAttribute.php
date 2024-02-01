@@ -10,7 +10,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * TODO ENUM he transparency flattener preferences override for the spread. (<Spread> only). Can be 
  * Default, None, or Custom.
  */
-trait FlattenerOverrideAttribute {
+trait FlattenerOverrideAttribute
+{
     
     /**
      * @XmlAttribute

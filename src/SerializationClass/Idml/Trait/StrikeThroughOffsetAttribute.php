@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a StrikeThroughOffset Attribute
  */
-trait StrikeThroughOffsetAttribute {
+trait StrikeThroughOffsetAttribute
+{
     
     /**
      * @XmlAttribute

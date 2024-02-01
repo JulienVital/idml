@@ -9,7 +9,8 @@ use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionTypeOptions;
  * This trait add a PageTransitionType Attribute
  * default value is None
  */
-trait PageTransitionTypeAttribute {
+trait PageTransitionTypeAttribute
+{
 
     /**
      * @XmlAttribute

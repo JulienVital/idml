@@ -7,13 +7,12 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /** 
  * @XmlNamespace(uri="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging", prefix="idPkg")
- * 
-*/
-abstract class IdpkgWrapper 
+ */
+abstract class IdpkgWrapper
 {
     /**
-    * @XmlAttribute
-    * @SerializedName("DOMVersion")
-    */
+     * @XmlAttribute
+     * @SerializedName("DOMVersion")
+     */
     private string $DOMVersion = "17.0";
 }

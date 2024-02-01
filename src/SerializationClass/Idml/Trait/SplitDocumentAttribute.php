@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * This trait add a Locked Attribute
  * default value is false
  */
-trait SplitDocumentAttribute {
+trait SplitDocumentAttribute
+{
     
     /**
      * @XmlAttribute
@@ -27,7 +28,7 @@ trait SplitDocumentAttribute {
 
     /**
      * 
-     * @param bool $splitDocument 
+     * @param  bool $splitDocument 
      * @return SplitDocumentAttribute 
      */
     public function setSplitDocument(bool $splitDocument): self

@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /** 
  * @XmlRoot("KeyValuePair") 
-*/
+ */
 class KeyValuePair
 {
 

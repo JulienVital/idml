@@ -10,8 +10,9 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("RootCellStyleGroup") 
-*/
-class RootCellStyleGroup{
+ */
+class RootCellStyleGroup
+{
 
     use SelfAttribute;
     use NameAttribute;
@@ -19,7 +20,7 @@ class RootCellStyleGroup{
     /**
      * @SerializedName("CellStyle")
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Ressources\Styles\CellStyle>")
-     * @XmlList(inline = true, entry = "CellStyle")
+     * @XmlList(inline                                                                 = true, entry = "CellStyle")
      */
     private array $celStyle;
 }

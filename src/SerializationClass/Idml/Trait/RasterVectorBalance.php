@@ -8,7 +8,8 @@ use Jvital\Idml\SerializationClass\Idml\Utils\Properties as UtilsProperties;
 /**
  * This trait add a Properties child
  */
-trait RasterVectorBalance {
+trait RasterVectorBalance
+{
     
     /**
      * @SerializedName("RasterVectorBalance")

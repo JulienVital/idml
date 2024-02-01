@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /** 
  * @XmlRoot("MarginPreference") 
-*/
+ */
 class MarginPreference
 {
     

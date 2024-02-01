@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a HorizontalScale Attribute
  */
-trait HorizontalScaleAttribute {
+trait HorizontalScaleAttribute
+{
 
     /**
      * @XmlAttribute

@@ -5,7 +5,7 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /** 
  * @XmlRoot("Label") 
-*/
+ */
 class Label
 {
 

@@ -16,7 +16,7 @@ use Jvital\Idml\SerializationClass\Idml\Utils\IdpkgWrapper;
 
 /** 
  * @XmlRoot("Document") 
-*/
+ */
 class Designmap extends IdpkgWrapper
 {
 
@@ -27,47 +27,47 @@ class Designmap extends IdpkgWrapper
     use AccurateLABSpotsAttribute;
 
     /**
-    * @SerializedName("idPkg:Graphic")
-    */
+     * @SerializedName("idPkg:Graphic")
+     */
     private IdpkgGraphic $graphic;
 
     /**
-    * @SerializedName("idPkg:Fonts")
-    */
+     * @SerializedName("idPkg:Fonts")
+     */
     private IdpkgFonts $fonts;
 
     /**
-    * @SerializedName("idPkg:Styles")
-    */
+     * @SerializedName("idPkg:Styles")
+     */
     private IdpkgStyles $styles;
 
     /**
-    * @SerializedName("idPkg:Tags")
-    */
+     * @SerializedName("idPkg:Tags")
+     */
     private IdpkgTags $tags;
 
     /**
-    * @Type("array<Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgSpread>")
-    * @XmlList(inline = true, entry = "idPkg:Spread")
-    */
+     * @Type("array<Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgSpread>")
+     * @XmlList(inline                                                           = true, entry = "idPkg:Spread")
+     */
     private array $spreads;
 
     /**
-    * @SerializedName("idPkg:BackingStory")
-    */
+     * @SerializedName("idPkg:BackingStory")
+     */
     private IdpkgBackingStory $backingStory;
 
     /**
-    * @Type("array<Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgStory>")
-    * @XmlList(inline = true, entry = "idPkg:Story")
-    */
+     * @Type("array<Jvital\Idml\SerializationClass\Idml\Designmap\IdpkgStory>")
+     * @XmlList(inline                                                          = true, entry = "idPkg:Story")
+     */
     private array $stories;
 
     
     /**
-    * @XmlAttribute
-    * @SerializedName("ActiveLayer")
-    */
+     * @XmlAttribute
+     * @SerializedName("ActiveLayer")
+     */
     private string $activeLayer;
 
     public function __construct()

@@ -15,7 +15,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\TableDirectionAttribute;
 
 /** 
  * @XmlRoot("Table") 
-*/
+ */
 class Table
 {
 
@@ -30,19 +30,19 @@ class Table
 
     /**
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Stories\Table\Row>")
-     * @XmlList(inline = true, entry = "Row")
+     * @XmlList(inline                                                       = true, entry = "Row")
      */
     private array $rows;
 
     /**
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Stories\Table\Column>")
-     * @XmlList(inline = true, entry = "Column")
+     * @XmlList(inline                                                          = true, entry = "Column")
      */
     private array $columns;
 
     /**
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Stories\Table\Cell>")
-     * @XmlList(inline = true, entry = "Cell")
+     * @XmlList(inline                                                        = true, entry = "Cell")
      */
     private array $cells;
 }

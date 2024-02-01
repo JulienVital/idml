@@ -7,7 +7,8 @@ use Jvital\Idml\SerializationClass\Idml\Properties\Value\BaselineFrameGridColor;
 /**
  * This trait BaselineFrameGridColor
  */
-trait BaselineFrameGridColorValue {
+trait BaselineFrameGridColorValue
+{
     
     /**
      * @SerializedName("BaselineFrameGridColor")

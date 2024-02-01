@@ -19,7 +19,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\TextFrame;
 
 /** 
  * @XmlRoot("Spread") 
-*/
+ */
 class Spread
 {
     use SelfAttribute;
@@ -35,31 +35,34 @@ class Spread
     use Page;
     use TextFrame;
     
-    function __construct(string $self){
+    function __construct(string $self)
+    {
         $this->self = $self;
     }
 
     /**
-    * @SerializedName("FlattenerPreference")
-    */
+     * @SerializedName("FlattenerPreference")
+     */
     private FlattenerPreference $flattenerPreference;
 
     /**
-    * @SerializedName("Rectangle")
-    */
+     * @SerializedName("Rectangle")
+     */
     private Rectangle $rectangle;
 
     /**
-    * @Exclude
-    */
-    public function getSpreadIdpkg():SpreadIdpkg{
+     * @Exclude
+     */
+    public function getSpreadIdpkg():SpreadIdpkg
+    {
         return new SpreadIdpkg($this);
     }
 
     /**
-    * @Exclude
-    */
-    public function addPage($page):self{
+     * @Exclude
+     */
+    public function addPage($page):self
+    {
 
         $this->page[] = $page;
         $this->setPageCount(count($this->page));

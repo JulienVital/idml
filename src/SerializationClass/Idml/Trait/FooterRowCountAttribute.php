@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
  * This trait add a FooterRowCount Attribute
  * range 0-25
  */
-trait FooterRowCountAttribute {
+trait FooterRowCountAttribute
+{
     
     /**
      * @SerializedName("FooterRowCount")

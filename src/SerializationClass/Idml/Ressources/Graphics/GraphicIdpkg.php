@@ -7,12 +7,13 @@ use Jvital\Idml\SerializationClass\Idml\Utils\IdpkgWrapper;
 
 /** 
  * @XmlRoot("idPkg:Graphic") 
-*/
-class GraphicIdpkg extends IdpkgWrapper{
+ */
+class GraphicIdpkg extends IdpkgWrapper
+{
 
     /**
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Ressources\Graphics\Color>")
-     * @XmlList(inline = true, entry = "Color")
+     * @XmlList(inline                                                               = true, entry = "Color")
      */
     private array $color;
 }

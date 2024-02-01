@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a LeftLineEnd Attribute
  */
-trait LeftLineEndAttribute {
+trait LeftLineEndAttribute
+{
     
     /**
      * @XmlAttribute

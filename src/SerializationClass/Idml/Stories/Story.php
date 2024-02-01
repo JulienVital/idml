@@ -8,7 +8,7 @@ use Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlElement;
 
 /** 
  * @XmlRoot("Story") 
-*/
+ */
 class Story
 {
 
@@ -60,7 +60,7 @@ class Story
     private ParagraphStyleRange $paragraphStyleRange;
 
     /**
-     * @var XmlElement
+     * @var                          XmlElement
      * @SerializedName("XMLElement")
      */
     private XmlElement $xmlElement;

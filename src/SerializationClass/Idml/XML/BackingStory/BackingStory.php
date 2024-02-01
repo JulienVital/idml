@@ -6,12 +6,13 @@ use Jvital\Idml\SerializationClass\Idml\Utils\IdpkgWrapper;
 
 /** 
  * @XmlRoot("idPkg:BackingStory") 
-*/
-class BackingStory extends IdpkgWrapper{
+ */
+class BackingStory extends IdpkgWrapper
+{
 
     /**
      * @SerializedName("XmlStory")
-    */
+     */
     private XmlStory $xmlStory;
 
     /**

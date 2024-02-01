@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
  * This trait add a ColumnCount Attribute
  * range 0-25
  */
-trait ColumnCountAttribute {
+trait ColumnCountAttribute
+{
     
     /**
      * @SerializedName("ColumnCount")

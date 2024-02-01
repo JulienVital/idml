@@ -7,13 +7,14 @@ use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
  * @XmlRoot("idPkg:Spread") 
-*/
-class IdpkgSpread{
+ */
+class IdpkgSpread
+{
     
     /**
-    * @SerializedName("src")
-    * @XmlAttribute
-    */
+     * @SerializedName("src")
+     * @XmlAttribute
+     */
     private string $src;
 
     /**

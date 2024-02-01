@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a SingleColumnWidth Attribute
  */
-trait SingleColumnWidthAttribute {
+trait SingleColumnWidthAttribute
+{
     
     /**
      * @XmlAttribute

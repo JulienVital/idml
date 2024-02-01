@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait ParagraphBorderLeftLineWeight
  */
-trait ParagraphBorderLeftLineWeightAttribute {
+trait ParagraphBorderLeftLineWeightAttribute
+{
     
     /**
      * @XmlAttribute

@@ -8,13 +8,14 @@ use Jvital\Idml\SerializationClass\Idml\Utils\IdpkgWrapper;
 
 /** 
  * @XmlRoot("idPkg:Styles") 
-*/
-class StylesIdpkg extends IdpkgWrapper{
+ */
+class StylesIdpkg extends IdpkgWrapper
+{
 
     /**
      * @SerializedName("ParagraphStyle")
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Ressources\Styles\ParagraphStyle>")
-     * @XmlList(inline = true, entry = "ParagraphStyle")
+     * @XmlList(inline                                                                      = true, entry = "ParagraphStyle")
      */
     private array $paragraphStyle;
 

@@ -19,8 +19,8 @@ use Jvital\Idml\SerializationClass\Idml\Utils\Properties\PathGeometry;
 
 /** 
  * @XmlRoot("Properties") 
-*/
-class Properties 
+ */
+class Properties
 {
     use RasterVectorBalance;
     use Label;

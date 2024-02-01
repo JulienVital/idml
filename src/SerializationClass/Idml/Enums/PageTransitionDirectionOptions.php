@@ -1,7 +1,8 @@
 <?php
 namespace Jvital\Idml\SerializationClass\Idml\Enums;
 
-class PageTransitionDirectionOptions {
+class PageTransitionDirectionOptions
+{
     const DOWN ="DOWN";
     const HORIZONTAL ="HORIZONTAL";
     const HORIZONTAL_IN ="HORIZONTAL_IN";

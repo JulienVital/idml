@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add AutoLeading value 
  */
-trait AutoLeadingAttribute {
+trait AutoLeadingAttribute
+{
     
     /**
      * @XmlAttribute

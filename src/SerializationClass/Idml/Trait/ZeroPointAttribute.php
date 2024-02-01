@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a ZeroPoint Attribute
  */
-trait ZeroPointAttribute {
+trait ZeroPointAttribute
+{
     
     /**
      * @XmlAttribute

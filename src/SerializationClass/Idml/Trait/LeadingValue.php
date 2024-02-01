@@ -7,7 +7,8 @@ use Jvital\Idml\SerializationClass\Idml\Properties\Value\Leading;
 /**
  * This trait Leading
  */
-trait LeadingValue {
+trait LeadingValue
+{
     
     /**
      * @SerializedName("Leading")

@@ -11,7 +11,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("Font") 
-*/
+ */
 class Font
 {
 

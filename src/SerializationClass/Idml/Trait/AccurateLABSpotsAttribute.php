@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * This trait add a AccurateLABSpots Attribute
  * default value is true
  */
-trait AccurateLABSpotsAttribute {
+trait AccurateLABSpotsAttribute
+{
     
     /**
      * @XmlAttribute

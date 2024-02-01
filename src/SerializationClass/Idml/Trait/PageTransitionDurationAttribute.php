@@ -10,7 +10,8 @@ use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionTypeOptions;
  * This trait add a PageTransitionType Attribute
  * default value is MEDIUM
  */
-trait PageTransitionDurationAttribute {
+trait PageTransitionDurationAttribute
+{
 
     /**
      * @XmlAttribute

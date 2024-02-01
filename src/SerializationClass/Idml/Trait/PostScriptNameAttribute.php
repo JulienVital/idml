@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a PostScriptName Attribute
  */
-trait PostScriptNameAttribute {
+trait PostScriptNameAttribute
+{
     
     /**
      * @XmlAttribute

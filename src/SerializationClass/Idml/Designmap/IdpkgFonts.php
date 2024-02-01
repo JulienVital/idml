@@ -7,13 +7,13 @@ use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
  * @XmlRoot("idPkg:Fonts") 
-*/
+ */
 class IdpkgFonts
 {
 
     /**
-    * @SerializedName("src")
-    * @XmlAttribute
-    */
+     * @SerializedName("src")
+     * @XmlAttribute
+     */
     private string $src='Resources/Fonts.xml';
 }

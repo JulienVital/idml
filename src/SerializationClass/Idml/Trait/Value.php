@@ -6,7 +6,8 @@ use JMS\Serializer\Annotation\XmlValue;
 /**
  * This trait add a Value child
  */
-trait Value {
+trait Value
+{
     
     /**
      * @XmlValue(cdata=false)

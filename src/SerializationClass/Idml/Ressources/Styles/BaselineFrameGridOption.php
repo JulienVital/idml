@@ -8,7 +8,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\Properties;
 
 /** 
  * @XmlRoot("BaselineFrameGridOption") 
-*/
+ */
 class BaselineFrameGridOption
 {
     use Properties;

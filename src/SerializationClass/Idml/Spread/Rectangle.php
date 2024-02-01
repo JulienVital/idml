@@ -16,7 +16,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\VisibleAttribute;
 
 /** 
  * @XmlRoot("Rectangle") 
-*/
+ */
 class Rectangle
 {
     use SelfAttribute;
@@ -29,7 +29,8 @@ class Rectangle
     use VisibleAttribute;
     use StoryTitleAttribute;
     use Properties;
-    function __construct($self){
+    function __construct($self)
+    {
         $this->self = $self;
     }
 

@@ -6,7 +6,8 @@ use JMS\Serializer\SerializerBuilder;
 use Jvital\Idml\SerializationClass\Idml\IdmlDocument;
 use ZipArchive;
 
-class Maker{
+class Maker
+{
     
     private IdmlDocument $idmlDocument;
     private string $targetFolder;
@@ -19,22 +20,23 @@ class Maker{
     const SPREADS_PATH = "Spreads/Spread_";
     const STORIES_PATH = "Stories/Story_";
 
-    public function __construct(IdmlDocument $document, $targetFolder){
+    public function __construct(IdmlDocument $document, $targetFolder)
+    {
         $this->idmlDocument = $document;
         $this->targetFolder = $targetFolder;
     }
 
-    public function generate(){
+    public function generate()
+    {
         
-        $document = $this->getDocument() ; 
-        $documentName = $document->getName() ;
+        $document = $this->getDocument(); 
+        $documentName = $document->getName();
 
         $zip = new ZipArchive(); 
 
         $serializer = SerializerBuilder::create()->build();
         try{
-            if($zip->open($this->targetFolder."/$documentName.idml", ZipArchive::CREATE) == TRUE)
-            {
+            if($zip->open($this->targetFolder."/$documentName.idml", ZipArchive::CREATE) == true) {
                 $zip->addFile(__DIR__."/rawFiles/META-INF/container.xml", "META-INF/container.xml");
                 $zip->addFile(__DIR__."/rawFiles/mimetype", "mimetype");
                 

@@ -7,7 +7,8 @@ use Jvital\Idml\SerializationClass\Idml\Properties\Value\ParagraphBorderColor;
 /**
  * This trait ParagraphBorderColor
  */
-trait ParagraphBorderColorValue {
+trait ParagraphBorderColorValue
+{
     
     /**
      * @SerializedName("ParagraphBorderColor")

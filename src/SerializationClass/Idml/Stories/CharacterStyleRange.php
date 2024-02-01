@@ -9,19 +9,19 @@ use Jvital\Idml\SerializationClass\Idml\Trait\AppliedCharacterStyle;
 
 /** 
  * @XmlRoot("CharacterStyleRange") 
-*/
+ */
 class CharacterStyleRange
 {
     use AppliedCharacterStyle;
     /**
-     * @var XmlElement
+     * @var                          XmlElement
      * @SerializedName("XMLElement")
      */
     private XmlElement $xmlElement;
 
 
     /**
-     * @var string
+     * @var                        string
      * @SerializedName("Content")
      * @XmlElementJMS(cdata=false)
      */

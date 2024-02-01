@@ -7,7 +7,8 @@ use Jvital\Idml\SerializationClass\Idml\Properties\Value\AppliedFont;
 /**
  * This trait Leading
  */
-trait AppliedFontValue {
+trait AppliedFontValue
+{
     
     /**
      * @SerializedName("AppliedFont")

@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a NextStyle Attribute
  */
-trait NextStyleAttribute {
+trait NextStyleAttribute
+{
     
     /**
      * @XmlAttribute

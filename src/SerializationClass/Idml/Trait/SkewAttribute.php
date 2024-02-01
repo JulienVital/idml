@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a Skew Attribute
  */
-trait SkewAttribute {
+trait SkewAttribute
+{
 
     /**
      * @XmlAttribute

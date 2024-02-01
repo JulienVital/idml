@@ -9,8 +9,9 @@ use Jvital\Idml\SerializationClass\Idml\Trait\VisibleAttribute;
 
 /** 
  * @XmlRoot("Color") 
-*/
-class Color {
+ */
+class Color
+{
 
     use SelfAttribute;
     use NameAttribute;

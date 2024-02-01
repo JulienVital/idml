@@ -7,8 +7,9 @@ use Jvital\Idml\SerializationClass\Idml\Trait\TransformAttrTopReferenceAttribute
 
 /** 
  * @XmlRoot("TransformAttributeOption") 
-*/
-class TransformAttributeOption {
+ */
+class TransformAttributeOption
+{
     use TransformAttrLeftReferenceAttribute;
 
     use TransformAttrTopReferenceAttribute;

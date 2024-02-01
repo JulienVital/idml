@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a BottomLeftCornerRadius Attribute
  */
-trait BottomLeftCornerRadiusAttribute {
+trait BottomLeftCornerRadiusAttribute
+{
     
     /**
      * @XmlAttribute

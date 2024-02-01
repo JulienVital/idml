@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add StrokeColor value 
  */
-trait StrokeColorAttribute {
+trait StrokeColorAttribute
+{
     
     /**
      * @XmlAttribute

@@ -8,12 +8,13 @@ use Jvital\Idml\SerializationClass\Idml\Spread\TextFrame as SpreadTextFrame;
 /**
  * This trait add a TextFrame 
  */
-trait TextFrame {
+trait TextFrame
+{
 
     /**
-    * @Type("array<Jvital\Idml\SerializationClass\Idml\Spread\TextFrame>")
-    * @XmlList(inline = true, entry = "TextFrame")
-    */
+     * @Type("array<Jvital\Idml\SerializationClass\Idml\Spread\TextFrame>")
+     * @XmlList(inline                                                      = true, entry = "TextFrame")
+     */
     private array $textFrame;
 
 

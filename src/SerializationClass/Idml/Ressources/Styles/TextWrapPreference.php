@@ -8,7 +8,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\Properties;
 
 /** 
  * @XmlRoot("TextWrapPreference") 
-*/
+ */
 class TextWrapPreference
 {
     use Properties;

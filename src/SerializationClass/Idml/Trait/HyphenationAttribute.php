@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add Hyphenation value 
  */
-trait HyphenationAttribute {
+trait HyphenationAttribute
+{
     
     /**
      * @XmlAttribute

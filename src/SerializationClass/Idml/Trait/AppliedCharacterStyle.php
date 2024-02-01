@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * This trait add a AppliedCharacterStyle Attribute
  * default value is true
  */
-trait AppliedCharacterStyle {
+trait AppliedCharacterStyle
+{
     
     /**
      * @XmlAttribute

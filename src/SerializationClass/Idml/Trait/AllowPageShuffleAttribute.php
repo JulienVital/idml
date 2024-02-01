@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * This trait add a AllowPageShuffle Attribute
  * default value is true
  */
-trait AllowPageShuffleAttribute {
+trait AllowPageShuffleAttribute
+{
     
     /**
      * @XmlAttribute

@@ -9,7 +9,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\Properties;
 
 /** 
  * @XmlRoot("CellStyle") 
-*/
+ */
 class CellStyle
 {
     use Properties;

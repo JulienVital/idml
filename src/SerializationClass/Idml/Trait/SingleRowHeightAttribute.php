@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a SingleRowHeight Attribute
  */
-trait SingleRowHeightAttribute {
+trait SingleRowHeightAttribute
+{
     
     /**
      * @XmlAttribute

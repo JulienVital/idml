@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait ParagraphBorderOn
  */
-trait ParagraphBorderOnAttribute {
+trait ParagraphBorderOnAttribute
+{
     
     /**
      * @XmlAttribute

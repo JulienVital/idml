@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a FontFamily Attribute
  */
-trait FontFamilyAttribute {
+trait FontFamilyAttribute
+{
     
     /**
      * @XmlAttribute

@@ -5,7 +5,8 @@ use Jvital\Idml\SerializationClass\Idml\Spread\Spread;
 use Jvital\Idml\SerializationClass\Idml\Spread\SpreadIdpkg;
 
 
-class SpreadBuilder{
+class SpreadBuilder
+{
 
     private Spread $spread;
 
@@ -15,7 +16,8 @@ class SpreadBuilder{
     }
 
 
-    public function build(){
+    public function build()
+    {
         return new SpreadIdpkg($this->spread);
     }
 

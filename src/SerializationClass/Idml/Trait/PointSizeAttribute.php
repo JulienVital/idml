@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a PointSize Attribute
  */
-trait PointSizeAttribute {
+trait PointSizeAttribute
+{
 
     /**
      * @XmlAttribute

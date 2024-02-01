@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a AppliedCellStyle Attribute
  */
-trait AppliedCellStyleAttribute {
+trait AppliedCellStyleAttribute
+{
     
     /**
      * @XmlAttribute

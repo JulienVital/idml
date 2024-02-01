@@ -8,7 +8,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\Properties;
 
 /** 
  * @XmlRoot("TextFramePreference") 
-*/
+ */
 class TextFramePreference
 {
     use Properties;

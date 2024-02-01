@@ -6,11 +6,12 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * This trait add a TextTypeCell Attribute
- * 	
+ *     
  * The content type of cell.
  * default value is 1
  */
-trait TextTypeCellAttribute {
+trait TextTypeCellAttribute
+{
     
     /**
      * @XmlAttribute

@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * This trait add a Locked Attribute
  * default value is false
  */
-trait LockedAttribute {
+trait LockedAttribute
+{
     
     /**
      * @XmlAttribute

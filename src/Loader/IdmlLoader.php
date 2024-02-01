@@ -11,9 +11,11 @@ use Jvital\Idml\SerializationClass\Idml\Spread\SpreadIdpkg;
 use Jvital\Idml\SerializationClass\Idml\Stories\StoryIdpkg;
 use ZipArchive;
 
-class IdmlLoader{
+class IdmlLoader
+{
 
-    public function load($idmlFile):IdmlDocument{
+    public function load($idmlFile):IdmlDocument
+    {
         $serializer = SerializerBuilder::create()->build();
         $filename = basename($idmlFile, ".idml");
         $zip = new ZipArchive;
@@ -23,48 +25,48 @@ class IdmlLoader{
             $name = $zip->getNameIndex($i);
             $contents = $zip->getFromIndex($i);
     
-            if (strpos($name, 'Spread') === 0 && $name!="Spreads/"){
+            if (strpos($name, 'Spread') === 0 && $name!="Spreads/") {
                 
-                $spreadDeSerialized = $serializer->deSerialize($contents, SpreadIdpkg::class,'xml');
+                $spreadDeSerialized = $serializer->deSerialize($contents, SpreadIdpkg::class, 'xml');
                 $document->addSpreads($spreadDeSerialized);
                 continue;
             }
     
-            if (strpos($name, 'Stories') === 0 && $name!= "Stories/"){
+            if (strpos($name, 'Stories') === 0 && $name!= "Stories/") {
             
-                $storyDeserialized = $serializer->deSerialize($contents, StoryIdpkg::class,'xml');
+                $storyDeserialized = $serializer->deSerialize($contents, StoryIdpkg::class, 'xml');
                 $document->addStory($storyDeserialized);
                 continue;
 
             }
     
-            if (strpos($name, 'designmap') === 0){
+            if (strpos($name, 'designmap') === 0) {
                 
-                $designMapDeserialized = $serializer->deSerialize($contents, Designmap::class,'xml');
+                $designMapDeserialized = $serializer->deSerialize($contents, Designmap::class, 'xml');
                 $document->setDesignMap($designMapDeserialized);
                 continue;
 
             }
             
-            if (strpos($name, "Resources/Fonts.xml") === 0){
+            if (strpos($name, "Resources/Fonts.xml") === 0) {
                 
-                $font = $serializer->deSerialize($contents, FontIdpkg::class,'xml');
+                $font = $serializer->deSerialize($contents, FontIdpkg::class, 'xml');
                 $document->setFonts($font);
                 continue;
 
             }
         
-            if (strpos($name, "Resources/Graphic.xml") === 0){
+            if (strpos($name, "Resources/Graphic.xml") === 0) {
                 
-                $graphic = $serializer->deSerialize($contents, GraphicIdpkg::class,'xml');
+                $graphic = $serializer->deSerialize($contents, GraphicIdpkg::class, 'xml');
                 $document->setGraphic($graphic);
                 continue;
 
             }
         
-            if (strpos($name, "Resources/Styles.xml") === 0){
+            if (strpos($name, "Resources/Styles.xml") === 0) {
                 
-                $styles = $serializer->deSerialize($contents, StylesIdpkg::class,'xml');
+                $styles = $serializer->deSerialize($contents, StylesIdpkg::class, 'xml');
                 $document->setStyles($styles);
                 continue;
 

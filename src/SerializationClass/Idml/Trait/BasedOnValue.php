@@ -7,7 +7,8 @@ use Jvital\Idml\SerializationClass\Idml\Properties\Value\BasedOn;
 /**
  * This trait BasedOn
  */
-trait BasedOnValue {
+trait BasedOnValue
+{
     
     /**
      * @SerializedName("BasedOn")

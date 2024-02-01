@@ -8,7 +8,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\Properties;
 
 /** 
  * @XmlRoot("TableStyle") 
-*/
+ */
 class TableStyle
 {
     use Properties;
@@ -684,15 +684,15 @@ class TableStyle
     private bool $RightColumnRegionSameAsBodyRegion;
 
         /**
-     * @XmlAttribute
-     * @SerializedName("HeaderRegionCellStyle")
-     */
+         * @XmlAttribute
+         * @SerializedName("HeaderRegionCellStyle")
+         */
     private string $HeaderRegionCellStyle;
 
         /**
-     * @XmlAttribute
-     * @SerializedName("FooterRegionCellStyle")
-     */
+         * @XmlAttribute
+         * @SerializedName("FooterRegionCellStyle")
+         */
     private string $FooterRegionCellStyle;
 
     /**

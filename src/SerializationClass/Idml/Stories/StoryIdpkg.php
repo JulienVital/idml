@@ -7,7 +7,7 @@ use Jvital\Idml\SerializationClass\Idml\Utils\IdpkgWrapper;
 
 /** 
  * @XmlRoot("idPkg:Story") 
-*/
+ */
 class StoryIdpkg extends IdpkgWrapper
 {
 
@@ -18,7 +18,7 @@ class StoryIdpkg extends IdpkgWrapper
 
     /**
      * @SerializedName("Story")
-    */
+     */
     private Story $story;
 
     /**

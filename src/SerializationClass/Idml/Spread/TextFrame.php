@@ -14,7 +14,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("TextFrame") 
-*/
+ */
 class TextFrame
 {
     use SelfAttribute;
@@ -24,7 +24,8 @@ class TextFrame
     use LockedAttribute;
     use AppliedObjectStyleAttribute;
     use Properties;
-    function __construct($self){
+    function __construct($self)
+    {
         $this->self = $self;
     }
 

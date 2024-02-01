@@ -7,12 +7,12 @@ use JMS\Serializer\Annotation\XmlList;
 
 /** 
  * @XmlRoot("PathPointArray") 
-*/
-class PathPointArray 
+ */
+class PathPointArray
 {
     /**
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Utils\Properties\PathPointType>")
-     * @XmlList(inline = true, entry = "PathPointType")
+     * @XmlList(inline                                                                    = true, entry = "PathPointType")
      */
     private $pathPointType;
 

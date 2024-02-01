@@ -26,8 +26,9 @@ use Jvital\Idml\SerializationClass\Idml\Spread\TextFramePreference;
 
 /** 
  * @XmlRoot("ObjectStyle") 
-*/
-class ObjectStyle{
+ */
+class ObjectStyle
+{
 
     use SelfAttribute;
     use NameAttribute;

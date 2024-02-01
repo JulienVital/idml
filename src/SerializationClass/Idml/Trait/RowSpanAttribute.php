@@ -6,11 +6,12 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * This trait add a RowSpan Attribute
- * 	
+ *     
  * The number of rows that the object spans.
  * default value is 1
  */
-trait RowSpanAttribute {
+trait RowSpanAttribute
+{
     
     /**
      * @XmlAttribute

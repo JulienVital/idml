@@ -10,7 +10,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\TextTableInsetAttribute;
 
 /** 
  * @XmlRoot("Row") 
-*/
+ */
 class Row
 {
 

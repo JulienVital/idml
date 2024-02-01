@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a FirstLineIndent Attribute
  */
-trait FirstLineIndentAttribute {
+trait FirstLineIndentAttribute
+{
     
     /**
      * @XmlAttribute

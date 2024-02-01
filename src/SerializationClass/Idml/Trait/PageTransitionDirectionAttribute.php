@@ -9,7 +9,8 @@ use Jvital\Idml\SerializationClass\Idml\Enums\PageTransitionDirectionOptions;
  * This trait add a PageTransitionDirectionAttribute
  * default value is NOT_APPLICABLE
  */
-trait PageTransitionDirectionAttribute {
+trait PageTransitionDirectionAttribute
+{
 
     /**
      * @XmlAttribute

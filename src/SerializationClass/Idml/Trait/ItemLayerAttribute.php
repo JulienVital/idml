@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add a ItemLayer Attribute
  */
-trait ItemLayerAttribute {
+trait ItemLayerAttribute
+{
     
     /**
      * @SerializedName("ItemLayer")

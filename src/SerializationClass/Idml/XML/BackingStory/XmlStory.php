@@ -8,7 +8,7 @@ use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
  * @XmlRoot("XmlStory") 
-*/
+ */
 class XmlStory
 {
     /**

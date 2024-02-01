@@ -8,14 +8,14 @@ use Jvital\Idml\SerializationClass\Idml\Utils\IdpkgWrapper;
 
 /** 
  * @XmlRoot("idPkg:Fonts") 
-*/
+ */
 class FontIdpkg extends IdpkgWrapper
 {
 
     /**
      * @SerializedName("FontFamily")
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\FontFamily>")
-     * @XmlList(inline = true, entry = "FontFamily")
+     * @XmlList(inline                                                                 = true, entry = "FontFamily")
      */
     private array $fontFamily;
 

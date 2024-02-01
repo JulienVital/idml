@@ -7,7 +7,8 @@ use Jvital\Idml\SerializationClass\Idml\Properties\Properties as UtilsProperties
 /**
  * This trait add a Properties child
  */
-trait Properties {
+trait Properties
+{
     
     /**
      * @SerializedName("Properties")

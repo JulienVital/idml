@@ -12,7 +12,7 @@ use Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlAttribute;
 
 /** 
  * @XmlRoot("XMLElement") 
-*/
+ */
 class XmlElement
 {
     /**
@@ -34,19 +34,19 @@ class XmlElement
     private string $xmlContent;
 
     /**
-    * @var XmlElement[]
-    *
-    * @Type("array<Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlElement>")
-    * @XmlList(inline = true, entry = "XMLElement")
-    */
+     * @var XmlElement[]
+     *
+     * @Type("array<Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlElement>")
+     * @XmlList(inline                                                                 = true, entry = "XMLElement")
+     */
     private array $children;
 
     /**
-    * @var XmlAttribute[]
-    *
-    * @Type("array<Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlAttribute>")
-    * @XmlList(inline = true, entry = "XMLAttribute")
-    */
+     * @var XmlAttribute[]
+     *
+     * @Type("array<Jvital\Idml\SerializationClass\Idml\XML\BackingStory\XmlAttribute>")
+     * @XmlList(inline                                                                   = true, entry = "XMLAttribute")
+     */
     private $xmlAttribute = [];
 
     /**

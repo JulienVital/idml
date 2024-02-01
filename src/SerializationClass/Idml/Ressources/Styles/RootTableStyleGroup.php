@@ -9,15 +9,16 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("RootTableStyleGroup") 
-*/
-class RootTableStyleGroup{
+ */
+class RootTableStyleGroup
+{
 
     use SelfAttribute;
 
     /**
      * @SerializedName("TableStyle")
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Ressources\Styles\TableStyle>")
-     * @XmlList(inline = true, entry = "TableStyle")
+     * @XmlList(inline                                                                  = true, entry = "TableStyle")
      */
     private array $tableStyle;
 }

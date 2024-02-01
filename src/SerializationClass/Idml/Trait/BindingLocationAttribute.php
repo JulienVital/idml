@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a BindingLocation Attribute
  */
-trait BindingLocationAttribute {
+trait BindingLocationAttribute
+{
 
     /**
      * @XmlAttribute

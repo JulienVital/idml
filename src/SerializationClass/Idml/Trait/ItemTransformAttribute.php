@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * This trait add a ItemTransform Attribute
  * default value is null
  */
-trait ItemTransformAttribute {
+trait ItemTransformAttribute
+{
     
     /**
      * @XmlAttribute

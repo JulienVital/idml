@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add a GeometricBounds Attribute
  */
-trait GeometricBoundsAttribute {
+trait GeometricBoundsAttribute
+{
     
     /**
      * @SerializedName("GeometricBounds")

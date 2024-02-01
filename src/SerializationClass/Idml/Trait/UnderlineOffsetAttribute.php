@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a UnderlineOffset Attribute
  */
-trait UnderlineOffsetAttribute {
+trait UnderlineOffsetAttribute
+{
     
     /**
      * @XmlAttribute

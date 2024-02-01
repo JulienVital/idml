@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add AppliedParagraphStyle
  */
-trait AppliedParagraphStyleAttribute {
+trait AppliedParagraphStyleAttribute
+{
     
     /**
      * @XmlAttribute

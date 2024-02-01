@@ -6,51 +6,53 @@ use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
  * @XmlRoot("XMLTag") 
-*/
-class XmlTag {
+ */
+class XmlTag
+{
   
-  public function __construct($name= ''){
-    $name = $name ==='' ? uniqid(): $name;
-    $this->setName($name);
-  }
-/**
- * @XmlAttribute
- * @SerializedName("Self")
- */
-private string $id;
+    public function __construct($name= '')
+    {
+        $name = $name ==='' ? uniqid(): $name;
+        $this->setName($name);
+    }
+    /**
+     * @XmlAttribute
+     * @SerializedName("Self")
+     */
+    private string $id;
 
-/**
- * @XmlAttribute
- * @SerializedName("Name")
- */
-private string $name;
+    /**
+     * @XmlAttribute
+     * @SerializedName("Name")
+     */
+    private string $name;
 
 
-/**
- * Get the value of name
- */
-public function getName(): string
-{
-  return $this->name;
-}
+    /**
+     * Get the value of name
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
 
-/**
- * Set the value of name
- */
-public function setName(string $name): self
-{
-  $name = str_replace(' ', '_', $name);
-  $this->name = $name;
-  $this->id = "XMLTag/$name";
+    /**
+     * Set the value of name
+     */
+    public function setName(string $name): self
+    {
+        $name = str_replace(' ', '_', $name);
+        $this->name = $name;
+        $this->id = "XMLTag/$name";
 
-  return $this;
-  }
+        return $this;
+    }
 
-/**
- * Get the value of id
- */
-public function getId(): string
-{
-return $this->id;
-}
+    /**
+     * Get the value of id
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
 }

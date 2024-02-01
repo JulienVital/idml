@@ -8,7 +8,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\TypeAttribute;
 
 /** 
  * @XmlRoot("InsetSpacing") 
-*/
+ */
 class InsetSpacing
 {
 
@@ -16,7 +16,7 @@ class InsetSpacing
     /**
      * @SerializedName("ListItem")
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Properties\Value\ListItem>")
-     * @XmlList(inline = true, entry = "ListItem")
+     * @XmlList(inline                                                               = true, entry = "ListItem")
      */
     private array $listItem;
 

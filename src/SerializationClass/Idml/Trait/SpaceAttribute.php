@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a Space Attribute
  */
-trait SpaceAttribute {
+trait SpaceAttribute
+{
     
     /**
      * @XmlAttribute

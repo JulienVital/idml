@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add a ParentStory Attribute
  */
-trait ParentStoryAttribute {
+trait ParentStoryAttribute
+{
     
     /**
      * @SerializedName("ParentStory")

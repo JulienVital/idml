@@ -9,7 +9,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\TextTableInsetAttribute;
 
 /** 
  * @XmlRoot("Column") 
-*/
+ */
 class Column
 {
 

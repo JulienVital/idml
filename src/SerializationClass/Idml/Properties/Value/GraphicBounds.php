@@ -6,7 +6,7 @@ use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
  * @XmlRoot("GraphicBounds") 
-*/
+ */
 class GraphicBounds
 {
 
@@ -29,8 +29,8 @@ class GraphicBounds
     private float $right;
 
         /**
-     * @XmlAttribute
-     * @SerializedName("Bottom")
-     */
+         * @XmlAttribute
+         * @SerializedName("Bottom")
+         */
     private float $bottom;
 }

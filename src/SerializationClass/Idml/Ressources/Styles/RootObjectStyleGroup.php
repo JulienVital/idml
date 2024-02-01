@@ -10,8 +10,9 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("RootObjectStyleGroup") 
-*/
-class RootObjectStyleGroup{
+ */
+class RootObjectStyleGroup
+{
 
     use SelfAttribute;
     use NameAttribute;
@@ -19,7 +20,7 @@ class RootObjectStyleGroup{
     /**
      * @SerializedName("ObjectStyle")
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Ressources\Styles\ObjectStyle>")
-     * @XmlList(inline = true, entry = "ObjectStyle")
+     * @XmlList(inline                                                                   = true, entry = "ObjectStyle")
      */
     private array $objectStyle;
 }

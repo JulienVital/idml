@@ -6,8 +6,9 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("RootCharacterStyleGroup") 
-*/
-class RootCharacterStyleGroup{
+ */
+class RootCharacterStyleGroup
+{
 
     use SelfAttribute;
 

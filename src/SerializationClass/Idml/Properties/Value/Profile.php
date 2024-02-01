@@ -6,7 +6,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\Value;
 
 /** 
  * @XmlRoot("Profile") 
-*/
+ */
 class Profile
 {
 

@@ -7,8 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /** 
  * @XmlRoot("PathGeometry") 
-*/
-class PathGeometry 
+ */
+class PathGeometry
 {
     /**
      * @SerializedName("GeometryPathType")

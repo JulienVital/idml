@@ -7,7 +7,8 @@ use Jvital\Idml\SerializationClass\Idml\Spread\Label as SpreadLabel;
 /**
  * This trait add a Label 
  */
-trait Label {
+trait Label
+{
     
     /**
      * @SerializedName("Label")

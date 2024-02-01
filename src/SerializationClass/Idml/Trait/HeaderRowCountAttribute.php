@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
  * This trait add a HeaderRowCount Attribute
  * range 0-25
  */
-trait HeaderRowCountAttribute {
+trait HeaderRowCountAttribute
+{
     
     /**
      * @SerializedName("HeaderRowCount")

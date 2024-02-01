@@ -9,12 +9,13 @@ use Jvital\Idml\SerializationClass\Idml\Spread\Page as SpreadPage;
 /**
  * This trait add Page value
  */
-trait Page {
+trait Page
+{
     
     /**
      * @SerializedName("Page")
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Spread\Page>")
-     * @XmlList(inline = true, entry = "Page")
+     * @XmlList(inline                                                 = true, entry = "Page")
      */
     private array $page;
     

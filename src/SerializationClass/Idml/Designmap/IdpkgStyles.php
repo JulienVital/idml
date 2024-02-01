@@ -7,13 +7,14 @@ use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
  * @XmlRoot("IdpkgStyles") 
-*/
-class IdpkgStyles{
+ */
+class IdpkgStyles
+{
     
     /**
-    * @SerializedName("src")
-    * @XmlAttribute
-    */
+     * @SerializedName("src")
+     * @XmlAttribute
+     */
     private string $src='Resources/Styles.xml';
 }
 

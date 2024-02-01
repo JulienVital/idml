@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a UnderlineWeight Attribute
  */
-trait UnderlineWeightAttribute {
+trait UnderlineWeightAttribute
+{
     
     /**
      * @XmlAttribute

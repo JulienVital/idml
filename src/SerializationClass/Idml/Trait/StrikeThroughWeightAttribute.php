@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a StrikeThroughWeight Attribute
  */
-trait StrikeThroughWeightAttribute {
+trait StrikeThroughWeightAttribute
+{
     
     /**
      * @XmlAttribute

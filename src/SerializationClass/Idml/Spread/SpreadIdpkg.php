@@ -7,17 +7,18 @@ use Jvital\Idml\SerializationClass\Idml\Utils\IdpkgWrapper;
 
 /** 
  * @XmlRoot("idPkg:Spread") 
-*/
+ */
 class SpreadIdpkg extends IdpkgWrapper
 {
 
-    public function __construct(Spread $spread) {
+    public function __construct(Spread $spread)
+    {
         $this->spread = $spread;
     }
 
     /**
-    * @SerializedName("Spread")
-    */
+     * @SerializedName("Spread")
+     */
     private Spread $spread;
 
     /**

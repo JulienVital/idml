@@ -9,7 +9,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("FontFamily") 
-*/
+ */
 class FontFamily
 {
 
@@ -19,7 +19,7 @@ class FontFamily
     /**
      * @SerializedName("Font")
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Ressources\Fonts\Font>")
-     * @XmlList(inline = true, entry = "Font")
+     * @XmlList(inline                                                           = true, entry = "Font")
      */
     private array $font;
 

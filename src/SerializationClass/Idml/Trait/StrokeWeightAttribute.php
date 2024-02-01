@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add StrokeWeight value 
  */
-trait StrokeWeightAttribute {
+trait StrokeWeightAttribute
+{
     
     /**
      * @XmlAttribute

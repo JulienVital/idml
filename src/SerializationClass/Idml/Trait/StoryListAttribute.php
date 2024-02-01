@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a StoryList Attribute
  */
-trait StoryListAttribute {
+trait StoryListAttribute
+{
     
     /**
      * @XmlAttribute

@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a TransformAttrTopReference Attribute
  */
-trait TransformAttrTopReferenceAttribute {
+trait TransformAttrTopReferenceAttribute
+{
     
     /**
      * @XmlAttribute

@@ -12,7 +12,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\VisibleAttribute;
 use JMS\Serializer\Annotation\SerializedName;
 /** 
  * @XmlRoot("Image") 
-*/
+ */
 class Image
 {
     use SelfAttribute;

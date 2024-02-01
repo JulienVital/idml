@@ -13,7 +13,8 @@ use Jvital\Idml\SerializationClass\Idml\Spread\SpreadIdpkg;
 use Jvital\Idml\SerializationClass\Idml\Stories\StoryIdpkg;
 use Jvital\Idml\SerializationClass\Idml\XML\Tags\Tags;
 
-class IdmlDocument{
+class IdmlDocument
+{
     
     private string $name;
     private IdpkgBackingStory $backingStory;
@@ -26,7 +27,8 @@ class IdmlDocument{
     private array $stories=[];
     private Tags $tags;
 
-    public function __construct($name){
+    public function __construct($name)
+    {
         $this->name = $name;
         $this->backingStory = new IdpkgBackingStory();
         $this->fonts = new FontIdpkg();
@@ -36,7 +38,8 @@ class IdmlDocument{
         $this->tags = new Tags();
     }
 
-    public function generate($targetFolder){
+    public function generate($targetFolder)
+    {
         $maker = new Maker($this, $targetFolder);
 
         $maker->generate();
@@ -199,7 +202,7 @@ class IdmlDocument{
      */
     public function addPages(array $pages): self
     {   
-        if (!$pages){
+        if (!$pages) {
             return $this;
         }
         
@@ -218,7 +221,8 @@ class IdmlDocument{
         return $this;
     }
 
-    private function createSpread($page1, $page2 = null){
+    private function createSpread($page1, $page2 = null)
+    {
         $spread = new Spread(uniqid());
         $spread->addPage(new Page(uniqid()));
         if ($page2) {
@@ -227,19 +231,22 @@ class IdmlDocument{
         return $spread;
     }
 
-    private function createFirstSpread($page1){
+    private function createFirstSpread($page1)
+    {
         $spread = new Spread(uniqid());
         $spread->addPage(new Page(uniqid()));
         $spread->setBindingLocation(0);
         return $spread;
     }
 
-    private function addSpread(SpreadIdpkg $spread){
+    private function addSpread(SpreadIdpkg $spread)
+    {
         $this->spreads[] = $spread;
         $this->designMap->addSpread($spread);
     }
 
-    public function getPages(){
+    public function getPages()
+    {
         $pages = [];
         foreach ($this->spreads as $idpkgSpread) {
             $pages = array_merge($pages, $idpkgSpread->getSpread()->getPages());

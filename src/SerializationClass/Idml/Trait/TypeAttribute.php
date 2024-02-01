@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add a Properties child
  */
-trait TypeAttribute {
+trait TypeAttribute
+{
     
     /**
      * @SerializedName("type")

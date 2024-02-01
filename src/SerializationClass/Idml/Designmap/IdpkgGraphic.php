@@ -7,11 +7,12 @@ use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
  * @XmlRoot("idPkgGraphic") 
-*/
-class IdpkgGraphic {
+ */
+class IdpkgGraphic
+{
     /**
-    * @SerializedName("src")
-    * @XmlAttribute
-    */
+     * @SerializedName("src")
+     * @XmlAttribute
+     */
     private string $src='Resources/Graphic.xml';
 }

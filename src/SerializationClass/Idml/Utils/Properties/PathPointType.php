@@ -7,8 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /** 
  * @XmlRoot("PathPointType") 
-*/
-class PathPointType 
+ */
+class PathPointType
 {
 
     /**

@@ -9,7 +9,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * default value is true
  *     // If true, displays master page items on document pages in the spread.
  */
-trait ShowMasterItemsAttribute {
+trait ShowMasterItemsAttribute
+{
 
     /**
      * @XmlAttribute

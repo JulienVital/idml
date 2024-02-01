@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add a Visible Attribute
  */
-trait VisibleAttribute {
+trait VisibleAttribute
+{
     
     /**
      * @SerializedName("Visible")

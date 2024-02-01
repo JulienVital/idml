@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a TableDirection Attribute
  */
-trait TableDirectionAttribute {
+trait TableDirectionAttribute
+{
 
     /**
      * @XmlAttribute

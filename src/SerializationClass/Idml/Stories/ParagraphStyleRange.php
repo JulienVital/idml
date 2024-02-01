@@ -8,11 +8,11 @@ use Jvital\Idml\SerializationClass\Idml\Trait\AppliedParagraphStyleAttribute;
 
 /** 
  * @XmlRoot("ParagraphStyleRange") 
-*/
+ */
 class ParagraphStyleRange
 {
     /**
-     * @var CharacterStyleRange
+     * @var                                   CharacterStyleRange
      * @SerializedName("CharacterStyleRange")
      */
     private CharacterStyleRange $characterStyleRange;

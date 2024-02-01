@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
  * This trait add a BodyRowCount Attribute
  * range 0-25
  */
-trait BodyRowCountAttribute {
+trait BodyRowCountAttribute
+{
     
     /**
      * @SerializedName("BodyRowCount")

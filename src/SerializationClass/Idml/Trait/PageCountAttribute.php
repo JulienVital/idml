@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * This trait add a PageCount Attribute
  * The number of pages in the spread.
  */
-trait PageCountAttribute {
+trait PageCountAttribute
+{
 
     /**
      * @XmlAttribute

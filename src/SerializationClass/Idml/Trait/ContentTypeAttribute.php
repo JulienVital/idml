@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\XmlAttribute;
 /**
  * This trait add a ContentType Attribute
  */
-trait ContentTypeAttribute {
+trait ContentTypeAttribute
+{
     
     /**
      * @SerializedName("ContentType")

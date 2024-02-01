@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a EndCap Attribute
  */
-trait EndCapAttribute {
+trait EndCapAttribute
+{
     
     /**
      * @XmlAttribute

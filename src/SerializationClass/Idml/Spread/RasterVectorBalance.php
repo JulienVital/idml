@@ -8,7 +8,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\Value;
 
 /** 
  * @XmlRoot("RasterVectorBalance") 
-*/
+ */
 class RasterVectorBalance
 {
 

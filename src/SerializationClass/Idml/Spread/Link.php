@@ -8,7 +8,7 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("Link") 
-*/
+ */
 class Link
 {
     use SelfAttribute;
@@ -20,9 +20,9 @@ class Link
     private string $assetID;
 
         /**
-     * @XmlAttribute
-     * @SerializedName("LinkResourceURI")
-     */
+         * @XmlAttribute
+         * @SerializedName("LinkResourceURI")
+         */
     private string $linkResourceURI;
 
     /**

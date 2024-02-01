@@ -8,7 +8,8 @@ use JMS\Serializer\Annotation\SerializedName;
  * This trait add a self attribute
  * Use string from __construct() method
  */
-trait SelfAttribute {
+trait SelfAttribute
+{
     
     /**
      * @XmlAttribute
@@ -16,7 +17,8 @@ trait SelfAttribute {
      */
     private string $self;
 
-    function getSelf(){
+    function getSelf()
+    {
         return $this->self;
     }
     

@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\XmlAttribute;
 
 /** 
  * @XmlRoot("TextWrapOffset") 
-*/
+ */
 class TextWrapOffset
 {
     /**

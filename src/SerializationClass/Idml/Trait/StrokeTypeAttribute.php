@@ -7,7 +7,8 @@ use JMS\Serializer\Annotation\SerializedName;
 /**
  * This trait add a StrokeType Attribute
  */
-trait StrokeTypeAttribute {
+trait StrokeTypeAttribute
+{
     
     /**
      * @XmlAttribute

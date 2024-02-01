@@ -10,8 +10,9 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("ParagraphStyleGroup") 
-*/
-class ParagraphStyleGroup{
+ */
+class ParagraphStyleGroup
+{
 
     use SelfAttribute;
     use NameAttribute;
@@ -19,7 +20,7 @@ class ParagraphStyleGroup{
     /**
      * @SerializedName("ParagraphStyle")
      * @Type("array<Jvital\Idml\SerializationClass\Idml\Ressources\Styles\ParagraphStyle>")
-     * @XmlList(inline = true, entry = "ParagraphStyle")
+     * @XmlList(inline                                                                      = true, entry = "ParagraphStyle")
      */
     private array $paragraphStyle;
 }

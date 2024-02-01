@@ -7,7 +7,8 @@ use Jvital\Idml\SerializationClass\Idml\Properties\Value\ParagraphBorderType;
 /**
  * This trait ParagraphBorderType
  */
-trait ParagraphBorderTypeValue {
+trait ParagraphBorderTypeValue
+{
     
     /**
      * @SerializedName("ParagraphBorderType")

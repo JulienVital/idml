@@ -10,13 +10,14 @@ use Jvital\Idml\SerializationClass\Idml\Trait\SelfAttribute;
 
 /** 
  * @XmlRoot("Spread") 
-*/
+ */
 class Page
 {
     use SelfAttribute;
     use GeometricBoundsAttribute;
     use ItemTransformAttribute;
-    function __construct($self){
+    function __construct($self)
+    {
         $this->self = $self;
     }
 

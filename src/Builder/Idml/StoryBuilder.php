@@ -6,7 +6,8 @@ use Jvital\Idml\SerializationClass\Idml\Stories\ParagraphStyleRange;
 use Jvital\Idml\SerializationClass\Idml\Stories\Story;
 use Jvital\Idml\SerializationClass\Idml\Stories\StoryIdpkg;
 
-class StoryBuilder{
+class StoryBuilder
+{
 
     private Story $story;
 
@@ -24,21 +25,25 @@ class StoryBuilder{
         $this->paragraph->setCharacterStyleRange($this->character);
     }
 
-    public function build(){
+    public function build()
+    {
         return new StoryIdpkg($this->story);
     }
 
-    public function setId(string $id){
+    public function setId(string $id)
+    {
         $this->story->setId($id);
         return $this;
     }
 
-    public function setParagraphStyle(string $paragraphStyle){
+    public function setParagraphStyle(string $paragraphStyle)
+    {
         $this->paragraph->setAppliedParagraphStyle($paragraphStyle);
         return $this;
     }
 
-    public function setContent(string $content){
+    public function setContent(string $content)
+    {
         $this->character->setContent($content);
         return $this;
     }

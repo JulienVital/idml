@@ -42,8 +42,9 @@ use Jvital\Idml\SerializationClass\Idml\Trait\VerticalScaleAttribute;
 
 /** 
  * @XmlRoot("ParagraphStyle") 
-*/
-class ParagraphStyle{
+ */
+class ParagraphStyle
+{
 
     use SelfAttribute;
     use NameAttribute;
